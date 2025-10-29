@@ -47,6 +47,7 @@ A summary of my key proficiencies, ensuring a breadth of knowledge from microser
 #### DevOps & Infra
 
 * Docker, Bash, Linux (Deployment & Administration), Git, CI/CD, Virtualization.
+* Nginx, Traefik, Kong API Gateaway, APISIX
 
 #### Full-Stack/Web
 
@@ -58,4 +59,5 @@ A summary of my key proficiencies, ensuring a breadth of knowledge from microser
 
 #### Embedded/IoT
 
-* MicroPython.
+* MicroPython
+* C
