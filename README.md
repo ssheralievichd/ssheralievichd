@@ -2,7 +2,7 @@
 
 ### 🚀 About Me
 
-I am a highly motivated Python Software Engineer specializing in asynchronous, scalable backend development. With 2+ years of impactful professional experience at Alif Tajikistan, I possess deep expertise across the entire development lifecycle—from designing resilient APIs (FastAPI/Django DRF) to orchestrating containerized deployments with Docker and optimizing large-scale relational data in PostgreSQL.
+I am a highly motivated Python Software Engineer specializing in asynchronous, scalable backend development. With 2+ years of impactful professional experience, I possess deep expertise across the entire development lifecycle—from designing resilient APIs (FastAPI/Django DRF) to orchestrating containerized deployments with Docker and optimizing large-scale relational data in PostgreSQL.
 
 I thrive on solving complex architectural challenges with efficient code. My goal is to secure a challenging role where I can apply modern cloud practices and performance-driven microservices to deliver tangible business value.
 
