@@ -1,10 +1,19 @@
 ## About me  
-
-Accomplished Full-Stack Software Engineer with over 3 years of hands-on experience delivering scalable, high-performance web applications in fast-paced environments. Proficient in modern Python and PHP backend frameworks (FastAPI, Flask, Django, Laravel) and leading frontend technologies (React, Next.js, Vue.js, Nuxt.js). Strong expertise in API design, database optimization, containerization, and CI/CD practices. Proven ability to architect end-to-end solutions that enhance system reliability, performance, and user experience while aligning with business objectives.
+Accomplished Full-Stack Software Engineer with over 3 years of hands-on experience delivering scalable, high-performance web applications in dynamic environments. Proficient in modern Python and PHP backend frameworks (FastAPI, Flask, Django, Laravel) and leading frontend technologies (React, Next.js, Vue.js, Nuxt.js). Strong expertise in API design, database optimization, containerization, and CI/CD practices. Proven ability to architect end-to-end solutions that enhance system reliability, performance, and user experience while aligning with business objectives.
 
 ## Professional Experience  
 
 **Full-Stack Software Engineer**  
+FinTech Company – Tajikistan  
+October 2025 – Present  
+
+- Design and develop scalable RESTful APIs and microservices using FastAPI, Django REST Framework, and Laravel to support evolving business requirements.  
+- Build modern, responsive front-end applications with React, Next.js, Vue.js, and Nuxt.js, focusing on performance, accessibility, and seamless user interactions.  
+- Optimize database performance through schema design, query tuning, and indexing strategies in PostgreSQL and MySQL.  
+- Implement and maintain DevOps practices including Docker containerization, CI/CD pipelines, and infrastructure monitoring on Linux environments.  
+- Collaborate with cross-functional teams to deliver high-quality, maintainable code following agile methodologies and best practices.
+
+**Software Engineer**  
 Alif Bank – Tajikistan  
 August 2022 – October 2024  
 
@@ -16,7 +25,7 @@ August 2022 – October 2024
 
 **Mandatory National Service**  
 2024 – 2025  
-Completed required military service, further developing strong discipline, teamwork, resilience, and effective time management in structured, high-pressure settings.
+Completed required military service (concurrently managed with professional responsibilities), further developing strong discipline, teamwork, resilience, and effective time management.
 
 ## Education  
 
