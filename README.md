@@ -10,10 +10,38 @@
 - 📫 How to reach me **ssheraliev@gmail.com**
 - ⚡ Fun fact **I'm a huge fan of chess and enjoy playing it in my free time.**
 
-<h3 align="left">Connect with me:</h3>
-<p align="left">
-<a href="https://linkedin.com/in/ssheralievich" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="ssheralievich" height="30" width="40" /></a>
-</p>
+## About  
+Experienced Full-Stack Engineer with 3+ years building scalable web applications. Specialized in Python (FastAPI, Flask, Django) and PHP (Laravel) backends, paired with modern frontend frameworks (React, Next.js, Vue.js, Nuxt.js). Expertise in RESTful API design, PostgreSQL optimization, Docker containerization, and CI/CD pipelines.
+
+## Experience  
+
+**Full-Stack Software Engineer**  
+Current Company — Tajikistan  
+*Oct 2025 – Present*  
+
+- Building scalable APIs and microservices with FastAPI, Django REST Framework, and Laravel  
+- Developing responsive UIs using React, Next.js, Vue.js, and Nuxt.js  
+- Optimizing PostgreSQL schemas and queries for performance  
+- Managing Docker-based deployments and CI/CD workflows on Linux  
+
+**Full-Stack Software Engineer**  
+Alif Bank — Tajikistan  
+*Aug 2022 – Oct 2024*  
+
+- Delivered high-availability RESTful APIs powering financial services for large user base  
+- Built maintainable frontends with React, Next.js, Vue.js, and Nuxt.js  
+- Designed and optimized PostgreSQL/MySQL databases, reducing latency significantly  
+- Implemented Docker containerization and production deployments  
+
+**National Service**  
+*2024 – 2025*  
+Completed mandatory service while maintaining professional commitments.
+
+## Education  
+**B.Sc. Computer Science**  
+Russian-Tajik Slavonic University  
+*2020 – 2024*
+
 
 <h3 align="left">Languages and Tools:</h3>
 <p align="left">
@@ -37,7 +65,3 @@
     <a href="https://nuxtjs.org/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/nuxtjs/nuxtjs-icon.svg" alt="nuxtjs" width="40" height="40"/> </a>
 </p>
 
-<h3 align="left">GitHub Stats:</h3>
-<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=ssheralievichd&show_icons=true&locale=en" alt="ssheralievichd" /></p>
-<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=ssheralievichd&" alt="ssheralievichd" /></p>
-<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=ssheralievichd&show_icons=true&locale=en&layout=compact" alt="ssheralievichd" /></p>
