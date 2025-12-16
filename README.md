@@ -1,9 +1,8 @@
-<h1 align="center">Hi 👋, I'm Abdurahmon Sheraliev</h1>
-<h3 align="center">A passionate Full-Stack Software Engineer from Tajikistan</h3>
+<h1 align="center">Hi 👋, I'm Abdurahmon</h1>
+<h3 align="center">A passionate Full-Stack Software Engineer</h3>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=ssheralievichd&label=Profile%20views&color=0e75b6&style=flat" alt="ssheralievichd" /> </p>
 
-- 🔭 I’m currently working on **[chronos-gaze](https://github.com/ssheralievichd/chronos-gaze)**
 - 🌱 I’m currently learning **Golang, and advanced microservices architecture.**
 - 👯 I’m looking to collaborate on **Open Source projects related to Python, Go, or DevOps.**
 - 🤝 I’m looking for help with **finding new and exciting projects to contribute to.**
