@@ -1,3 +1,5 @@
+## About me
+
 Results-driven Python Software Engineer with over 3 years of professional experience specializing in asynchronous, scalable backend systems. Proven expertise in full-stack development, resilient API design using FastAPI and Django REST Framework, containerization with Docker, and performance optimization of large-scale relational databases (PostgreSQL). Adept at architecting high-availability microservices and implementing modern cloud-native practices to drive operational efficiency and business impact.
 
 ## Professional Experience  
