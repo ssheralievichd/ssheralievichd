@@ -1,63 +1,34 @@
-### Juraev Abdurahmon | Software Engineer 👨‍💻
+Results-driven Python Software Engineer with over 3 years of professional experience specializing in asynchronous, scalable backend systems. Proven expertise in full-stack development, resilient API design using FastAPI and Django REST Framework, containerization with Docker, and performance optimization of large-scale relational databases (PostgreSQL). Adept at architecting high-availability microservices and implementing modern cloud-native practices to drive operational efficiency and business impact.
 
-### 🚀 About Me
+## Professional Experience  
 
-I am a highly motivated Python Software Engineer specializing in asynchronous, scalable backend development. With 2+ years of impactful professional experience, I possess deep expertise across the entire development lifecycle—from designing resilient APIs (FastAPI/Django DRF) to orchestrating containerized deployments with Docker and optimizing large-scale relational data in PostgreSQL.
+**Software Engineer**  
+Alif Bank, Tajikistan  
+August 2022 – October 2024  
 
-I thrive on solving complex architectural challenges with efficient code. My goal is to secure a challenging role where I can apply modern cloud practices and performance-driven microservices to deliver tangible business value.
+- Designed, developed, and maintained high-availability RESTful APIs using Django REST Framework and FastAPI, powering critical financial services and internal enterprise platforms serving thousands of users.  
+- Engineered secure and efficient database schemas; optimized complex PostgreSQL and MySQL queries, achieving significant reductions in query execution time and operational latency.  
+- Led DevOps initiatives, including Docker containerization, CI/CD pipeline configuration, and production deployment management on Linux environments to ensure system reliability and rapid iteration.  
+- Implemented advanced Python practices, including asynchronous programming with asyncio, comprehensive type hinting, and clean code principles to enhance maintainability and team productivity.  
 
-### ⚙️ Professional Journey
+**Military Service**  
+2024 – 2025  
+Completed mandatory national service, honing discipline, teamwork, and time-management skills under high-pressure conditions.
 
-Software Engineer | Alif Tajikistan
-Aug 2022 – Oct 2024
+## Education  
 
-* Developed and maintained highly available RESTful APIs using Django REST Framework and FastAPI to support critical financial services and internal platforms.
+**Bachelor of Science in Computer Science**  
+Russian-Tajik Slavonic University (RTSU)  
+2020 – 2024  
 
-* Implemented secure and efficient database schemas, aggressively optimizing complex queries in PostgreSQL and MySQL to reduce operational latency.
+## Technical Skills  
 
-* Contributed significantly to DevOps pipelines, managing containerization using Docker and ensuring robust deployment and health on Linux environments.
+**Core Expertise**  
+- **Backend & APIs**: Python (3.11+), **FastAPI**, **Django REST Framework**, Flask, Django, Asynchronous Programming (asyncio)  
+- **Databases & Caching**: **PostgreSQL**, MySQL, Redis, SQLModel  
+- **DevOps & Infrastructure**: **Docker**, Linux Administration & Deployment, Git, CI/CD Pipelines, Nginx, Traefik, Kong API Gateway, APISIX  
+- **Full-Stack/Web**: JavaScript, TypeScript, React, Next.js, HTML5, CSS3  
 
-* Gained proficiency in modern Python paradigms, including asynchronous programming (asyncio) and comprehensive type-hinting for reliable codebases.
-
-### Military Service (2024 – 2025)
-
-Fulfilled mandatory military service, demonstrating commitment, discipline, and strong organizational skills.
-
-### 📚 Education
-
-Russian-Tajik Slavonic University (RTSU)
-2020 – 2024
-
-* Bachelor of Science in Computer Science (or equivalent degree)
-
-### 🛠️ Core Technical Arsenal
-
-A summary of my key proficiencies, ensuring a breadth of knowledge from microservices to modern full-stack frameworks.
-
-#### Key Technologies (Expertise Bolded)
-
-* Backend & APIs
-
-* Python (3.11+), FastAPI, Django DRF, Flask, Django, Asynchronous Programming (asyncio).
-
-* Database & Caching
-
-* PostgreSQL, MySQL, Redis (caching/queuing), SQLModel.
-
-#### DevOps & Infra
-
-* Docker, Bash, Linux (Deployment & Administration), Git, CI/CD, Virtualization.
-* Nginx, Traefik, Kong API Gateaway, APISIX
-
-#### Full-Stack/Web
-
-* JavaScript, TypeScript, React, Next.js, HTML5, CSS3.
-
-#### Familiarity
-
-* Golang, PHP, Ruby.
-
-#### Embedded/IoT
-
-* MicroPython
-* C
+**Additional Proficiencies**  
+- Languages: Golang, PHP, Ruby  
+- Embedded/IoT: MicroPython, C
