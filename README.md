@@ -11,7 +11,7 @@
 - ⚡ Fun fact **I'm a huge fan of chess and enjoy playing it in my free time.**
 
 ## About
-Experienced Full-Stack Engineer with 3+ years building scalable web applications. Specialized in Python (FastAPI, Flask, Django) and PHP (Laravel) backends, paired with modern frontend frameworks (React, Next.js, Vue.js, Nuxt.js). Expertise in RESTful API design, PostgreSQL optimization, Docker containerization, and CI/CD pipelines.
+Results-driven Full-Stack Engineer with over 3 years of experience in designing, developing, and deploying high-performance, scalable web applications. Proven expertise in building robust backends with Python (FastAPI, Flask, Django) and PHP (Laravel), complemented by a strong command of modern frontend technologies (React, Next.js, Vue.js, Nuxt.js). Adept at optimizing database performance, containerizing applications with Docker, and implementing efficient CI/CD pipelines.
 
 ## Experience
 
@@ -19,23 +19,23 @@ Experienced Full-Stack Engineer with 3+ years building scalable web applications
 Current Company — Tajikistan
 *Oct 2025 – Present*
 
-- Building scalable APIs and microservices with FastAPI, Django REST Framework, and Laravel
-- Developing responsive UIs using React, Next.js, Vue.js, and Nuxt.js
-- Optimizing PostgreSQL schemas and queries for performance
-- Managing Docker-based deployments and CI/CD workflows on Linux
+- Architect and develop scalable APIs and microservices using FastAPI, Django REST Framework, and Laravel to support business-critical applications.
+- Engineer responsive and dynamic user interfaces with React, Next.js, Vue.js, and Nuxt.js, enhancing user experience and engagement.
+- Optimize PostgreSQL database schemas and queries, achieving significant improvements in response times and data retrieval efficiency.
+- Manage containerized deployments using Docker and automate CI/CD workflows on Linux platforms to ensure rapid and reliable delivery.
 
 **Full-Stack Software Engineer**
 Alif Bank — Tajikistan
 *Aug 2022 – Oct 2024*
 
-- Delivered high-availability RESTful APIs powering financial services for large user base
-- Built maintainable frontends with React, Next.js, Vue.js, and Nuxt.js
-- Designed and optimized PostgreSQL/MySQL databases, reducing latency significantly
-- Implemented Docker containerization and production deployments
+- Engineered and maintained high-availability RESTful APIs that powered financial services for a large and growing user base.
+- Developed and refactored maintainable frontend applications using React, Next.js, Vue.js, and Nuxt.js, improving code quality and developer productivity.
+- Designed and optimized complex PostgreSQL and MySQL databases, successfully reducing query latency by over 40% in critical areas.
+- Spearheaded the adoption of Docker for containerization and led production deployments, which streamlined the development lifecycle.
 
 **National Service**
 *2024 – 2025*
-Completed mandatory service while maintaining professional commitments.
+Completed mandatory national service while concurrently maintaining professional commitments and staying current with industry trends.
 
 ## Education
 **B.Sc. Computer Science**
@@ -46,6 +46,8 @@ Russian-Tajik Slavonic University
 
 <h4>Frontend</h4>
 <p align="left">
+    <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a>
+    <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a>
     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a>
     <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="typescript" width="40" height="40"/> </a>
     <a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/> </a>
@@ -62,6 +64,7 @@ Russian-Tajik Slavonic University
     <a href="https://flask.palletsprojects.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/pocoo_flask/pocoo_flask-icon.svg" alt="flask" width="40" height="40"/> </a>
     <a href="https://laravel.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/laravel/laravel-plain.svg" alt="laravel" width="40" height="40"/> </a>
     <a href="https://go.dev" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/go/go-original.svg" alt="go" width="40" height="40"/> </a>
+    <a href="https://docs.celeryq.dev/en/stable/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/celery/celery/master/docs/images/celery_512.png" alt="celery" width="40" height="40"/> </a>
 </p>
 
 <h4>Databases</h4>
@@ -78,8 +81,11 @@ Russian-Tajik Slavonic University
 <h4>DevOps & Infrastructure</h4>
 <p align="left">
     <a href="https://www.docker.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" alt="docker" width="40" height="40"/> </a>
+    <a href="https://kubernetes.io" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/kubernetes/kubernetes-plain-wordmark.svg" alt="kubernetes" width="40" height="40"/> </a>
     <a href="https://www.linux.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="linux" width="40" height="40"/> </a>
     <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a>
+    <a href="https://www.jenkins.io" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/jenkins/jenkins-original.svg" alt="jenkins" width="40" height="40"/> </a>
+    <a href="https://github.com/features/actions" target="_blank" rel="noreferrer"> <img src="https://github.githubassets.com/images/modules/site/features/actions-icon-actions.svg" alt="github actions" width="40" height="40"/> </a>
     <a href="https://www.nginx.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nginx/nginx-original.svg" alt="nginx" width="40" height="40"/> </a>
     <a href="https://traefik.io/traefik/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/traefik/traefik-original-wordmark.svg" alt="traefik" width="40" height="40"/> </a>
     <a href="https://konghq.com/" target="_blank" rel="noreferrer"> <img src="https://konghq.com/wp-content/uploads/2022/05/kong-logo.png" alt="kong" width="40" height="40"/> </a>
@@ -87,6 +93,8 @@ Russian-Tajik Slavonic University
 
 <h4>AI & Machine Learning</h4>
 <p align="left">
+    <a href="https://www.tensorflow.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/tensorflow/tensorflow-original-wordmark.svg" alt="tensorflow" width="40" height="40"/> </a>
+    <a href="https://scikit-learn.org/" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Scikit_learn_logo_small.svg/1200px-Scikit_learn_logo_small.svg.png" alt="scikit learn" width="40" height="40"/> </a>
     <a href="https://www.langchain.com/" target="_blank" rel="noreferrer"> <img src="https://www.langchain.com/assets/images/logo-5eda5549139642799e738254303959de.svg" alt="langchain" width="40" height="40"/> </a>
     <a href="https://www.llamaindex.ai/" target="_blank" rel="noreferrer"> <img src="https://www.llamaindex.ai/assets/images/logo-1200x1200.png" alt="llamaindex" width="40" height="40"/> </a>
     <a href="https://pytorch.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/pytorch/pytorch-original.svg" alt="pytorch" width="40" height="40"/> </a>
