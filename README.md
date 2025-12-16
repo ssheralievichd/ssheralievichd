@@ -1,47 +1,44 @@
-## About me  
-Accomplished Full-Stack Software Engineer with over 3 years of hands-on experience delivering scalable, high-performance web applications in dynamic environments. Proficient in modern Python and PHP backend frameworks (FastAPI, Flask, Django, Laravel) and leading frontend technologies (React, Next.js, Vue.js, Nuxt.js). Strong expertise in API design, database optimization, containerization, and CI/CD practices. Proven ability to architect end-to-end solutions that enhance system reliability, performance, and user experience while aligning with business objectives.
+<h1 align="center">Hi 👋, I'm Abdurahmon Sheraliev</h1>
+<h3 align="center">A passionate Full-Stack Software Engineer from Tajikistan</h3>
 
-## Professional Experience  
+<p align="left"> <img src="https://komarev.com/ghpvc/?username=ssheralievichd&label=Profile%20views&color=0e75b6&style=flat" alt="ssheralievichd" /> </p>
 
-**Full-Stack Software Engineer**  
-FinTech Company – Tajikistan  
-October 2025 – Present  
+- 🔭 I’m currently working on **[chronos-gaze](https://github.com/ssheralievichd/chronos-gaze)**
+- 🌱 I’m currently learning **Golang, and advanced microservices architecture.**
+- 👯 I’m looking to collaborate on **Open Source projects related to Python, Go, or DevOps.**
+- 🤝 I’m looking for help with **finding new and exciting projects to contribute to.**
+- 💬 Ask me about **Python, FastAPI, Django, Docker, and anything related to backend development.**
+- 📫 How to reach me **ssheraliev@gmail.com**
+- ⚡ Fun fact **I'm a huge fan of chess and enjoy playing it in my free time.**
 
-- Design and develop scalable RESTful APIs and microservices using FastAPI, Django REST Framework, and Laravel to support evolving business requirements.  
-- Build modern, responsive front-end applications with React, Next.js, Vue.js, and Nuxt.js, focusing on performance, accessibility, and seamless user interactions.  
-- Optimize database performance through schema design, query tuning, and indexing strategies in PostgreSQL and MySQL.  
-- Implement and maintain DevOps practices including Docker containerization, CI/CD pipelines, and infrastructure monitoring on Linux environments.  
-- Collaborate with cross-functional teams to deliver high-quality, maintainable code following agile methodologies and best practices.
+<h3 align="left">Connect with me:</h3>
+<p align="left">
+<a href="https://linkedin.com/in/ssheralievich" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="ssheralievich" height="30" width="40" /></a>
+</p>
 
-**Software Engineer**  
-Alif Bank – Tajikistan  
-August 2022 – October 2024  
+<h3 align="left">Languages and Tools:</h3>
+<p align="left">
+    <a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a>
+    <a href="https://fastapi.tiangolo.com/" target="_blank" rel="noreferrer"> <img src="https://fastapi.tiangolo.com/img/logo-margin/logo-teal.png" alt="fastapi" width="40" height="40"/> </a>
+    <a href="https://www.djangoproject.com/" target="_blank" rel="noreferrer"> <img src="https://cdn.worldvectorlogo.com/logos/django.svg" alt="django" width="40" height="40"/> </a>
+    <a href="https://flask.palletsprojects.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/pocoo_flask/pocoo_flask-icon.svg" alt="flask" width="40" height="40"/> </a>
+    <a href="https://www.postgresql.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg" alt="postgresql" width="40" height="40"/> </a>
+    <a href="https://redis.io" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redis/redis-original-wordmark.svg" alt="redis" width="40" height="40"/> </a>
+    <a href="https://www.docker.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" alt="docker" width="40" height="40"/> </a>
+    <a href="https://www.linux.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="linux" width="40" height="40"/> </a>
+    <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a>
+    <a href="https://www.nginx.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nginx/nginx-original.svg" alt="nginx" width="40" height="40"/> </a>
+    <a href="https://traefik.io/traefik/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/traefik/traefik-original-wordmark.svg" alt="traefik" width="40" height="40"/> </a>
+    <a href="https://go.dev" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/go/go-original.svg" alt="go" width="40" height="40"/> </a>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a>
+    <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="typescript" width="40" height="40"/> </a>
+    <a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/> </a>
+    <a href="https://nextjs.org/" target="_blank" rel="noreferrer"> <img src="https://cdn.worldvectorlogo.com/logos/nextjs-2.svg" alt="nextjs" width="40" height="40"/> </a>
+    <a href="https://vuejs.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original-wordmark.svg" alt="vuejs" width="40" height="40"/> </a>
+    <a href="https://nuxtjs.org/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/nuxtjs/nuxtjs-icon.svg" alt="nuxtjs" width="40" height="40"/> </a>
+</p>
 
-- Designed and implemented robust, high-availability RESTful APIs using FastAPI, Flask, Django REST Framework, and Laravel, supporting mission-critical financial services and internal platforms serving a large user base.  
-- Developed responsive and maintainable front-end applications with React, Next.js, Vue.js, and Nuxt.js, ensuring seamless integration with backend services and exceptional user experience.  
-- Architected efficient database schemas and optimized complex queries in PostgreSQL and MySQL, resulting in substantial improvements in query performance and reduced operational latency.  
-- Drove DevOps initiatives by implementing Docker containerization, configuring CI/CD pipelines, and managing production deployments on Linux environments to achieve faster release cycles and higher system uptime.  
-- Promoted best practices in code quality, including asynchronous programming, type safety, clean architecture, and comprehensive testing across Python and PHP codebases.
-
-**Mandatory National Service**  
-2024 – 2025  
-Completed required military service (concurrently managed with professional responsibilities), further developing strong discipline, teamwork, resilience, and effective time management.
-
-## Education  
-
-**Bachelor of Science in Computer Science**  
-Russian-Tajik Slavonic University (RTSU)  
-2020 – 2024  
-
-## Technical Skills  
-
-**Core Technologies**  
-- **Frontend**: React, Next.js, Vue.js, Nuxt.js, JavaScript (ES6+), TypeScript, HTML5, CSS3  
-- **Backend**: Python (3.11+), FastAPI, Flask, Django/Django REST Framework; PHP, Laravel  
-- **Databases**: PostgreSQL (advanced), MySQL, Redis, SQLModel  
-- **DevOps & Infrastructure**: Docker, Linux Server Administration, Git, CI/CD Pipelines, Nginx, Traefik, Kong API Gateway, Apache APISIX  
-
-**Additional Skills**  
-- Languages: Golang, Ruby  
-- Embedded Systems: MicroPython, C  
-- Practices: Asynchronous Programming, RESTful API Design, Microservices Architecture, Performance Optimization, Agile Methodologies
+<h3 align="left">GitHub Stats:</h3>
+<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=ssheralievichd&show_icons=true&locale=en" alt="ssheralievichd" /></p>
+<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=ssheralievichd&" alt="ssheralievichd" /></p>
+<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=ssheralievichd&show_icons=true&locale=en&layout=compact" alt="ssheralievichd" /></p>
