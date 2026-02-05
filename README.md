@@ -6,6 +6,7 @@
 
 [![Website](https://img.shields.io/badge/Website-sheralievich.baselinux.net-blue?style=flat-square)](https://sheralievich.baselinux.net)
 [![Email](https://img.shields.io/badge/Email-ssheralievd@gmail.com-red?style=flat-square)](mailto:ssheralievd@gmail.com)
+[![Telegram](https://img.shields.io/badge/Email-ssheralievd@gmail.com-red?style=flat-square)](https://t.me/ssheralievichd)
 [![Profile Views](https://komarev.com/ghpvc/?username=ssheralievichd&label=Profile%20Views&color=0e75b6&style=flat-square)](https://github.com/ssheralievichd)
 
 </div>
