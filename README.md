@@ -1,6 +1,6 @@
 <div align="center">
 
-# Abdurahmon Sheraliev
+# Abdurahmon Sheralievich
 
 **Full-Stack Software Engineer | Python | PHP | Flutter | DevOps**
 
