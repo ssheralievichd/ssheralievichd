@@ -88,12 +88,11 @@ Results-driven Full-Stack Engineer with 3+ years of experience architecting and 
 - Optimize PostgreSQL query performance, achieving 50%+ reduction in response times on high-traffic endpoints
 - Lead containerization initiatives with Docker and implement automated CI/CD pipelines for rapid deployment cycles
 
-**Full-Stack Software Engineer** | Alif Bank, Tajikistan
+**Python Software Engineer** | Alif Bank, Tajikistan
 *August 2022 - October 2024*
 
-- Developed and maintained high-availability RESTful APIs serving 100K+ active users in financial services
-- Built maintainable frontend applications using React, Next.js, Vue.js, reducing technical debt by 40%
-- Designed complex database schemas and optimized queries, decreasing average query latency by 45%
+- Developed and maintained high-availability RESTful APIs
+- Designed complex database schemas and optimized queries, decrng query latency
 - Spearheaded Docker adoption and production deployment automation, reducing deployment time by 60%
 
 **National Service** | Tajikistan
@@ -152,26 +151,6 @@ Russian-Tajik Slavonic University | 2020 - 2024
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white)
 ![LangChain](https://img.shields.io/badge/LangChain-121212?style=flat-square)
 
-## GitHub Statistics
-
-<div align="center">
-
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=ssheralievichd&show_icons=true&theme=dark&hide_border=true&include_all_commits=true&count_private=true)
-
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=ssheralievichd&layout=compact&theme=dark&hide_border=true&langs_count=8)
-
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=ssheralievichd&theme=dark&hide_border=true)
-
-</div>
-
-## Open Source Contributions
-
-I actively contribute to open-source projects and maintain several production-ready boilerplates and tools. Currently exploring:
-
-- Advanced microservices patterns and distributed systems
-- Event-driven architectures and real-time data processing
-- Cloud-native application development
-- AI/ML integration in production systems
 
 ## Contact
 
