@@ -5,7 +5,7 @@
 **Full-Stack Software Engineer | Python | PHP | Flutter | DevOps**
 
 [![Website](https://img.shields.io/badge/Website-sheralievich.baselinux.net-blue?style=flat-square)](https://sheralievich.baselinux.net)
-[![Email](https://img.shields.io/badge/Email-ssheraliev@gmail.com-red?style=flat-square)](mailto:ssheraliev@gmail.com)
+[![Email](https://img.shields.io/badge/Email-ssheralievd@gmail.com-red?style=flat-square)](mailto:ssheralievd@gmail.com)
 [![Profile Views](https://komarev.com/ghpvc/?username=ssheralievichd&label=Profile%20Views&color=0e75b6&style=flat-square)](https://github.com/ssheralievichd)
 
 </div>
