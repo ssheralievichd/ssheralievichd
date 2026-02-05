@@ -5,7 +5,7 @@
 **Full-Stack Software Engineer | Python | PHP | Flutter | DevOps**
 
 [![Website](https://img.shields.io/badge/Website-sheralievich.baselinux.net-blue?style=flat-square)](https://ssheralievichd.baselinux.net)
-[![Email](https://img.shields.io/badge/Email-ssheralievd@gmail.com-red?style=flat-square)](mailto:ssheralievd@gmail.com)
+[![Email](https://img.shields.io/badge/Email-ssheralievichd@gmail.com-red?style=flat-square)](mailto:ssheralievichd@gmail.com)
 [![Telegram](https://img.shields.io/badge/Telegram-ssheralievichd-blue?style=flat-square)](https://t.me/ssheralievichd)
 [![Profile Views](https://komarev.com/ghpvc/?username=ssheralievichd&label=Profile%20Views&color=0e75b6&style=flat-square)](https://github.com/ssheralievichd)
 
@@ -107,7 +107,7 @@ Looking for collaboration opportunities on innovative projects or full-time posi
 - DevOps and cloud infrastructure roles
 - Mobile development with Flutter
 
-Reach out via [email](mailto:ssheralievd@gmail.com) or visit my [website](https://ssheralievichd.baselinux.net).
+Reach out via [email](mailto:ssheralievichd@gmail.com) or visit my [website](https://ssheralievichd.baselinux.net).
 
 ---
 
