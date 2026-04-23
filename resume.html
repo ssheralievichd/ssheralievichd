@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abdurahmon Sheralievich — Resume</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --ink:    #0f1117;
+  --sub:    #4a5568;
+  --muted:  #718096;
+  --border: #e2e8f0;
+  --accent: #3b5bdb;
+  --bg:     #ffffff;
+  --page-w: 860px;
+}
+
+html { background: #f0f2f5; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Print button bar ── */
+.print-bar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: #1a1a2e;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 10px 32px;
+  gap: 16px;
+}
+.print-bar-left { display: flex; align-items: center; gap: 16px; }
+.print-bar a {
+  font-size: 13px; color: #8892a4; text-decoration: none;
+  display: flex; align-items: center; gap: 6px;
+  transition: color 0.15s;
+}
+.print-bar a:hover { color: #fff; }
+.print-bar-title { font-size: 13px; font-weight: 500; color: #c8d0e0; }
+
+.btn-print {
+  display: inline-flex; align-items: center; gap: 7px;
+  background: #3b5bdb; color: #fff;
+  border: none; cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px; font-weight: 600;
+  padding: 8px 18px; border-radius: 8px;
+  transition: opacity 0.15s;
+}
+.btn-print:hover { opacity: 0.85; }
+.btn-print svg { width: 14px; height: 14px; }
+
+/* ── Page wrapper ── */
+.page-wrap {
+  max-width: var(--page-w);
+  margin: 72px auto 48px;
+  background: var(--bg);
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 8px 32px rgba(0,0,0,0.06);
+  overflow: hidden;
+}
+
+/* ── Resume body ── */
+.resume {
+  padding: 52px 56px;
+}
+
+/* ── Header ── */
+.r-header {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  gap: 24px; margin-bottom: 36px;
+  padding-bottom: 28px;
+  border-bottom: 1.5px solid var(--border);
+}
+.r-name {
+  font-size: 28px; font-weight: 700; letter-spacing: -0.03em;
+  color: var(--ink); line-height: 1.1; margin-bottom: 5px;
+}
+.r-title {
+  font-size: 14px; font-weight: 500; color: var(--accent);
+  letter-spacing: 0.01em;
+}
+.r-contact {
+  display: flex; flex-direction: column; align-items: flex-end; gap: 4px;
+  font-size: 12.5px; color: var(--sub);
+}
+.r-contact a { color: var(--sub); text-decoration: none; }
+.r-contact a:hover { color: var(--accent); }
+.r-contact span { display: flex; align-items: center; gap: 5px; }
+
+/* ── Sections ── */
+.r-section { margin-bottom: 30px; }
+.r-section:last-child { margin-bottom: 0; }
+
+.r-sec-title {
+  font-size: 10px; font-weight: 700; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--accent);
+  margin-bottom: 14px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Summary */
+.r-summary {
+  font-size: 13.5px; color: var(--sub); line-height: 1.75;
+}
+
+/* Experience */
+.r-exp { margin-bottom: 20px; }
+.r-exp:last-child { margin-bottom: 0; }
+.r-exp-head {
+  display: flex; justify-content: space-between; align-items: baseline;
+  gap: 12px; margin-bottom: 2px; flex-wrap: wrap;
+}
+.r-exp-role { font-size: 14px; font-weight: 600; color: var(--ink); letter-spacing: -0.01em; }
+.r-exp-date { font-size: 12px; color: var(--muted); white-space: nowrap; }
+.r-exp-org { font-size: 12.5px; color: var(--sub); margin-bottom: 8px; }
+.r-exp-ul { list-style: none; }
+.r-exp-ul li {
+  font-size: 13px; color: var(--sub); line-height: 1.65;
+  padding-left: 14px; position: relative; margin-bottom: 3px;
+}
+.r-exp-ul li::before {
+  content: '•'; position: absolute; left: 0;
+  color: var(--accent); font-size: 10px; top: 2px;
+}
+
+/* Skills */
+.r-skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.r-skill-group {}
+.r-skill-label { font-size: 11px; font-weight: 600; color: var(--ink); margin-bottom: 5px; }
+.r-skill-tags { display: flex; flex-wrap: wrap; gap: 4px; }
+.r-skill-tag {
+  font-size: 11px; color: var(--sub);
+  background: #f7fafc;
+  border: 1px solid var(--border);
+  padding: 2px 8px; border-radius: 4px;
+}
+
+/* Education */
+.r-edu-head {
+  display: flex; justify-content: space-between; align-items: baseline;
+  gap: 12px; flex-wrap: wrap; margin-bottom: 2px;
+}
+.r-edu-deg { font-size: 14px; font-weight: 600; color: var(--ink); letter-spacing: -0.01em; }
+.r-edu-date { font-size: 12px; color: var(--muted); }
+.r-edu-school { font-size: 12.5px; color: var(--sub); }
+
+/* Projects */
+.r-proj { margin-bottom: 16px; }
+.r-proj:last-child { margin-bottom: 0; }
+.r-proj-head {
+  display: flex; justify-content: space-between; align-items: baseline;
+  gap: 12px; flex-wrap: wrap; margin-bottom: 3px;
+}
+.r-proj-name { font-size: 13.5px; font-weight: 600; color: var(--ink); }
+.r-proj-stack { font-size: 11px; color: var(--accent); }
+.r-proj-desc { font-size: 13px; color: var(--sub); line-height: 1.65; }
+
+/* ── Print styles ── */
+@media print {
+  html { background: #fff; }
+  .print-bar { display: none !important; }
+  .page-wrap {
+    margin: 0; max-width: 100%;
+    border-radius: 0; box-shadow: none;
+  }
+  .resume { padding: 32px 40px; }
+  body { font-size: 12.5px; }
+  .r-name { font-size: 24px; }
+  a { color: inherit !important; text-decoration: none !important; }
+
+  @page {
+    margin: 0;
+    size: A4;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="print-bar no-print">
+  <div class="print-bar-left">
+    <a href="/">
+      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+      Back to portfolio
+    </a>
+    <span class="print-bar-title">Abdurahmon Sheralievich — Resume</span>
+  </div>
+  <button class="btn-print" onclick="window.print()">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+    Print / Save as PDF
+  </button>
+</div>
+
+<div class="page-wrap">
+<div class="resume">
+
+  <!-- Header -->
+  <div class="r-header">
+    <div>
+      <div class="r-name">Abdurahmon Sheralievich</div>
+      <div class="r-title">Full-Stack Software Engineer</div>
+    </div>
+    <div class="r-contact">
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        <a href="mailto:ssheralievichd@gmail.com">ssheralievichd@gmail.com</a>
+      </span>
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+        <a href="https://t.me/ssheralievichd" target="_blank">t.me/ssheralievichd</a>
+      </span>
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+        <a href="https://ssheralievichd.baselinux.net" target="_blank">ssheralievichd.baselinux.net</a>
+      </span>
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+        Tajikistan · Remote
+      </span>
+    </div>
+  </div>
+
+  <!-- Summary -->
+  <div class="r-section">
+    <div class="r-sec-title">Summary</div>
+    <p class="r-summary">Results-driven Full-Stack Engineer with 3+ years of experience architecting and deploying high-performance, scalable applications across backend, frontend, and mobile platforms. Specialized in microservices, real-time systems, and cloud-native solutions. Proven track record of improving system performance — 50%+ query optimization and 60% reduction in deployment time at Alif Bank. Open to remote opportunities worldwide.</p>
+  </div>
+
+  <!-- Experience -->
+  <div class="r-section">
+    <div class="r-sec-title">Experience</div>
+
+    <div class="r-exp">
+      <div class="r-exp-head">
+        <span class="r-exp-role">Full-Stack Software Engineer</span>
+        <span class="r-exp-date">Oct 2025 — Present</span>
+      </div>
+      <div class="r-exp-org">Current Company · Tajikistan</div>
+      <ul class="r-exp-ul">
+        <li>Architect scalable microservices using FastAPI, Django REST Framework, and Laravel for business-critical applications</li>
+        <li>Engineer responsive SPAs with Vue.js, Nuxt.js, React, and Next.js, improving user engagement metrics</li>
+        <li>Optimize PostgreSQL query performance, achieving 50%+ reduction in response times on high-traffic endpoints</li>
+        <li>Lead Docker containerization and implement automated CI/CD pipelines, accelerating release cycles</li>
+      </ul>
+    </div>
+
+    <div class="r-exp">
+      <div class="r-exp-head">
+        <span class="r-exp-role">Python Software Engineer</span>
+        <span class="r-exp-date">Aug 2022 — Oct 2024</span>
+      </div>
+      <div class="r-exp-org">Alif Bank · Tajikistan</div>
+      <ul class="r-exp-ul">
+        <li>Developed and maintained high-availability RESTful APIs serving production-scale financial traffic</li>
+        <li>Designed complex database schemas and optimized queries, significantly decreasing query latency</li>
+        <li>Spearheaded Docker adoption and production deployment automation, reducing deployment time by 60%</li>
+        <li>Collaborated with cross-functional teams on fintech product features and system reliability improvements</li>
+      </ul>
+    </div>
+
+    <div class="r-exp">
+      <div class="r-exp-head">
+        <span class="r-exp-role">National Service</span>
+        <span class="r-exp-date">2024 — 2025</span>
+      </div>
+      <div class="r-exp-org">Republic of Tajikistan</div>
+      <ul class="r-exp-ul">
+        <li>Completed mandatory military service while maintaining technical skills</li>
+        <li>Contributed to open-source projects during off-duty periods</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Skills -->
+  <div class="r-section">
+    <div class="r-sec-title">Technical Skills</div>
+    <div class="r-skills-grid">
+      <div class="r-skill-group">
+        <div class="r-skill-label">Languages</div>
+        <div class="r-skill-tags">
+          <span class="r-skill-tag">Python</span>
+          <span class="r-skill-tag">PHP</span>
+          <span class="r-skill-tag">TypeScript</span>
+          <span class="r-skill-tag">JavaScript</span>
+          <span class="r-skill-tag">Dart</span>
+          <span class="r-skill-tag">Go</span>
+          <span class="r-skill-tag">Lua</span>
+        </div>
+      </div>
+      <div class="r-skill-group">
+        <div class="r-skill-label">Backend</div>
+        <div class="r-skill-tags">
+          <span class="r-skill-tag">FastAPI</span>
+          <span class="r-skill-tag">Django</span>
+          <span class="r-skill-tag">Flask</span>
+          <span class="r-skill-tag">Laravel</span>
+          <span class="r-skill-tag">Celery</span>
+        </div>
+      </div>
+      <div class="r-skill-group">
+        <div class="r-skill-label">Frontend & Mobile</div>
+        <div class="r-skill-tags">
+          <span class="r-skill-tag">Vue.js</span>
+          <span class="r-skill-tag">Nuxt.js</span>
+          <span class="r-skill-tag">React</span>
+          <span class="r-skill-tag">Next.js</span>
+          <span class="r-skill-tag">Flutter</span>
+        </div>
+      </div>
+      <div class="r-skill-group">
+        <div class="r-skill-label">Databases</div>
+        <div class="r-skill-tags">
+          <span class="r-skill-tag">PostgreSQL</span>
+          <span class="r-skill-tag">MySQL</span>
+          <span class="r-skill-tag">Redis</span>
+          <span class="r-skill-tag">MongoDB</span>
+          <span class="r-skill-tag">Neo4j</span>
+        </div>
+      </div>
+      <div class="r-skill-group">
+        <div class="r-skill-label">DevOps & Infra</div>
+        <div class="r-skill-tags">
+          <span class="r-skill-tag">Docker</span>
+          <span class="r-skill-tag">Kubernetes</span>
+          <span class="r-skill-tag">NGINX</span>
+          <span class="r-skill-tag">GitHub Actions</span>
+          <span class="r-skill-tag">Linux</span>
+        </div>
+      </div>
+      <div class="r-skill-group">
+        <div class="r-skill-label">AI / ML</div>
+        <div class="r-skill-tags">
+          <span class="r-skill-tag">TensorFlow</span>
+          <span class="r-skill-tag">PyTorch</span>
+          <span class="r-skill-tag">scikit-learn</span>
+          <span class="r-skill-tag">LangChain</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Projects -->
+  <div class="r-section">
+    <div class="r-sec-title">Projects</div>
+
+    <div class="r-proj">
+      <div class="r-proj-head">
+        <span class="r-proj-name">High-Availability API Platform</span>
+        <span class="r-proj-stack">FastAPI · PostgreSQL · Redis · Docker</span>
+      </div>
+      <p class="r-proj-desc">Designed and built a production-grade REST API platform serving financial transactions at scale, with Redis caching layer and horizontal scaling via Kubernetes. Achieved 99.9% uptime over 12 months.</p>
+    </div>
+
+    <div class="r-proj">
+      <div class="r-proj-head">
+        <span class="r-proj-name">Microservices Migration</span>
+        <span class="r-proj-stack">Django · Celery · RabbitMQ · Docker Compose</span>
+      </div>
+      <p class="r-proj-desc">Led migration of a monolithic Django application to a microservices architecture, reducing inter-service latency and enabling independent deployments. Cut deployment time by 60%.</p>
+    </div>
+
+    <div class="r-proj">
+      <div class="r-proj-head">
+        <span class="r-proj-name">Cross-Platform Mobile App</span>
+        <span class="r-proj-stack">Flutter · Dart · FastAPI · WebSockets</span>
+      </div>
+      <p class="r-proj-desc">Built a cross-platform mobile application using Flutter with Feature-Sliced Design architecture, integrated with a real-time WebSocket backend for live data synchronization.</p>
+    </div>
+  </div>
+
+  <!-- Education -->
+  <div class="r-section">
+    <div class="r-sec-title">Education</div>
+    <div class="r-edu-head">
+      <span class="r-edu-deg">Bachelor of Science in Computer Science</span>
+      <span class="r-edu-date">2020 — 2024</span>
+    </div>
+    <div class="r-edu-school">Russian-Tajik Slavonic University · Dushanbe, Tajikistan</div>
+  </div>
+
+  <!-- Languages -->
+  <div class="r-section">
+    <div class="r-sec-title">Languages</div>
+    <div class="r-skills-grid" style="grid-template-columns: repeat(3,auto); gap: 8px 32px; display: flex; flex-wrap: wrap;">
+      <span style="font-size:13px; color: var(--sub);"><strong style="color:var(--ink)">Tajik</strong> — Native</span>
+      <span style="font-size:13px; color: var(--sub);"><strong style="color:var(--ink)">Russian</strong> — Fluent</span>
+      <span style="font-size:13px; color: var(--sub);"><strong style="color:var(--ink)">English</strong> — Professional</span>
+    </div>
+  </div>
+
+</div>
+</div>
+
+</body>
+</html>
