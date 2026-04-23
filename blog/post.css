@@ -3,7 +3,7 @@
 html[data-theme="dark"] { --bg: oklch(0.07 0.005 260); --fg: oklch(0.96 0.004 260); --muted: oklch(0.55 0.005 260); --border: oklch(1 0 0 / 8%); --code-bg: oklch(0.12 0.008 260); --primary: oklch(0.68 0.2 262); --tag-bg: oklch(0.12 0.008 260); --nav-bg: oklch(0.07 0.005 260 / 90%); --menu-bg: oklch(0.09 0.005 260); }
 body { background: var(--bg); color: var(--fg); font-family: 'Inter', ui-sans-serif, sans-serif; font-size: 16px; line-height: 1.7; min-height: 100vh; }
 
-.bp-nav { position: sticky; top: 0; z-index: 20; background: var(--nav-bg); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0 32px; height: 56px; display: flex; align-items: center; justify-content: space-between; }
+.bp-nav { position: sticky; top: 0; z-index: 20; background: var(--menu-bg); border-bottom: 1px solid var(--border); padding: 0 32px; height: 56px; display: flex; align-items: center; justify-content: space-between; }
 .bp-nav-left { display: flex; align-items: center; gap: 24px; }
 .bp-logo { font-size: 15px; font-weight: 700; color: var(--fg); text-decoration: none; letter-spacing: -0.01em; }
 .bp-nav-links { display: flex; align-items: center; gap: 24px; list-style: none; }
