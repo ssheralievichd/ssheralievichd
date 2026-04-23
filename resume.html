@@ -135,6 +135,14 @@ body {
   @page { margin: 0; size: A4; }
 }
 
+.lang-btn-r {
+  font-size: 12px; font-weight: 700; letter-spacing: 0.05em;
+  background: #2a2a2a; color: #ccc; border: 1px solid #444;
+  padding: 4px 10px; border-radius: 4px; cursor: pointer;
+  font-family: Arial, sans-serif; transition: background 0.15s;
+}
+.lang-btn-r:hover { background: #3a3a3a; color: #fff; }
+
 /* ── Mobile ── */
 @media (max-width: 680px) {
   .print-bar { padding: 8px 16px; }
@@ -153,6 +161,7 @@ body {
       <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
       Back to portfolio
     </a>
+    <button id="lang-btn" class="lang-btn-r">RU</button>
     <span class="print-bar-title">Abdurahmon Sheralievich — Resume</span>
   </div>
   <button class="btn-print" onclick="window.print()">
@@ -196,129 +205,216 @@ body {
 
   <!-- Summary -->
   <div class="r-section">
-    <div class="r-sec-title">Summary</div>
-    <p class="r-summary">Results-driven Full-Stack Engineer with 4+ years of experience architecting and deploying high-performance, scalable applications across backend, frontend, and mobile platforms. Specialized in microservices, real-time systems, and cloud-native solutions. Proven track record of improving system performance — 50%+ query optimization and 60% reduction in deployment time at Alif Bank. Open to remote opportunities worldwide.</p>
+    <div class="r-sec-title" data-i18n="r_sec_summary">Summary</div>
+    <p class="r-summary" data-i18n="r_summary">Results-driven Full-Stack Engineer with 4+ years of experience architecting and deploying high-performance, scalable applications across backend, frontend, and mobile platforms. Specialized in microservices, real-time systems, and cloud-native solutions. Proven track record of improving system performance — 50%+ query optimization and 60% reduction in deployment time at Alif Bank. Open to remote opportunities worldwide.</p>
   </div>
 
   <!-- Experience -->
   <div class="r-section">
-    <div class="r-sec-title">Experience</div>
+    <div class="r-sec-title" data-i18n="r_sec_exp">Experience</div>
 
     <div class="r-exp">
       <div class="r-exp-head">
-        <span class="r-exp-role">Full-Stack Software Engineer</span>
+        <span class="r-exp-role" data-i18n="r_role1">Full-Stack Software Engineer</span>
         <span class="r-exp-date">Oct 2025 — Present</span>
       </div>
-      <div class="r-exp-org">Confidential · Tajikistan</div>
+      <div class="r-exp-org" data-i18n="r_org1">Confidential · Tajikistan</div>
       <ul class="r-exp-ul">
-        <li>Architect scalable microservices using FastAPI, Django REST Framework, and Laravel for business-critical applications</li>
-        <li>Engineer responsive SPAs with Vue.js, Nuxt.js, React, and Next.js, improving user engagement metrics</li>
-        <li>Optimize PostgreSQL query performance, achieving 50%+ reduction in response times on high-traffic endpoints</li>
-        <li>Lead Docker containerization and implement automated CI/CD pipelines, accelerating release cycles</li>
+        <li data-i18n="r_b1_1">Architect scalable microservices using FastAPI, Django REST Framework, and Laravel for business-critical applications</li>
+        <li data-i18n="r_b1_2">Engineer responsive SPAs with Vue.js, Nuxt.js, React, and Next.js, improving user engagement metrics</li>
+        <li data-i18n="r_b1_3">Optimize PostgreSQL query performance, achieving 50%+ reduction in response times on high-traffic endpoints</li>
+        <li data-i18n="r_b1_4">Lead Docker containerization and implement automated CI/CD pipelines, accelerating release cycles</li>
       </ul>
     </div>
 
     <div class="r-exp">
       <div class="r-exp-head">
-        <span class="r-exp-role">Python Developer</span>
+        <span class="r-exp-role" data-i18n="r_role2">Python Developer</span>
         <span class="r-exp-date">Oct 2024 — Jan 2025</span>
       </div>
-      <div class="r-exp-org">Formika · Tajikistan</div>
+      <div class="r-exp-org" data-i18n="r_org2">Formika · Tajikistan</div>
       <ul class="r-exp-ul">
-        <li>Developed backend services and REST APIs using Python and FastAPI</li>
-        <li>Integrated third-party services and maintained existing codebase</li>
-        <li>Participated in code reviews and improved test coverage</li>
+        <li data-i18n="r_b2_1">Developed backend services and REST APIs using Python and FastAPI</li>
+        <li data-i18n="r_b2_2">Integrated third-party services and maintained existing codebase</li>
+        <li data-i18n="r_b2_3">Participated in code reviews and improved test coverage</li>
       </ul>
     </div>
 
     <div class="r-exp">
       <div class="r-exp-head">
-        <span class="r-exp-role">Python Software Engineer</span>
+        <span class="r-exp-role" data-i18n="r_role3">Python Software Engineer</span>
         <span class="r-exp-date">Aug 2022 — Oct 2024</span>
       </div>
-      <div class="r-exp-org">Alif Bank · Tajikistan</div>
+      <div class="r-exp-org" data-i18n="r_org3">Alif Bank · Tajikistan</div>
       <ul class="r-exp-ul">
-        <li>Developed and maintained high-availability RESTful APIs serving production-scale financial traffic</li>
-        <li>Designed complex database schemas and optimized queries, significantly decreasing query latency</li>
-        <li>Spearheaded Docker adoption and production deployment automation, reducing deployment time by 60%</li>
-        <li>Collaborated with cross-functional teams on fintech product features and system reliability improvements</li>
+        <li data-i18n="r_b3_1">Developed and maintained high-availability RESTful APIs serving production-scale financial traffic</li>
+        <li data-i18n="r_b3_2">Designed complex database schemas and optimized queries, significantly decreasing query latency</li>
+        <li data-i18n="r_b3_3">Spearheaded Docker adoption and production deployment automation, reducing deployment time by 60%</li>
+        <li data-i18n="r_b3_4">Collaborated with cross-functional teams on fintech product features and system reliability improvements</li>
       </ul>
     </div>
 
     <div class="r-exp">
       <div class="r-exp-head">
-        <span class="r-exp-role">Freelance Python Developer</span>
+        <span class="r-exp-role" data-i18n="r_role4">Freelance Python Developer</span>
         <span class="r-exp-date">2021 — 2024</span>
       </div>
-      <div class="r-exp-org">Self-employed · Remote</div>
+      <div class="r-exp-org" data-i18n="r_org4">Self-employed · Remote</div>
       <ul class="r-exp-ul">
-        <li>Built web applications and REST APIs for clients using Python, Django, and Flask</li>
-        <li>Developed automation scripts and data processing tools for small businesses</li>
-        <li>Managed full project lifecycle — requirements, development, deployment, and support</li>
+        <li data-i18n="r_b4_1">Built web applications and REST APIs for clients using Python, Django, and Flask</li>
+        <li data-i18n="r_b4_2">Developed automation scripts and data processing tools for small businesses</li>
+        <li data-i18n="r_b4_3">Managed full project lifecycle — requirements, development, deployment, and support</li>
       </ul>
     </div>
 
     <div class="r-exp">
       <div class="r-exp-head">
-        <span class="r-exp-role">National Service</span>
+        <span class="r-exp-role" data-i18n="r_role5">National Service</span>
         <span class="r-exp-date">2024 — 2025</span>
       </div>
-      <div class="r-exp-org">Republic of Tajikistan</div>
+      <div class="r-exp-org" data-i18n="r_org5">Republic of Tajikistan</div>
     </div>
   </div>
 
   <!-- Skills -->
   <div class="r-section">
-    <div class="r-sec-title">Technical Skills</div>
+    <div class="r-sec-title" data-i18n="r_sec_skills">Technical Skills</div>
     <div class="r-skills-grid">
       <div class="r-skill-group">
-        <div class="r-skill-label">Languages</div>
-        <div class="r-skill-val">Python, PHP, TypeScript, JavaScript, Dart, Go, Lua</div>
+        <div class="r-skill-label" data-i18n="r_sk_lang">Languages</div>
+        <div class="r-skill-val" data-i18n="r_sk_lang_v">Python, PHP, TypeScript, JavaScript, Dart, Go, Lua</div>
       </div>
       <div class="r-skill-group">
-        <div class="r-skill-label">Backend</div>
-        <div class="r-skill-val">FastAPI, Django, Flask, Laravel, Celery</div>
+        <div class="r-skill-label" data-i18n="r_sk_back">Backend</div>
+        <div class="r-skill-val" data-i18n="r_sk_back_v">FastAPI, Django, Flask, Laravel, Celery</div>
       </div>
       <div class="r-skill-group">
-        <div class="r-skill-label">Frontend &amp; Mobile</div>
-        <div class="r-skill-val">Vue.js, Nuxt.js, React, Next.js, Flutter</div>
+        <div class="r-skill-label" data-i18n="r_sk_front">Frontend &amp; Mobile</div>
+        <div class="r-skill-val" data-i18n="r_sk_front_v">Vue.js, Nuxt.js, React, Next.js, Flutter</div>
       </div>
       <div class="r-skill-group">
-        <div class="r-skill-label">Databases</div>
-        <div class="r-skill-val">PostgreSQL, MySQL, Redis, MongoDB, Neo4j</div>
+        <div class="r-skill-label" data-i18n="r_sk_db">Databases</div>
+        <div class="r-skill-val" data-i18n="r_sk_db_v">PostgreSQL, MySQL, Redis, MongoDB, Neo4j</div>
       </div>
       <div class="r-skill-group">
-        <div class="r-skill-label">DevOps &amp; Infra</div>
-        <div class="r-skill-val">Docker, Kubernetes, NGINX, GitHub Actions, Linux</div>
+        <div class="r-skill-label" data-i18n="r_sk_devops">DevOps &amp; Infra</div>
+        <div class="r-skill-val" data-i18n="r_sk_devops_v">Docker, Kubernetes, NGINX, GitHub Actions, Linux</div>
       </div>
       <div class="r-skill-group">
-        <div class="r-skill-label">AI / ML</div>
-        <div class="r-skill-val">TensorFlow, PyTorch, scikit-learn, LangChain</div>
+        <div class="r-skill-label" data-i18n="r_sk_ai">AI / ML</div>
+        <div class="r-skill-val" data-i18n="r_sk_ai_v">TensorFlow, PyTorch, scikit-learn, LangChain</div>
       </div>
     </div>
   </div>
 
   <!-- Education -->
   <div class="r-section">
-    <div class="r-sec-title">Education</div>
+    <div class="r-sec-title" data-i18n="r_edu_sec">Education</div>
     <div class="r-edu-head">
-      <span class="r-edu-deg">Bachelor of Science in Computer Science</span>
+      <span class="r-edu-deg" data-i18n="r_edu_deg">Bachelor of Science in Computer Science</span>
       <span class="r-edu-date">2020 — 2024</span>
     </div>
-    <div class="r-edu-school">Russian-Tajik Slavonic University · Dushanbe, Tajikistan</div>
+    <div class="r-edu-school" data-i18n="r_edu_sch">Russian-Tajik Slavonic University · Dushanbe, Tajikistan</div>
   </div>
 
   <!-- Languages -->
   <div class="r-section">
-    <div class="r-sec-title">Languages</div>
+    <div class="r-sec-title" data-i18n="r_lang_sec">Languages</div>
     <div class="r-lang-row">
-      <span class="r-lang-item"><strong>Tajik</strong> — Native</span>
-      <span class="r-lang-item"><strong>Russian</strong> — Fluent</span>
-      <span class="r-lang-item"><strong>English</strong> — Professional</span>
+      <span class="r-lang-item"><strong data-i18n="r_lang1">Tajik</strong> — <span data-i18n="r_lang1_lv">Native</span></span>
+      <span class="r-lang-item"><strong data-i18n="r_lang2">Russian</strong> — <span data-i18n="r_lang2_lv">Fluent</span></span>
+      <span class="r-lang-item"><strong data-i18n="r_lang3">English</strong> — <span data-i18n="r_lang3_lv">Professional</span></span>
     </div>
   </div>
 
 </div>
 
+<script>
+const rT = {
+  en: {
+    r_summary: 'Results-driven Full-Stack Engineer with 4+ years of experience architecting and deploying high-performance, scalable applications across backend, frontend, and mobile platforms. Specialized in microservices, real-time systems, and cloud-native solutions. Proven track record of improving system performance — 50%+ query optimization and 60% reduction in deployment time at Alif Bank. Open to remote opportunities worldwide.',
+    r_sec_summary:'Summary', r_sec_exp:'Experience', r_sec_skills:'Technical Skills', r_sec_edu:'Education', r_sec_lang:'Languages',
+    r_role1:'Full-Stack Software Engineer', r_org1:'Confidential · Tajikistan',
+    r_b1_1:'Architect scalable microservices using FastAPI, Django REST Framework, and Laravel for business-critical applications',
+    r_b1_2:'Engineer responsive SPAs with Vue.js, Nuxt.js, React, and Next.js, improving user engagement metrics',
+    r_b1_3:'Optimize PostgreSQL query performance, achieving 50%+ reduction in response times on high-traffic endpoints',
+    r_b1_4:'Lead Docker containerization and implement automated CI/CD pipelines, accelerating release cycles',
+    r_role2:'Python Developer', r_org2:'Formika · Tajikistan',
+    r_b2_1:'Developed backend services and REST APIs using Python and FastAPI',
+    r_b2_2:'Integrated third-party services and maintained existing codebase',
+    r_b2_3:'Participated in code reviews and improved test coverage',
+    r_role3:'Python Software Engineer', r_org3:'Alif Bank · Tajikistan',
+    r_b3_1:'Developed and maintained high-availability RESTful APIs serving production-scale financial traffic',
+    r_b3_2:'Designed complex database schemas and optimized queries, significantly decreasing query latency',
+    r_b3_3:'Spearheaded Docker adoption and production deployment automation, reducing deployment time by 60%',
+    r_b3_4:'Collaborated with cross-functional teams on fintech product features and system reliability improvements',
+    r_role4:'Freelance Python Developer', r_org4:'Self-employed · Remote',
+    r_b4_1:'Built web applications and REST APIs for clients using Python, Django, and Flask',
+    r_b4_2:'Developed automation scripts and data processing tools for small businesses',
+    r_b4_3:'Managed full project lifecycle — requirements, development, deployment, and support',
+    r_role5:'National Service', r_org5:'Republic of Tajikistan',
+    r_sk_lang:'Languages', r_sk_back:'Backend', r_sk_front:'Frontend & Mobile', r_sk_db:'Databases', r_sk_devops:'DevOps & Infra', r_sk_ai:'AI / ML',
+    r_sk_lang_v:'Python, PHP, TypeScript, JavaScript, Dart, Go, Lua',
+    r_sk_back_v:'FastAPI, Django, Flask, Laravel, Celery',
+    r_sk_front_v:'Vue.js, Nuxt.js, React, Next.js, Flutter',
+    r_sk_db_v:'PostgreSQL, MySQL, Redis, MongoDB, Neo4j',
+    r_sk_devops_v:'Docker, Kubernetes, NGINX, GitHub Actions, Linux',
+    r_sk_ai_v:'TensorFlow, PyTorch, scikit-learn, LangChain',
+    r_edu_sec:'Education', r_edu_deg:'Bachelor of Science in Computer Science', r_edu_sch:'Russian-Tajik Slavonic University · Dushanbe, Tajikistan',
+    r_lang_sec:'Languages',
+    r_lang1:'Tajik', r_lang1_lv:'Native', r_lang2:'Russian', r_lang2_lv:'Fluent', r_lang3:'English', r_lang3_lv:'Professional',
+  },
+  ru: {
+    r_summary: 'Full-Stack инженер с 4+ годами опыта создания высокопроизводительных масштабируемых приложений на бэкенде, фронтенде и мобильных платформах. Специализируюсь на микросервисах, системах реального времени и облачных решениях. Оптимизация запросов 50%+ и сокращение времени деплоя на 60% в Alif Bank. Открыт к удалённой работе по всему миру.',
+    r_sec_summary:'Резюме', r_sec_exp:'Опыт', r_sec_skills:'Технические навыки', r_sec_edu:'Образование', r_sec_lang:'Языки',
+    r_role1:'Full-Stack инженер', r_org1:'Конфиденциально · Таджикистан',
+    r_b1_1:'Проектирую масштабируемые микросервисы на FastAPI, Django REST Framework и Laravel',
+    r_b1_2:'Разрабатываю адаптивные SPA на Vue.js, Nuxt.js, React и Next.js',
+    r_b1_3:'Оптимизирую запросы PostgreSQL — снижение времени отклика на 50%+',
+    r_b1_4:'Руковожу контейнеризацией Docker и автоматизацией CI/CD',
+    r_role2:'Python разработчик', r_org2:'Formika · Таджикистан',
+    r_b2_1:'Разрабатывал бэкенд-сервисы и REST API на Python и FastAPI',
+    r_b2_2:'Интегрировал сторонние сервисы и поддерживал существующий код',
+    r_b2_3:'Участвовал в code review и повышал покрытие тестами',
+    r_role3:'Python инженер', r_org3:'Alif Bank · Таджикистан',
+    r_b3_1:'Создавал и поддерживал высокодоступные RESTful API в продакшне финансового сектора',
+    r_b3_2:'Проектировал схемы БД и оптимизировал запросы, снижая задержки',
+    r_b3_3:'Внедрил Docker, сократив время деплоя на 60%',
+    r_b3_4:'Работал в кросс-функциональных командах над финтех-продуктами',
+    r_role4:'Фриланс Python разработчик', r_org4:'Самозанятый · Удалённо',
+    r_b4_1:'Создавал веб-приложения и REST API для клиентов на Python, Django, Flask',
+    r_b4_2:'Разрабатывал скрипты автоматизации и инструменты обработки данных',
+    r_b4_3:'Вёл полный жизненный цикл проекта — требования, разработка, деплой, поддержка',
+    r_role5:'Военная служба', r_org5:'Республика Таджикистан',
+    r_sk_lang:'Языки программирования', r_sk_back:'Бэкенд', r_sk_front:'Фронтенд и мобильные', r_sk_db:'Базы данных', r_sk_devops:'DevOps и инфра', r_sk_ai:'ИИ / МО',
+    r_sk_lang_v:'Python, PHP, TypeScript, JavaScript, Dart, Go, Lua',
+    r_sk_back_v:'FastAPI, Django, Flask, Laravel, Celery',
+    r_sk_front_v:'Vue.js, Nuxt.js, React, Next.js, Flutter',
+    r_sk_db_v:'PostgreSQL, MySQL, Redis, MongoDB, Neo4j',
+    r_sk_devops_v:'Docker, Kubernetes, NGINX, GitHub Actions, Linux',
+    r_sk_ai_v:'TensorFlow, PyTorch, scikit-learn, LangChain',
+    r_edu_sec:'Образование', r_edu_deg:'Бакалавр информатики', r_edu_sch:'Российско-таджикский славянский университет · Душанбе, Таджикистан',
+    r_lang_sec:'Владение языками',
+    r_lang1:'Таджикский', r_lang1_lv:'Родной', r_lang2:'Русский', r_lang2_lv:'Свободно', r_lang3:'Английский', r_lang3_lv:'Профессиональный',
+  }
+};
+
+function applyResumeLang(lang) {
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.dataset.i18n;
+    if (rT[lang][key] !== undefined) el.textContent = rT[lang][key];
+  });
+  document.getElementById('lang-btn').textContent = lang === 'en' ? 'RU' : 'EN';
+  document.documentElement.setAttribute('lang', lang === 'ru' ? 'ru' : 'en');
+}
+
+let rLang = localStorage.getItem('lang') || 'en';
+applyResumeLang(rLang);
+document.getElementById('lang-btn').addEventListener('click', () => {
+  rLang = rLang === 'en' ? 'ru' : 'en';
+  localStorage.setItem('lang', rLang);
+  applyResumeLang(rLang);
+});
+</script>
 </body>
 </html>
