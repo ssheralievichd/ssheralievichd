@@ -532,6 +532,8 @@ html:not([data-theme="dark"]) .aa-bg { fill: oklch(0.16 0.01 260); }
 .aa-arrow { fill: oklch(0.68 0.2 262 / 60%); }
 .aa-label { font-family: 'JetBrains Mono', 'Fira Mono', monospace; font-size: 8.5px; fill: oklch(0.75 0.005 260); text-anchor: middle; dominant-baseline: middle; }
 .aa-label-hi { fill: oklch(0.78 0.18 262); }
+.aa-node-sec { fill: oklch(0.22 0.04 28); stroke: oklch(0.66 0.14 28 / 55%); stroke-width: 1; }
+.aa-label-sec { fill: oklch(0.74 0.13 28); }
 .aa-sub { font-family: 'JetBrains Mono', 'Fira Mono', monospace; font-size: 6.5px; fill: oklch(0.5 0.005 260); text-anchor: middle; dominant-baseline: middle; }
 .aa-dot { fill: oklch(0.68 0.2 262); }
 .aa-dot-green { fill: oklch(0.72 0.18 148); }
@@ -894,69 +896,73 @@ footer {
         <circle cx="34" cy="49" r="6" fill="#ff5f57"/>
         <circle cx="54" cy="49" r="6" fill="#febc2e"/>
         <circle cx="74" cy="49" r="6" fill="#28c840"/>
-        <!-- Tab label -->
-        <rect class="hi-tab" x="94" y="38" width="90" height="22" rx="6"/>
-        <text class="hi-tab-txt" x="139" y="53">main.py</text>
-        <!-- Code lines -->
-        <!-- line 1 -->
+        <!-- Tab: pages/index.vue -->
+        <rect class="hi-tab" x="94" y="38" width="122" height="22" rx="6"/>
+        <text class="hi-tab-txt" x="155" y="53">pages/index.vue</text>
+        <!-- line 1: &lt;script setup lang="ts"&gt; -->
         <text class="hi-ln" x="30" y="102">1</text>
-        <text class="hi-kw" x="50" y="102">from</text>
-        <text class="hi-plain" x="86" y="102">fastapi</text>
-        <text class="hi-kw" x="148" y="102">import</text>
-        <text class="hi-plain" x="198" y="102">FastAPI, Depends</text>
-        <!-- line 2 -->
+        <text class="hi-dec" x="50" y="102">&lt;script</text>
+        <text class="hi-kw" x="100" y="102">setup</text>
+        <text class="hi-plain" x="136" y="102">lang=</text>
+        <text class="hi-str" x="172" y="102">"ts"</text>
+        <text class="hi-dec" x="204" y="102">&gt;</text>
+        <!-- line 2: import { ref, computed } from 'vue' -->
         <text class="hi-ln" x="30" y="122">2</text>
-        <text class="hi-kw" x="50" y="122">from</text>
-        <text class="hi-plain" x="86" y="122">auth</text>
-        <text class="hi-kw" x="118" y="122">import</text>
-        <text class="hi-plain" x="168" y="122">verify_token</text>
+        <text class="hi-kw" x="50" y="122">import</text>
+        <text class="hi-plain" x="92" y="122">{ ref, computed }</text>
+        <text class="hi-kw" x="208" y="122">from</text>
+        <text class="hi-str" x="240" y="122">'vue'</text>
         <!-- line 3 blank -->
         <text class="hi-ln" x="30" y="142">3</text>
-        <!-- line 4 -->
+        <!-- line 4: const { data, pending } = await -->
         <text class="hi-ln" x="30" y="162">4</text>
-        <text class="hi-plain" x="50" y="162">app = FastAPI()</text>
-        <!-- line 5 blank -->
+        <text class="hi-kw" x="50" y="162">const</text>
+        <text class="hi-plain" x="90" y="162">{ data, pending } =</text>
+        <text class="hi-kw" x="226" y="162">await</text>
+        <!-- line 5:   useFetch<User[]>('/api/users') -->
         <text class="hi-ln" x="30" y="182">5</text>
-        <!-- line 6 -->
+        <text class="hi-fn" x="66" y="182">useFetch</text>
+        <text class="hi-plain" x="120" y="182">&lt;User[]&gt;(</text>
+        <text class="hi-str" x="176" y="182">'/api/users'</text>
+        <text class="hi-plain" x="264" y="182">)</text>
+        <!-- line 6 blank -->
         <text class="hi-ln" x="30" y="202">6</text>
-        <text class="hi-dec" x="50" y="202">@app.get</text>
-        <text class="hi-plain" x="104" y="202">("/users/me")</text>
-        <!-- line 7 -->
+        <!-- line 7: const active = computed(() => -->
         <text class="hi-ln" x="30" y="222">7</text>
-        <text class="hi-kw" x="50" y="222">async def</text>
-        <text class="hi-fn" x="106" y="222">get_current_user</text>
-        <text class="hi-plain" x="230" y="222">(</text>
-        <!-- line 8 -->
+        <text class="hi-kw" x="50" y="222">const</text>
+        <text class="hi-plain" x="90" y="222">active =</text>
+        <text class="hi-fn" x="148" y="222">computed</text>
+        <text class="hi-plain" x="210" y="222">(() =&gt;</text>
+        <!-- line 8:   data.value?.filter(u => u.active) -->
         <text class="hi-ln" x="30" y="242">8</text>
-        <text class="hi-plain" x="66" y="242">token: str = Depends(verify_token)</text>
-        <!-- line 9 -->
+        <text class="hi-plain" x="66" y="242">data.value?.</text>
+        <text class="hi-fn" x="148" y="242">filter</text>
+        <text class="hi-plain" x="190" y="242">(u =&gt; u.active)</text>
+        <!-- line 9: ) -->
         <text class="hi-ln" x="30" y="262">9</text>
-        <text class="hi-plain" x="50" y="262">):</text>
-        <!-- line 10 -->
+        <text class="hi-plain" x="50" y="262">)</text>
+        <!-- line 10: </script> -->
         <text class="hi-ln" x="30" y="282">10</text>
-        <text class="hi-kw" x="54" y="282">return</text>
-        <text class="hi-str" x="98" y="282">{"user": token}</text>
+        <text class="hi-dec" x="54" y="282">&lt;/script&gt;</text>
         <!-- cursor blink -->
-        <rect class="hi-cursor" x="172" y="271" width="8" height="14" rx="1"/>
+        <rect class="hi-cursor" x="112" y="271" width="8" height="14" rx="1"/>
         <!-- Status bar -->
-        <rect class="hi-status" x="10" y="288" width="380" height="12" rx="0"/>
-        <rect class="hi-status" x="10" y="294" width="380" height="6" rx="0"/>
         <rect class="hi-statusb" x="10" y="288" width="380" height="12"/>
-        <text class="hi-stxt" x="20" y="298">Python 3.12  FastAPI  UTF-8</text>
-        <text class="hi-stxt hi-stxt-r" x="400" y="298">Ln 10, Col 22</text>
+        <text class="hi-stxt" x="20" y="298">Vue 3  TypeScript  Nuxt</text>
+        <text class="hi-stxt hi-stxt-r" x="400" y="298">Ln 10, Col 12</text>
       </svg>
       <!-- floating badges -->
       <div class="hi-badge hi-badge-a">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" fill="#3776ab"/></svg>
-        Python 3.12
+        <svg width="16" height="16" viewBox="0 0 256 221" xmlns="http://www.w3.org/2000/svg"><path d="M204.8 0H256L128 220.8 0 0h97.92L128 51.2 157.44 0z" fill="#41b883"/><path d="M0 0l128 220.8L256 0h-51.2L128 132.48 50.56 0z" fill="#41b883"/><path d="M50.56 0L128 133.12 204.8 0h-47.36L128 51.2 97.92 0z" fill="#35495e"/></svg>
+        Vue.js
       </div>
       <div class="hi-badge hi-badge-b">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="4" fill="#009688"/><text x="3" y="17" font-size="11" font-weight="700" fill="white">FA</text></svg>
-        FastAPI
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="4" fill="#0175C2"/><path d="M5 16.5L9.5 21 19 8" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Flutter
       </div>
       <div class="hi-badge hi-badge-c">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="4" fill="#2496ed"/><text x="3" y="17" font-size="9" font-weight="700" fill="white">🐳</text></svg>
-        Docker
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="4" fill="#3178c6"/><text x="2.5" y="17" font-family="monospace" font-size="10" font-weight="800" fill="white">TS</text></svg>
+        TypeScript
       </div>
     </div>
   </div>
@@ -981,52 +987,60 @@ footer {
         <div class="about-arch">
           <svg viewBox="0 0 340 190" xmlns="http://www.w3.org/2000/svg">
             <rect class="aa-bg" width="340" height="190"/>
-            <!-- grid lines -->
-            <line x1="0" y1="47" x2="340" y2="47" stroke="oklch(1 0 0 / 4%)" stroke-width="1"/>
-            <line x1="0" y1="95" x2="340" y2="95" stroke="oklch(1 0 0 / 4%)" stroke-width="1"/>
-            <line x1="0" y1="143" x2="340" y2="143" stroke="oklch(1 0 0 / 4%)" stroke-width="1"/>
-            <line x1="85" y1="0" x2="85" y2="190" stroke="oklch(1 0 0 / 4%)" stroke-width="1"/>
-            <line x1="170" y1="0" x2="170" y2="190" stroke="oklch(1 0 0 / 4%)" stroke-width="1"/>
-            <line x1="255" y1="0" x2="255" y2="190" stroke="oklch(1 0 0 / 4%)" stroke-width="1"/>
-            <!-- Client node -->
-            <rect class="aa-node" x="12" y="75" width="62" height="40" rx="6"/>
-            <text class="aa-label" x="43" y="92">Client</text>
-            <text class="aa-sub" x="43" y="104">Browser / App</text>
-            <!-- Arrow client → API -->
-            <line class="aa-line-hi" x1="74" y1="95" x2="106" y2="95"/>
-            <polygon class="aa-arrow" points="106,91 115,95 106,99"/>
-            <!-- API Gateway -->
-            <rect class="aa-node-hi" x="115" y="72" width="70" height="46" rx="6"/>
-            <text class="aa-label aa-label-hi" x="150" y="91">FastAPI</text>
-            <text class="aa-sub" x="150" y="103">API Gateway</text>
-            <!-- status dot -->
-            <circle class="aa-dot aa-pulse" cx="177" cy="77" r="3.5"/>
-            <!-- Arrow API → DB -->
-            <line class="aa-line-hi" x1="185" y1="88" x2="215" y2="72"/>
-            <polygon class="aa-arrow" points="212,66 222,70 214,76"/>
-            <!-- Arrow API → Cache -->
-            <line class="aa-line-hi" x1="185" y1="102" x2="215" y2="118"/>
-            <polygon class="aa-arrow" points="212,114 222,120 214,126"/>
-            <!-- PostgreSQL -->
-            <rect class="aa-node" x="222" y="48" width="68" height="40" rx="6"/>
-            <text class="aa-label" x="256" y="65">PostgreSQL</text>
-            <text class="aa-sub" x="256" y="77">Primary DB</text>
-            <circle class="aa-dot-green" cx="284" cy="53" r="3"/>
-            <!-- Redis -->
-            <rect class="aa-node" x="222" y="104" width="68" height="40" rx="6"/>
-            <text class="aa-label" x="256" y="121">Redis</text>
-            <text class="aa-sub" x="256" y="133">Cache Layer</text>
-            <circle class="aa-dot-orange" cx="284" cy="109" r="3"/>
-            <!-- Docker wrapper outline -->
-            <rect x="8" y="8" width="326" height="174" rx="10" fill="none" stroke="oklch(0.48 0.22 262 / 15%)" stroke-width="1.5" stroke-dasharray="6 4"/>
-            <text class="aa-sub" x="22" y="19">Docker · Kubernetes</text>
-            <!-- Celery worker -->
-            <rect class="aa-node" x="115" y="144" width="70" height="34" rx="6"/>
-            <text class="aa-label" x="150" y="158">Celery</text>
-            <text class="aa-sub" x="150" y="169">Task Queue</text>
-            <!-- Arrow API → Celery -->
-            <line class="aa-line" x1="150" y1="118" x2="150" y2="144"/>
-            <polygon class="aa-arrow" points="146,141 150,150 154,141"/>
+            <!-- Docker/K8s wrapper -->
+            <rect x="4" y="11" width="332" height="171" rx="10" fill="none" stroke="oklch(0.48 0.22 262 / 15%)" stroke-width="1.5" stroke-dasharray="6 4"/>
+            <text class="aa-sub" x="18" y="22">Docker · Kubernetes</text>
+            <!-- Column labels -->
+            <text class="aa-sub" x="43" y="33" text-anchor="middle">Clients</text>
+            <text class="aa-sub" x="162" y="28" text-anchor="middle">Services</text>
+            <text class="aa-sub" x="279" y="33" text-anchor="middle">Data</text>
+            <!-- ── Client nodes ── -->
+            <rect class="aa-node" x="8" y="40" width="70" height="34" rx="6"/>
+            <text class="aa-label" x="43" y="54">Vue.js</text>
+            <text class="aa-sub" x="43" y="65">Browser</text>
+            <rect class="aa-node" x="8" y="104" width="70" height="34" rx="6"/>
+            <text class="aa-label" x="43" y="118">Flutter</text>
+            <text class="aa-sub" x="43" y="129">Mobile</text>
+            <!-- ── Service nodes ── -->
+            <rect class="aa-node-hi" x="127" y="37" width="70" height="34" rx="6"/>
+            <text class="aa-label aa-label-hi" x="162" y="51">FastAPI</text>
+            <text class="aa-sub" x="162" y="62">Python</text>
+            <circle class="aa-dot aa-pulse" cx="190" cy="43" r="3"/>
+            <rect class="aa-node-sec" x="127" y="101" width="70" height="34" rx="6"/>
+            <text class="aa-label aa-label-sec" x="162" y="115">Laravel</text>
+            <text class="aa-sub" x="162" y="126">PHP</text>
+            <circle class="aa-dot-orange" cx="190" cy="107" r="3"/>
+            <!-- ── Data nodes ── -->
+            <rect class="aa-node" x="244" y="40" width="72" height="34" rx="6"/>
+            <text class="aa-label" x="280" y="54">PostgreSQL</text>
+            <text class="aa-sub" x="280" y="65">Primary DB</text>
+            <circle class="aa-dot-green" cx="309" cy="46" r="3"/>
+            <rect class="aa-node" x="244" y="104" width="72" height="34" rx="6"/>
+            <text class="aa-label" x="280" y="118">Redis</text>
+            <text class="aa-sub" x="280" y="129">Cache</text>
+            <circle class="aa-dot-orange" cx="309" cy="110" r="3"/>
+            <!-- ── Main connections (straight, hi) ── -->
+            <!-- Vue → FastAPI -->
+            <line class="aa-line-hi" x1="78" y1="55" x2="127" y2="52"/>
+            <polygon class="aa-arrow" points="123,48 127,52 123,56"/>
+            <!-- Flutter → Laravel -->
+            <line class="aa-line-hi" x1="78" y1="119" x2="127" y2="116"/>
+            <polygon class="aa-arrow" points="123,112 127,116 123,120"/>
+            <!-- FastAPI → PostgreSQL -->
+            <line class="aa-line-hi" x1="197" y1="52" x2="244" y2="55"/>
+            <polygon class="aa-arrow" points="240,51 244,55 240,59"/>
+            <!-- Laravel → Redis -->
+            <line class="aa-line-hi" x1="197" y1="116" x2="244" y2="119"/>
+            <polygon class="aa-arrow" points="240,115 244,119 240,123"/>
+            <!-- ── Cross connections (dashed, subtle) ── -->
+            <!-- Vue → Laravel -->
+            <line class="aa-line" x1="78" y1="61" x2="127" y2="108"/>
+            <!-- Flutter → FastAPI -->
+            <line class="aa-line" x1="78" y1="113" x2="127" y2="60"/>
+            <!-- FastAPI → Redis -->
+            <line class="aa-line" x1="197" y1="60" x2="244" y2="110"/>
+            <!-- Laravel → PostgreSQL -->
+            <line class="aa-line" x1="197" y1="108" x2="244" y2="60"/>
           </svg>
         </div>
         <div class="stats">
