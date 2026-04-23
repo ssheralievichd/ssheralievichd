@@ -135,9 +135,13 @@ section { padding: 96px 0; }
   border-radius: var(--radius-xl);
   border: 1px solid var(--border);
   background: var(--card);
-  transition: border-color 0.2s;
+  transition: border-color 0.22s, transform 0.22s, box-shadow 0.22s;
 }
-.card:hover { border-color: oklch(1 0 0 / 11%); }
+.card:hover {
+  border-color: oklch(1 0 0 / 12%);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 32px oklch(0 0 0 / 30%);
+}
 
 /* glass card variant */
 .glass-card {
@@ -149,14 +153,15 @@ section { padding: 96px 0; }
     0 0 0 1px oklch(1 0 0 / 4%),
     0 2px 6px oklch(0 0 0 / 25%),
     0 16px 48px oklch(0 0 0 / 40%);
-  transition: border-color 0.2s, box-shadow 0.2s;
+  transition: border-color 0.22s, transform 0.22s, box-shadow 0.22s;
 }
 .glass-card:hover {
-  border-color: oklch(1 0 0 / 12%);
+  border-color: oklch(1 0 0 / 14%);
+  transform: translateY(-3px);
   box-shadow:
-    0 0 0 1px oklch(1 0 0 / 5%),
-    0 4px 12px oklch(0 0 0 / 30%),
-    0 20px 60px oklch(0 0 0 / 45%);
+    0 0 0 1px oklch(1 0 0 / 6%),
+    0 8px 24px oklch(0 0 0 / 35%),
+    0 24px 64px oklch(0 0 0 / 45%);
 }
 
 /* highlight card (featured) */
@@ -168,26 +173,51 @@ section { padding: 96px 0; }
     0 0 0 1px oklch(0.65 0.2 262 / 6%),
     0 4px 20px oklch(0.65 0.2 262 / 8%),
     0 20px 60px oklch(0 0 0 / 40%);
-  transition: border-color 0.2s;
+  transition: border-color 0.22s, transform 0.22s, box-shadow 0.22s;
 }
-.highlight-card:hover { border-color: oklch(0.65 0.2 262 / 28%); }
+.highlight-card:hover {
+  border-color: oklch(0.65 0.2 262 / 30%);
+  transform: translateY(-3px);
+  box-shadow:
+    0 0 0 1px oklch(0.65 0.2 262 / 10%),
+    0 8px 32px oklch(0.65 0.2 262 / 12%),
+    0 24px 64px oklch(0 0 0 / 44%);
+}
 
 /* ── Shimmer text ── */
 .shimmer {
   background: linear-gradient(
     110deg,
-    oklch(0.92 0.004 260) 30%,
-    oklch(0.65 0.2 262) 50%,
-    oklch(0.92 0.004 260) 70%
+    oklch(0.92 0.004 260) 15%,
+    oklch(0.78 0.22 262) 40%,
+    oklch(0.60 0.24 290) 50%,
+    oklch(0.78 0.22 262) 60%,
+    oklch(0.92 0.004 260) 85%
   );
-  background-size: 250% 100%;
+  background-size: 300% 100%;
   -webkit-background-clip: text; background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: shimmer 5s ease-in-out infinite;
+  animation: shimmer 6s ease-in-out infinite;
 }
 @keyframes shimmer {
   0%,100% { background-position: 100% center; }
   50%      { background-position: 0% center; }
+}
+
+/* ── Fade-up scroll reveal ── */
+@media (prefers-reduced-motion: no-preference) {
+  .fade-up {
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity 0.55s cubic-bezier(0.22,1,0.36,1),
+                transform 0.55s cubic-bezier(0.22,1,0.36,1);
+  }
+  .fade-up.in { opacity: 1; transform: none; }
+  .fade-up:nth-child(2) { transition-delay: 0.07s; }
+  .fade-up:nth-child(3) { transition-delay: 0.14s; }
+  .fade-up:nth-child(4) { transition-delay: 0.21s; }
+  .fade-up:nth-child(5) { transition-delay: 0.28s; }
+  .fade-up:nth-child(6) { transition-delay: 0.35s; }
 }
 
 /* ── Buttons ── */
@@ -196,19 +226,32 @@ section { padding: 96px 0; }
   font-family: var(--font); font-size: 14px; font-weight: 600;
   text-decoration: none; border: none; cursor: pointer;
   padding: 10px 20px; border-radius: var(--radius-xl);
-  transition: opacity 0.15s, background 0.15s;
+  transition: opacity 0.18s, transform 0.18s, box-shadow 0.18s, background 0.18s;
+  position: relative; overflow: hidden;
 }
+.btn:active { transform: scale(0.97); }
+
 .btn-primary {
   background: var(--primary); color: var(--primary-fg);
+  box-shadow: 0 0 0 0 oklch(0.65 0.2 262 / 0%);
 }
-.btn-primary:hover { opacity: 0.85; }
+.btn-primary:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 20px oklch(0.65 0.2 262 / 30%);
+}
 
 .btn-secondary {
   background: oklch(0.14 0.004 260 / 40%);
   border: 1px solid var(--border);
   color: var(--muted-fg);
 }
-.btn-secondary:hover { background: oklch(0.14 0.004 260 / 70%); color: var(--foreground); }
+.btn-secondary:hover {
+  background: oklch(0.14 0.004 260 / 70%);
+  border-color: oklch(1 0 0 / 12%);
+  color: var(--foreground);
+  transform: translateY(-1px);
+}
 
 /* ── HERO ── */
 #hero {
@@ -328,6 +371,14 @@ section { padding: 96px 0; }
   width: 8px; height: 8px; border-radius: 50%;
   background: var(--primary);
   box-shadow: 0 0 0 3px oklch(0.65 0.2 262 / 15%);
+}
+.tldot.active {
+  animation: dotpulse 2.4s ease-out infinite;
+}
+@keyframes dotpulse {
+  0% { box-shadow: 0 0 0 0 oklch(0.65 0.2 262 / 50%); }
+  70% { box-shadow: 0 0 0 8px oklch(0.65 0.2 262 / 0%); }
+  100% { box-shadow: 0 0 0 0 oklch(0.65 0.2 262 / 0%); }
 }
 
 .tlc { padding: 22px 26px; }
@@ -483,16 +534,16 @@ footer {
     <p class="lbl">About</p>
     <h2 class="sh">Engineered for scale.</h2>
     <div class="about-grid">
-      <div class="about-body">
+      <div class="about-body fade-up">
         <p>Results-driven engineer with <strong>3+ years</strong> architecting and deploying high-performance, scalable applications across backend, frontend, and mobile platforms.</p>
         <p>Specialized in <strong>microservices</strong>, real-time systems, and cloud-native solutions. Deep focus on clean architecture, query performance, and developer experience.</p>
         <p>Open to <strong>remote opportunities</strong> worldwide — backend, full-stack, DevOps, and Flutter mobile roles.</p>
       </div>
-      <div class="stats">
-        <div class="glass-card stat"><div class="stat-n">3+</div><div class="stat-l">Years of experience</div></div>
-        <div class="glass-card stat"><div class="stat-n">10+</div><div class="stat-l">Technologies</div></div>
-        <div class="glass-card stat"><div class="stat-n">60%</div><div class="stat-l">Faster deployments</div></div>
-        <div class="glass-card stat"><div class="stat-n">50%</div><div class="stat-l">Query perf improved</div></div>
+      <div class="stats fade-up">
+        <div class="glass-card stat"><div class="stat-n" data-count="3" data-suffix="+">0</div><div class="stat-l">Years of experience</div></div>
+        <div class="glass-card stat"><div class="stat-n" data-count="10" data-suffix="+">0</div><div class="stat-l">Technologies</div></div>
+        <div class="glass-card stat"><div class="stat-n" data-count="60" data-suffix="%">0</div><div class="stat-l">Faster deployments</div></div>
+        <div class="glass-card stat"><div class="stat-n" data-count="50" data-suffix="%">0</div><div class="stat-l">Query perf improved</div></div>
       </div>
     </div>
   </div>
@@ -503,7 +554,7 @@ footer {
   <div class="w">
     <p class="lbl">Tech Stack</p>
     <h2 class="sh">Tools of the trade.</h2>
-    <div class="stack-grid">
+    <div class="stack-grid fade-up">
       <div class="card sc">
         <p class="sc-cat"><i data-lucide="code-2"></i> Languages</p>
         <div class="tags">
@@ -558,8 +609,8 @@ footer {
     <h2 class="sh">Where I've shipped.</h2>
     <div class="tl">
 
-      <div class="tli">
-        <div class="tldot"></div>
+      <div class="tli fade-up">
+        <div class="tldot active"></div>
         <div class="highlight-card tlc">
           <div class="tl-top">
             <span class="tl-role">Full-Stack Software Engineer</span>
@@ -576,7 +627,7 @@ footer {
         </div>
       </div>
 
-      <div class="tli">
+      <div class="tli fade-up">
         <div class="tldot"></div>
         <div class="glass-card tlc">
           <div class="tl-top">
@@ -592,7 +643,7 @@ footer {
         </div>
       </div>
 
-      <div class="tli">
+      <div class="tli fade-up">
         <div class="tldot"></div>
         <div class="card tlc">
           <div class="tl-top">
@@ -659,44 +710,77 @@ footer {
 <script>
 lucide.createIcons();
 
+/* nav */
 const nav = document.getElementById('nav');
 const hbg = document.getElementById('hbg');
 const nl  = document.getElementById('nl');
 
-window.addEventListener('scroll', () => {
-  nav.classList.toggle('stuck', window.scrollY > 20);
-}, { passive: true });
-
-hbg.addEventListener('click', () => {
-  hbg.classList.toggle('open');
-  nl.classList.toggle('open');
-});
+window.addEventListener('scroll', onScroll, { passive: true });
+hbg.addEventListener('click', () => { hbg.classList.toggle('open'); nl.classList.toggle('open'); });
 nl.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-  hbg.classList.remove('open');
-  nl.classList.remove('open');
+  hbg.classList.remove('open'); nl.classList.remove('open');
 }));
 
+/* word cycle */
 const words = ['Python', 'PHP', 'Flutter', 'DevOps', 'FastAPI', 'Vue.js', 'Docker', 'Go'];
 let wi = 0;
 const cword = document.getElementById('cword');
-
 function cycle() {
-  cword.style.opacity = '0';
-  cword.style.transform = 'translateY(-5px)';
-  cword.style.transition = 'opacity 0.2s, transform 0.2s';
+  cword.style.cssText = 'opacity:0;transform:translateY(-5px);transition:opacity 0.2s,transform 0.2s';
   setTimeout(() => {
     wi = (wi + 1) % words.length;
     cword.textContent = words[wi];
-    cword.style.transition = 'none';
-    cword.style.transform = 'translateY(5px)';
+    cword.style.cssText = 'opacity:0;transform:translateY(5px);transition:none';
     requestAnimationFrame(() => requestAnimationFrame(() => {
-      cword.style.opacity = '1';
-      cword.style.transform = 'none';
-      cword.style.transition = 'opacity 0.25s, transform 0.25s';
+      cword.style.cssText = 'opacity:1;transform:none;transition:opacity 0.25s,transform 0.25s';
     }));
   }, 210);
 }
 setInterval(cycle, 2600);
+
+/* scroll reveal — simple, no IO */
+const fadeEls = document.querySelectorAll('.fade-up');
+function checkReveal() {
+  const vh = window.innerHeight;
+  fadeEls.forEach(el => {
+    if (el.classList.contains('in')) return;
+    const r = el.getBoundingClientRect();
+    if (r.top < vh - 40) el.classList.add('in');
+  });
+}
+
+/* stat counter */
+const counters = document.querySelectorAll('.stat-n[data-count]');
+const counted = new Set();
+function checkCounters() {
+  counters.forEach(el => {
+    if (counted.has(el)) return;
+    const r = el.getBoundingClientRect();
+    if (r.top < window.innerHeight - 20) {
+      counted.add(el);
+      const target = parseInt(el.dataset.count);
+      const suffix = el.dataset.suffix || '';
+      const dur = 900;
+      const start = performance.now();
+      function tick(now) {
+        const p = Math.min((now - start) / dur, 1);
+        const ease = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.round(ease * target) + suffix;
+        if (p < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    }
+  });
+}
+
+function onScroll() {
+  nav.classList.toggle('stuck', window.scrollY > 20);
+  checkReveal();
+  checkCounters();
+}
+
+checkReveal();
+checkCounters();
 </script>
 </body>
 </html>
