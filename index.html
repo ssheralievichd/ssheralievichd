@@ -176,8 +176,11 @@ nav.stuck {
 .nav-links a {
   font-size: 14px; font-weight: 500; color: var(--muted-fg);
   text-decoration: none; transition: color 0.15s;
+  display: flex; align-items: center; gap: 5px;
 }
+.nav-links a svg { width: 13px; height: 13px; flex-shrink: 0; opacity: 0.7; transition: opacity 0.15s; }
 .nav-links a:hover { color: var(--foreground); }
+.nav-links a:hover svg { opacity: 1; }
 .nav-cta {
   color: var(--foreground) !important;
   border: 1px solid var(--border);
@@ -199,12 +202,12 @@ section { padding: 96px 0; }
 
 /* ── Section label ── */
 .lbl {
-  font-size: 11px; font-weight: 500; text-transform: uppercase;
-  letter-spacing: 0.1em; color: var(--muted-fg);
-  display: flex; align-items: center; gap: 8px;
+  font-size: 11px; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 0.1em; color: var(--primary);
+  display: flex; align-items: center; gap: 7px;
   margin-bottom: 10px;
 }
-.lbl::before { content: ''; width: 16px; height: 1px; background: var(--muted-fg); }
+.lbl svg { width: 12px; height: 12px; flex-shrink: 0; opacity: 0.8; }
 
 /* ── Section heading ── */
 .sh {
@@ -361,13 +364,12 @@ section { padding: 96px 0; }
 }
 
 .hero-tag {
-  font-size: 11px; font-weight: 500; text-transform: uppercase;
-  letter-spacing: 0.1em; color: var(--muted-fg);
-  display: flex; align-items: center; gap: 8px;
+  font-size: 11px; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 0.1em; color: var(--primary);
+  display: flex; align-items: center; gap: 7px;
   margin-bottom: 20px;
   opacity: 0; animation: up 0.5s 0.1s forwards;
 }
-.hero-tag::before { content: ''; width: 16px; height: 1px; background: var(--muted-fg); }
 
 .hero-h1 {
   font-size: clamp(42px, 6vw, 72px);
@@ -441,6 +443,7 @@ section { padding: 96px 0; }
 
 .stats { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 .stat { padding: 22px 20px; }
+.stat-icon { width: 14px; height: 14px; color: var(--primary); opacity: 0.7; margin-bottom: 8px; display: block; }
 .stat-n {
   font-size: 32px; font-weight: 700; letter-spacing: -0.03em;
   color: var(--primary); line-height: 1; margin-bottom: 4px;
@@ -503,7 +506,8 @@ section { padding: 96px 0; }
 }
 .tl-role { font-size: 15px; font-weight: 600; color: var(--foreground); letter-spacing: -0.01em; }
 .tl-date { font-size: 12px; color: var(--muted-fg); font-weight: 500; }
-.tl-org { font-size: 13px; color: var(--muted-fg); margin-bottom: 14px; }
+.tl-org { font-size: 13px; color: var(--muted-fg); margin-bottom: 14px; display: flex; align-items: center; gap: 5px; }
+.tl-org svg { width: 12px; height: 12px; opacity: 0.6; flex-shrink: 0; }
 .tl-now {
   display: inline-flex; align-items: center; gap: 5px;
   font-size: 11px; font-weight: 500; color: oklch(0.75 0.18 145);
@@ -686,13 +690,11 @@ footer {
 <nav id="nav">
   <a href="#" class="logo">AS<span>.</span></a>
   <ul class="nav-links" id="nl">
-    <li><a href="#about">About</a></li>
-    <li><a href="#stack">Stack</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#life">Life</a></li>
-    <li><a href="/resume.html" class="nav-cta">
-      <i data-lucide="download" style="width:12px;height:12px;display:inline;vertical-align:middle;margin-right:4px"></i>Resume
-    </a></li>
+    <li><a href="#about"><i data-lucide="user"></i>About</a></li>
+    <li><a href="#stack"><i data-lucide="layers"></i>Stack</a></li>
+    <li><a href="#experience"><i data-lucide="briefcase"></i>Experience</a></li>
+    <li><a href="#life"><i data-lucide="heart"></i>Life</a></li>
+    <li><a href="/resume.html" class="nav-cta"><i data-lucide="file-text"></i>Resume</a></li>
   </ul>
   <div style="display:flex;align-items:center;gap:10px">
     <button class="theme-btn" id="theme-btn" aria-label="Toggle theme">
@@ -710,7 +712,7 @@ footer {
 <!-- HERO -->
 <section id="hero">
   <div class="w">
-    <p class="hero-tag">Full-Stack Software Engineer</p>
+    <p class="hero-tag"><i data-lucide="code-2" style="width:11px;height:11px;opacity:0.6"></i>Full-Stack Software Engineer</p>
     <h1 class="hero-h1 shimmer">Abdurahmon<br>Sheralievich</h1>
     <p class="hero-sub">Building scalable systems across backend, frontend &amp; mobile. Based in Tajikistan, open to remote.</p>
     <p class="hero-cycle">Specializing in <span id="cword">Python</span><span class="cursor"></span></p>
@@ -738,7 +740,7 @@ footer {
 <!-- ABOUT -->
 <section id="about">
   <div class="w">
-    <p class="lbl">About</p>
+    <p class="lbl"><i data-lucide="user"></i>About</p>
     <h2 class="sh">Engineered for scale.</h2>
     <div class="about-grid">
       <div class="about-body fade-up">
@@ -747,10 +749,10 @@ footer {
         <p>Open to <strong>remote opportunities</strong> worldwide — backend, full-stack, DevOps, and Flutter mobile roles.</p>
       </div>
       <div class="stats fade-up">
-        <div class="glass-card stat"><div class="stat-n" data-count="3" data-suffix="+">0</div><div class="stat-l">Years of experience</div></div>
-        <div class="glass-card stat"><div class="stat-n" data-count="10" data-suffix="+">0</div><div class="stat-l">Technologies</div></div>
-        <div class="glass-card stat"><div class="stat-n" data-count="60" data-suffix="%">0</div><div class="stat-l">Faster deployments</div></div>
-        <div class="glass-card stat"><div class="stat-n" data-count="50" data-suffix="%">0</div><div class="stat-l">Query perf improved</div></div>
+        <div class="glass-card stat"><i data-lucide="calendar" class="stat-icon"></i><div class="stat-n" data-count="3" data-suffix="+">0</div><div class="stat-l">Years of experience</div></div>
+        <div class="glass-card stat"><i data-lucide="layers" class="stat-icon"></i><div class="stat-n" data-count="10" data-suffix="+">0</div><div class="stat-l">Technologies</div></div>
+        <div class="glass-card stat"><i data-lucide="zap" class="stat-icon"></i><div class="stat-n" data-count="60" data-suffix="%">0</div><div class="stat-l">Faster deployments</div></div>
+        <div class="glass-card stat"><i data-lucide="trending-up" class="stat-icon"></i><div class="stat-n" data-count="50" data-suffix="%">0</div><div class="stat-l">Query perf improved</div></div>
       </div>
     </div>
   </div>
@@ -759,7 +761,7 @@ footer {
 <!-- STACK -->
 <section id="stack">
   <div class="w">
-    <p class="lbl">Tech Stack</p>
+    <p class="lbl"><i data-lucide="layers"></i>Tech Stack</p>
     <h2 class="sh">Tools of the trade.</h2>
     <div class="stack-grid fade-up">
       <div class="card sc">
@@ -812,7 +814,7 @@ footer {
 <!-- EXPERIENCE -->
 <section id="experience">
   <div class="w">
-    <p class="lbl">Experience</p>
+    <p class="lbl"><i data-lucide="briefcase"></i>Experience</p>
     <h2 class="sh">Where I've shipped.</h2>
     <div class="tl">
 
@@ -823,7 +825,7 @@ footer {
             <span class="tl-role">Full-Stack Software Engineer</span>
             <span class="tl-date">Oct 2025 — Present</span>
           </div>
-          <p class="tl-org">Current Company · Tajikistan</p>
+          <p class="tl-org"><i data-lucide="building-2"></i>Current Company · Tajikistan</p>
           <span class="tl-now"><span class="tl-dot2"></span> Active</span>
           <ul class="tl-ul">
             <li>Architect scalable microservices using FastAPI, Django REST Framework, and Laravel</li>
@@ -841,7 +843,7 @@ footer {
             <span class="tl-role">Python Software Engineer</span>
             <span class="tl-date">Aug 2022 — Oct 2024</span>
           </div>
-          <p class="tl-org">Alif Bank · Tajikistan</p>
+          <p class="tl-org"><i data-lucide="landmark"></i>Alif Bank · Tajikistan</p>
           <ul class="tl-ul">
             <li>Built and maintained high-availability RESTful APIs at production scale</li>
             <li>Designed database schemas and optimized queries, reducing latency significantly</li>
@@ -857,7 +859,7 @@ footer {
             <span class="tl-role">National Service</span>
             <span class="tl-date">2024 — 2025</span>
           </div>
-          <p class="tl-org">Republic of Tajikistan</p>
+          <p class="tl-org"><i data-lucide="shield"></i>Republic of Tajikistan</p>
           <ul class="tl-ul">
             <li>Completed mandatory military service</li>
             <li>Maintained technical skills and contributed to open-source projects</li>
@@ -872,7 +874,7 @@ footer {
 <!-- LIFE & HOBBIES -->
 <section id="life">
   <div class="w">
-    <p class="lbl">Life & Interests</p>
+    <p class="lbl"><i data-lucide="heart"></i>Life & Interests</p>
     <h2 class="sh">Beyond the code.</h2>
 
     <div class="life-grid fade-up" style="margin-bottom: 48px;">
@@ -957,7 +959,7 @@ footer {
 <!-- EDUCATION -->
 <section id="education" style="padding-top:0">
   <div class="w">
-    <p class="lbl">Education</p>
+    <p class="lbl"><i data-lucide="book-open"></i>Education</p>
     <h2 class="sh" style="margin-bottom:28px">Foundation.</h2>
     <div class="edu-grid">
       <div class="glass-card ec">
@@ -977,7 +979,7 @@ footer {
 <section id="contact">
   <div class="w">
     <div class="highlight-card cbox">
-      <p class="lbl clbl">Contact</p>
+      <p class="lbl clbl"><i data-lucide="mail"></i>Contact</p>
       <h2 class="ch">Let's build something <span class="shimmer">remarkable.</span></h2>
       <p class="cp">Open to full-time roles, freelance, and technical conversations.</p>
       <div class="clinks">
