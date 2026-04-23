@@ -783,6 +783,23 @@ html:not([data-theme="dark"]) .ep-bg { fill: oklch(0.16 0.01 260); }
 .resume-bar-text span { font-size: 13px; color: var(--muted-fg); }
 
 /* ── FOOTER ── */
+.proj-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+  margin-top: 48px;
+}
+.proj-card {
+  padding: 28px; display: flex; flex-direction: column; gap: 12px;
+}
+.proj-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; }
+.proj-name { font-size: 17px; font-weight: 700; color: var(--foreground); line-height: 1.2; }
+.proj-badge {
+  font-size: 10px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase;
+  padding: 3px 8px; border-radius: 999px; flex-shrink: 0;
+  border: 1px solid var(--border); color: var(--muted-fg); white-space: nowrap;
+}
+.proj-desc { font-size: 13.5px; color: var(--muted-fg); line-height: 1.6; flex: 1; }
+.proj-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+
 .blog-grid {
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
   margin-top: 48px;
@@ -819,6 +836,7 @@ footer {
   .life-grid { grid-template-columns: 1fr; gap: 32px; }
   .stack-grid { grid-template-columns: 1fr 1fr; }
   .hobbies-grid { grid-template-columns: 1fr 1fr; }
+  .proj-grid { grid-template-columns: 1fr 1fr; }
   .blog-grid { grid-template-columns: 1fr 1fr; }
   .cbox { padding: 40px 28px; }
   .contact-net { display: none; }
@@ -851,6 +869,7 @@ footer {
   .hbg { display: flex; }
   .stack-grid { grid-template-columns: 1fr; }
   .hobbies-grid { grid-template-columns: 1fr; }
+  .proj-grid { grid-template-columns: 1fr; }
   .blog-grid { grid-template-columns: 1fr; }
   .edu-grid { grid-template-columns: 1fr; }
   .stats { grid-template-columns: 1fr 1fr; }
@@ -899,6 +918,7 @@ footer {
     <li><a href="#stack"><i data-lucide="layers"></i><span data-i18n="nav_stack">Stack</span></a></li>
     <li><a href="#experience"><i data-lucide="briefcase"></i><span data-i18n="nav_exp">Experience</span></a></li>
     <li><a href="#life"><i data-lucide="heart"></i><span data-i18n="nav_life">Life</span></a></li>
+    <li><a href="#projects"><i data-lucide="folder-open"></i><span data-i18n="nav_projects">Projects</span></a></li>
     <li><a href="#blog"><i data-lucide="pen-line"></i><span data-i18n="nav_blog">Blog</span></a></li>
     <li><a href="/resume.html" class="nav-cta"><i data-lucide="file-text"></i><span data-i18n="nav_resume">Resume</span></a></li>
   </ul>
@@ -1419,6 +1439,115 @@ footer {
 </section>
 
 <!-- CONTACT -->
+<section id="projects">
+  <div class="w">
+    <p class="lbl"><i data-lucide="folder-open"></i><span data-i18n="proj_lbl">Projects</span></p>
+    <h2 class="sh" data-i18n="proj_sh">Things I've built.</h2>
+    <div class="proj-grid">
+
+      <div class="card proj-card fade-up">
+        <div class="proj-head">
+          <span class="proj-name">OpsDesk</span>
+          <span class="proj-badge" data-i18n="proj_badge_commercial">Commercial</span>
+        </div>
+        <p class="proj-desc" data-i18n="proj1_desc">Enterprise contact center platform with real-time multi-channel support across Web, Telegram, and WhatsApp. Features RAG-based AI operator for automated responses and smart routing by operator workload and language.</p>
+        <div class="proj-tags">
+          <span class="tag">Laravel 12</span><span class="tag">Vue 3</span><span class="tag">WebSockets</span><span class="tag">RAG AI</span><span class="tag">PostgreSQL</span>
+        </div>
+      </div>
+
+      <div class="card proj-card fade-up">
+        <div class="proj-head">
+          <span class="proj-name">RegistryCore</span>
+          <span class="proj-badge" data-i18n="proj_badge_commercial">Commercial</span>
+        </div>
+        <p class="proj-desc" data-i18n="proj2_desc">Enterprise TLD Registry Management System with full domain lifecycle — registration workflow, real-time availability checking, DNS nameserver management, bulk operations, and multi-role access control.</p>
+        <div class="proj-tags">
+          <span class="tag">Laravel 12</span><span class="tag">Vue 3</span><span class="tag">Inertia</span><span class="tag">PostgreSQL</span>
+        </div>
+      </div>
+
+      <div class="card proj-card fade-up">
+        <div class="proj-head">
+          <span class="proj-name">GoClaw</span>
+          <span class="proj-badge" data-i18n="proj_badge_personal">Personal</span>
+        </div>
+        <p class="proj-desc" data-i18n="proj3_desc">Multi-tenant SaaS platform for deploying personal AI Telegram bots. Each subscriber gets an isolated Docker instance provisioned on-demand with a dedicated API sub-key, Telegram OAuth, and subscription billing.</p>
+        <div class="proj-tags">
+          <span class="tag">Laravel 13</span><span class="tag">React 19</span><span class="tag">Docker</span><span class="tag">PostgreSQL</span><span class="tag">Yookassa</span>
+        </div>
+      </div>
+
+      <div class="card proj-card fade-up">
+        <div class="proj-head">
+          <span class="proj-name">Lumio</span>
+          <span class="proj-badge" data-i18n="proj_badge_personal">Personal</span>
+        </div>
+        <p class="proj-desc" data-i18n="proj4_desc">AI content generation platform via Telegram. Image and video generation through FAL.ai models with GPT-4o prompt enhancement, async webhook callbacks, wallet top-up, referral commissions, and Filament admin panel.</p>
+        <div class="proj-tags">
+          <span class="tag">Laravel 12</span><span class="tag">React 19</span><span class="tag">FAL.ai</span><span class="tag">GPT-4o</span><span class="tag">Horizon</span>
+        </div>
+      </div>
+
+      <div class="card proj-card fade-up">
+        <div class="proj-head">
+          <span class="proj-name">Velora</span>
+          <span class="proj-badge" data-i18n="proj_badge_personal">Personal</span>
+        </div>
+        <p class="proj-desc" data-i18n="proj5_desc">Full-stack automotive marketplace with Flutter mobile app and FastAPI backend. JWT authentication, Google and Apple OAuth, full-text search with multi-criteria filtering, and a comprehensive test suite with 96% coverage.</p>
+        <div class="proj-tags">
+          <span class="tag">Flutter</span><span class="tag">FastAPI</span><span class="tag">PostgreSQL</span><span class="tag">Docker</span>
+        </div>
+      </div>
+
+      <div class="card proj-card fade-up">
+        <div class="proj-head">
+          <span class="proj-name">WheelBase</span>
+          <span class="proj-badge" data-i18n="proj_badge_personal">Personal</span>
+        </div>
+        <p class="proj-desc" data-i18n="proj6_desc">Full-stack tire and wheel e-commerce monorepo with multi-supplier product sync, Redis cart with 7-day TTL, Awilix dependency injection, and a cron-based price parser running alongside the storefront.</p>
+        <div class="proj-tags">
+          <span class="tag">Nuxt 3</span><span class="tag">Express TS</span><span class="tag">Redis</span><span class="tag">PostgreSQL</span><span class="tag">Knex</span>
+        </div>
+      </div>
+
+      <div class="card proj-card fade-up">
+        <div class="proj-head">
+          <span class="proj-name">Stars Bot</span>
+          <span class="proj-badge" data-i18n="proj_badge_personal">Personal</span>
+        </div>
+        <p class="proj-desc" data-i18n="proj7_desc">Telegram Stars reseller bot with no-KYC instant delivery via Fragment API. Supports preset and custom amounts, multiple payment methods via Yookassa, automatic retry on failed deliveries, and admin notifications.</p>
+        <div class="proj-tags">
+          <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">aiogram</span><span class="tag">PostgreSQL</span>
+        </div>
+      </div>
+
+      <div class="card proj-card fade-up">
+        <div class="proj-head">
+          <span class="proj-name">MinioTeleFuse</span>
+          <span class="proj-badge" data-i18n="proj_badge_personal">Personal</span>
+        </div>
+        <p class="proj-desc" data-i18n="proj8_desc">S3-compatible object storage backed by Telegram. Combines MinIO with a FUSE filesystem layer to expose Telegram as an S3 endpoint — compatible with any S3 client including AWS CLI and SDKs.</p>
+        <div class="proj-tags">
+          <span class="tag">Python</span><span class="tag">Docker</span><span class="tag">FUSE</span><span class="tag">MinIO</span>
+        </div>
+      </div>
+
+      <div class="card proj-card fade-up">
+        <div class="proj-head">
+          <span class="proj-name">Auth1</span>
+          <span class="proj-badge" data-i18n="proj_badge_personal">Personal</span>
+        </div>
+        <p class="proj-desc" data-i18n="proj9_desc">Minimal OAuth2 SSO server that authenticates users against a mail server — no local user database required. Stateless, lightweight, and designed to front internal tools without managing credentials.</p>
+        <div class="proj-tags">
+          <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">OAuth2</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <section id="blog">
   <div class="w">
     <p class="lbl"><i data-lucide="pen-line"></i><span data-i18n="blog_lbl">Blog</span></p>
@@ -1656,7 +1785,7 @@ checkCounters();
 
 const translations = {
   en: {
-    nav_about:'About', nav_stack:'Stack', nav_exp:'Experience', nav_life:'Life', nav_blog:'Blog', nav_resume:'Resume',
+    nav_about:'About', nav_stack:'Stack', nav_exp:'Experience', nav_life:'Life', nav_projects:'Projects', nav_blog:'Blog', nav_resume:'Resume',
     hero_tag:'Full-Stack Software Engineer',
     hero_sub:'Building scalable systems across backend, frontend & mobile. Based in Tajikistan, open to remote.',
     hero_cycle:'Specializing in',
@@ -1703,6 +1832,17 @@ const translations = {
     rbar_title:'Want the full picture?', rbar_sub:'Download my CV for a complete overview of experience, education, and skills.',
     rbar_btn:'View / Print Resume',
     edu_lbl:'Education', edu_sh:'Foundation.', edu_deg:'B.Sc. Computer Science', edu_sch:'Russian-Tajik Slavonic University', edu_yr:'2020 — 2024', edu_remote:'Open to remote opportunities worldwide',
+    proj_lbl:'Projects', proj_sh:"Things I've built.",
+    proj_badge_commercial:'Commercial', proj_badge_personal:'Personal',
+    proj1_desc:'Enterprise contact center platform with real-time multi-channel support across Web, Telegram, and WhatsApp. Features RAG-based AI operator for automated responses and smart routing by operator workload and language.',
+    proj2_desc:'Enterprise TLD Registry Management System with full domain lifecycle — registration workflow, real-time availability checking, DNS nameserver management, bulk operations, and multi-role access control.',
+    proj3_desc:'Multi-tenant SaaS platform for deploying personal AI Telegram bots. Each subscriber gets an isolated Docker instance provisioned on-demand with a dedicated API sub-key, Telegram OAuth, and subscription billing.',
+    proj4_desc:'AI content generation platform via Telegram. Image and video generation through FAL.ai models with GPT-4o prompt enhancement, async webhook callbacks, wallet top-up, referral commissions, and Filament admin panel.',
+    proj5_desc:'Full-stack automotive marketplace with Flutter mobile app and FastAPI backend. JWT authentication, Google and Apple OAuth, full-text search with multi-criteria filtering, and a comprehensive test suite with 96% coverage.',
+    proj6_desc:'Full-stack tire and wheel e-commerce monorepo with multi-supplier product sync, Redis cart with 7-day TTL, Awilix dependency injection, and a cron-based price parser running alongside the storefront.',
+    proj7_desc:'Telegram Stars reseller bot with no-KYC instant delivery via Fragment API. Supports preset and custom amounts, multiple payment methods via Yookassa, automatic retry on failed deliveries, and admin notifications.',
+    proj8_desc:'S3-compatible object storage backed by Telegram. Combines MinIO with a FUSE filesystem layer to expose Telegram as an S3 endpoint — compatible with any S3 client including AWS CLI and SDKs.',
+    proj9_desc:'Minimal OAuth2 SSO server that authenticates users against a mail server — no local user database required. Stateless, lightweight, and designed to front internal tools without managing credentials.',
     blog_lbl:'Blog', blog_sh:'Thoughts & write-ups.',
     blog1_date:'March 12, 2026', blog1_read:'6 min read', blog1_title:'FastAPI at Scale: Async Patterns That Actually Matter', blog1_excerpt:'Most FastAPI tutorials stop at hello-world endpoints. Here\'s what I learned running async services under real traffic — connection pools, background tasks, and where async hurts more than it helps.',
     blog2_date:'February 3, 2026', blog2_read:'8 min read', blog2_title:'PostgreSQL Query Optimization: From 2s to 40ms', blog2_excerpt:'A walkthrough of how I diagnosed and fixed a slow dashboard query — covering EXPLAIN ANALYZE, partial indexes, and why ORM-generated SQL often needs a second look.',
@@ -1712,7 +1852,7 @@ const translations = {
     scroll_txt:'scroll', footer_txt:'© 2026 Abdurahmon Sheralievich', footer_visitors:'visitors',
   },
   ru: {
-    nav_about:'О себе', nav_stack:'Стек', nav_exp:'Опыт', nav_life:'Интересы', nav_blog:'Блог', nav_resume:'Резюме',
+    nav_about:'О себе', nav_stack:'Стек', nav_exp:'Опыт', nav_life:'Интересы', nav_projects:'Проекты', nav_blog:'Блог', nav_resume:'Резюме',
     hero_tag:'Full-Stack разработчик',
     hero_sub:'Создаю масштабируемые системы: бэкенд, фронтенд и мобильные. Таджикистан, открыт к удалённой работе.',
     hero_cycle:'Специализируюсь на',
@@ -1759,6 +1899,17 @@ const translations = {
     rbar_title:'Хотите полную картину?', rbar_sub:'Скачайте CV для полного обзора опыта, образования и навыков.',
     rbar_btn:'Открыть резюме',
     edu_lbl:'Образование', edu_sh:'Основа.', edu_deg:'Бакалавр информатики', edu_sch:'Российско-таджикский славянский университет', edu_yr:'2020 — 2024', edu_remote:'Открыт к удалённой работе по всему миру',
+    proj_lbl:'Проекты', proj_sh:'Что я построил.',
+    proj_badge_commercial:'Коммерческий', proj_badge_personal:'Личный',
+    proj1_desc:'Корпоративная платформа контакт-центра с поддержкой Web, Telegram и WhatsApp в реальном времени. RAG-based ИИ-оператор для автоматических ответов и умная маршрутизация по нагрузке и языку.',
+    proj2_desc:'Корпоративная система управления TLD-реестром с полным жизненным циклом домена — регистрация, проверка доступности, управление DNS, массовые операции и многоуровневый доступ.',
+    proj3_desc:'Мультитенантная SaaS-платформа для развёртывания персональных ИИ Telegram-ботов. Каждый подписчик получает изолированный Docker-экземпляр, уникальный API-ключ, OAuth через Telegram и подписку.',
+    proj4_desc:'Платформа ИИ-генерации контента через Telegram. Генерация изображений и видео через FAL.ai с улучшением промптов через GPT-4o, webhook-колбэки, кошелёк, реферальные комиссии и Filament-панель.',
+    proj5_desc:'Full-stack маркетплейс автомобилей с Flutter-приложением и FastAPI-бэкендом. JWT и OAuth (Google/Apple), полнотекстовый поиск с фильтрами и покрытие тестами 96%.',
+    proj6_desc:'Full-stack монорепозиторий e-commerce для продажи шин и дисков. Синхронизация товаров от нескольких поставщиков, Redis-корзина с TTL 7 дней, Awilix DI и cron-парсер цен.',
+    proj7_desc:'Бот для перепродажи Telegram Stars без KYC с мгновенной доставкой через Fragment API. Пресеты и произвольные суммы, Yookassa, повторная попытка при сбое, уведомления администратору.',
+    proj8_desc:'S3-совместимое объектное хранилище на базе Telegram. Объединяет MinIO и FUSE-слой для доступа к Telegram как к S3-эндпоинту — совместимо с AWS CLI и любым S3-клиентом.',
+    proj9_desc:'Минимальный OAuth2 SSO-сервер с аутентификацией через почтовый сервер — без локальной базы пользователей. Stateless, лёгкий, предназначен для защиты внутренних инструментов.',
     blog_lbl:'Блог', blog_sh:'Мысли и заметки.',
     blog1_date:'12 марта 2026', blog1_read:'6 мин чтения', blog1_title:'FastAPI под нагрузкой: async-паттерны, которые реально работают', blog1_excerpt:'Большинство туториалов по FastAPI заканчиваются на hello-world. Вот что я узнал, запуская async-сервисы под реальной нагрузкой — пулы соединений, фоновые задачи и случаи, когда async мешает больше, чем помогает.',
     blog2_date:'3 февраля 2026', blog2_read:'8 мин чтения', blog2_title:'Оптимизация запросов PostgreSQL: с 2s до 40ms', blog2_excerpt:'Разбор того, как я нашёл и исправил медленный запрос в дашборде — EXPLAIN ANALYZE, частичные индексы и почему SQL, генерируемый ORM, часто нуждается в доработке.',
