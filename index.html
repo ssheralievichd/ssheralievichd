@@ -797,10 +797,10 @@ html:not([data-theme="dark"]) .ep-bg { fill: oklch(0.16 0.01 260); }
 .blog-title { font-size: 17px; font-weight: 700; line-height: 1.35; color: var(--foreground); transition: color 0.18s; }
 .blog-card:hover .blog-title { color: var(--primary); }
 .blog-excerpt { font-size: 14px; color: var(--muted-fg); line-height: 1.6; flex: 1; }
-.blog-footer { display: flex; align-items: center; justify-content: space-between; margin-top: 4px; }
+.blog-footer { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
 .blog-tags { display: flex; flex-wrap: wrap; gap: 6px; }
-.blog-read { font-size: 12px; font-weight: 600; color: var(--primary); display: flex; align-items: center; gap: 4px; transition: gap 0.18s; white-space: nowrap; }
-.blog-card:hover .blog-read { gap: 7px; }
+.blog-read { font-size: 13px; font-weight: 600; color: var(--primary); display: flex; align-items: center; gap: 5px; transition: gap 0.18s; }
+.blog-card:hover .blog-read { gap: 8px; }
 
 footer {
   border-top: 1px solid var(--border);
