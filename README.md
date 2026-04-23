@@ -13,7 +13,7 @@
 
 ## About Me
 
-Results-driven Full-Stack Engineer with 3+ years of experience architecting and deploying high-performance, scalable applications across backend, frontend, and mobile platforms. Specialized in building microservices, real-time systems, and cloud-native solutions that handle production-scale traffic.
+Results-driven Full-Stack Engineer with 6+ years of experience architecting and deploying high-performance, scalable applications across backend, frontend, and mobile platforms. Specialized in building microservices, real-time systems, and cloud-native solutions that handle production-scale traffic.
 
 **Core Competencies:**
 - Backend Development: Python (FastAPI, Django, Flask), PHP (Laravel), Go
@@ -52,6 +52,13 @@ Results-driven Full-Stack Engineer with 3+ years of experience architecting and 
 *2024 - 2025*
 
 Completed mandatory service while maintaining technical skills and contributing to open-source projects.
+
+**Freelance Python Developer** | Self-employed, Remote
+*2020 - 2024*
+
+- Built web applications and REST APIs for clients using Python, Django, and Flask
+- Developed automation scripts and data processing tools for small businesses
+- Managed full project lifecycle — requirements, development, deployment, and support
 
 ## Education
 
