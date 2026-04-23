@@ -13,12 +13,12 @@
 
 :root {
   --background:        oklch(0.07 0.005 260);
-  --foreground:        oklch(0.92 0.004 260);
+  --foreground:        oklch(0.96 0.004 260);
   --card:              oklch(0.1 0.006 260);
-  --primary:           oklch(0.65 0.2 262);
+  --primary:           oklch(0.68 0.2 262);
   --primary-fg:        oklch(0.07 0.005 260);
   --muted:             oklch(0.14 0.004 260);
-  --muted-fg:          oklch(0.65 0.01 260);
+  --muted-fg:          oklch(0.75 0.008 260);
   --border:            oklch(1 0 0 / 7%);
   --surface-1:         oklch(0.06 0.005 260);
   --surface-2:         oklch(0.08 0.004 260);
@@ -276,7 +276,7 @@ section { padding: 96px 0; }
 }
 
 .hero-sub {
-  font-size: 16px; font-weight: 400;
+  font-size: 17px; font-weight: 400;
   color: var(--muted-fg); margin-bottom: 10px;
   max-width: 540px;
   opacity: 0; animation: up 0.5s 0.3s forwards;
@@ -335,7 +335,7 @@ section { padding: 96px 0; }
 
 /* ── ABOUT ── */
 .about-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 56px; align-items: start; }
-.about-body p { color: var(--muted-fg); font-size: 15px; line-height: 1.8; margin-bottom: 14px; }
+.about-body p { color: var(--muted-fg); font-size: 15.5px; line-height: 1.85; margin-bottom: 14px; }
 .about-body strong { color: var(--foreground); font-weight: 600; }
 
 .stats { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
@@ -413,10 +413,10 @@ section { padding: 96px 0; }
 .tl-dot2 { width: 5px; height: 5px; border-radius: 50%; background: oklch(0.75 0.18 145); }
 .tl-ul { list-style: none; }
 .tl-ul li {
-  font-size: 13.5px; color: var(--muted-fg); line-height: 1.7;
-  padding-left: 14px; position: relative; margin-bottom: 4px;
+  font-size: 14px; color: var(--muted-fg); line-height: 1.75;
+  padding-left: 14px; position: relative; margin-bottom: 5px;
 }
-.tl-ul li::before { content: '–'; position: absolute; left: 0; color: var(--muted-fg); opacity: 0.4; }
+.tl-ul li::before { content: '–'; position: absolute; left: 0; color: var(--muted-fg); opacity: 0.5; }
 
 /* ── EDU ── */
 .edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
