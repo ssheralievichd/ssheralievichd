@@ -404,6 +404,79 @@ section { padding: 96px 0; }
   opacity: 0; animation: up 0.5s 0.46s forwards;
 }
 
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  align-items: center;
+  gap: 60px;
+}
+.hero-content { min-width: 0; }
+
+.hero-illustration {
+  position: relative;
+  opacity: 0;
+  animation: up 0.6s 0.55s forwards;
+}
+.hi-svg {
+  width: 100%; height: auto;
+  filter: drop-shadow(0 24px 48px oklch(0.48 0.22 262 / 18%));
+  border-radius: 12px;
+}
+.hi-win { fill: oklch(0.16 0.015 260); stroke: oklch(1 0 0 / 8%); stroke-width: 1; }
+.hi-bar { fill: oklch(0.22 0.015 260); }
+.hi-bar-b { fill: oklch(0.19 0.015 260); }
+.hi-tab { fill: oklch(0.28 0.018 260); }
+.hi-tab-txt { font-family: 'JetBrains Mono', 'Fira Mono', monospace; font-size: 10px; fill: oklch(0.78 0.005 260); text-anchor: middle; }
+.hi-ln { font-family: 'JetBrains Mono', 'Fira Mono', monospace; font-size: 10px; fill: oklch(0.45 0.005 260); }
+.hi-kw { font-family: 'JetBrains Mono', 'Fira Mono', monospace; font-size: 10px; fill: oklch(0.72 0.16 300); }
+.hi-fn { font-family: 'JetBrains Mono', 'Fira Mono', monospace; font-size: 10px; fill: oklch(0.78 0.15 220); }
+.hi-dec { font-family: 'JetBrains Mono', 'Fira Mono', monospace; font-size: 10px; fill: oklch(0.72 0.12 50); }
+.hi-str { font-family: 'JetBrains Mono', 'Fira Mono', monospace; font-size: 10px; fill: oklch(0.74 0.12 148); }
+.hi-plain { font-family: 'JetBrains Mono', 'Fira Mono', monospace; font-size: 10px; fill: oklch(0.82 0.005 260); }
+.hi-cursor { fill: oklch(0.72 0.2 262); animation: blink 1s step-end infinite; }
+.hi-statusb { fill: oklch(0.48 0.22 262); opacity: 0.85; }
+.hi-stxt { font-family: 'JetBrains Mono', 'Fira Mono', monospace; font-size: 8px; fill: oklch(1 0 0 / 75%); }
+.hi-stxt-r { text-anchor: end; }
+
+.hi-badge {
+  position: absolute;
+  display: flex; align-items: center; gap: 7px;
+  font-size: 11.5px; font-weight: 600;
+  padding: 7px 13px; border-radius: 40px;
+  backdrop-filter: blur(12px);
+  border: 1px solid oklch(1 0 0 / 12%);
+  color: var(--fg);
+  white-space: nowrap;
+}
+html[data-theme="dark"] .hi-badge {
+  background: oklch(0.18 0.015 260 / 88%);
+  box-shadow: 0 8px 24px oklch(0 0 0 / 30%);
+}
+html:not([data-theme="dark"]) .hi-badge {
+  background: oklch(0.99 0 0 / 88%);
+  box-shadow: 0 8px 24px oklch(0 0 0 / 10%);
+}
+.hi-badge-a {
+  top: -18px; right: 10px;
+  animation: fi-float-a 4s ease-in-out infinite;
+}
+.hi-badge-b {
+  bottom: 48px; right: -24px;
+  animation: fi-float-b 5s ease-in-out infinite;
+}
+.hi-badge-c {
+  bottom: -16px; left: 20px;
+  animation: fi-float-a 4.5s 0.8s ease-in-out infinite;
+}
+@keyframes fi-float-a {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+@keyframes fi-float-b {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
+
 .scroll-hint {
   position: absolute; bottom: 36px; left: 50%; transform: translateX(-50%);
   display: flex; flex-direction: column; align-items: center; gap: 10px;
@@ -627,6 +700,8 @@ footer {
   .stack-grid { grid-template-columns: 1fr 1fr; }
   .hobbies-grid { grid-template-columns: 1fr 1fr; }
   .cbox { padding: 40px 28px; }
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-illustration { display: none; }
 }
 
 @media (max-width: 620px) {
@@ -711,32 +786,110 @@ footer {
 
 <!-- HERO -->
 <section id="hero">
-  <div class="w">
-    <p class="hero-tag"><i data-lucide="code-2" style="width:11px;height:11px;opacity:0.6"></i>Full-Stack Software Engineer</p>
-    <h1 class="hero-h1 shimmer">Abdurahmon<br>Sheralievich</h1>
-    <p class="hero-sub">Building scalable systems across backend, frontend &amp; mobile. Based in Tajikistan, open to remote.</p>
-    <p class="hero-cycle">Specializing in <span id="cword">Python</span><span class="cursor"></span></p>
-    <div class="hero-btns">
-      <a href="#experience" class="btn btn-primary">
-        <i data-lucide="briefcase" style="width:14px;height:14px"></i>
-        View Experience
-      </a>
-      <a href="/resume.html" class="btn btn-secondary">
-        <i data-lucide="download" style="width:14px;height:14px"></i>
-        View CV
-      </a>
-      <a href="#contact" class="btn btn-secondary">
-        <i data-lucide="send" style="width:14px;height:14px"></i>
-        Contact
-      </a>
-      <a href="https://github.com/ssheralievichd" target="_blank" rel="noopener" class="btn btn-secondary">
-        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
-        GitHub
-      </a>
-      <a href="https://www.linkedin.com/in/ssheralievichd/" target="_blank" rel="noopener" class="btn btn-secondary">
-        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
-        LinkedIn
-      </a>
+  <div class="w hero-inner">
+    <div class="hero-content">
+      <p class="hero-tag"><i data-lucide="code-2" style="width:11px;height:11px;opacity:0.6"></i>Full-Stack Software Engineer</p>
+      <h1 class="hero-h1 shimmer">Abdurahmon<br>Sheralievich</h1>
+      <p class="hero-sub">Building scalable systems across backend, frontend &amp; mobile. Based in Tajikistan, open to remote.</p>
+      <p class="hero-cycle">Specializing in <span id="cword">Python</span><span class="cursor"></span></p>
+      <div class="hero-btns">
+        <a href="#experience" class="btn btn-primary">
+          <i data-lucide="briefcase" style="width:14px;height:14px"></i>
+          View Experience
+        </a>
+        <a href="/resume.html" class="btn btn-secondary">
+          <i data-lucide="download" style="width:14px;height:14px"></i>
+          View CV
+        </a>
+        <a href="#contact" class="btn btn-secondary">
+          <i data-lucide="send" style="width:14px;height:14px"></i>
+          Contact
+        </a>
+        <a href="https://github.com/ssheralievichd" target="_blank" rel="noopener" class="btn btn-secondary">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+          GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/ssheralievichd/" target="_blank" rel="noopener" class="btn btn-secondary">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
+        </a>
+      </div>
+    </div>
+    <div class="hero-illustration" aria-hidden="true">
+      <svg class="hi-svg" viewBox="0 0 420 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Terminal window -->
+        <rect class="hi-win" x="10" y="30" width="380" height="270" rx="12"/>
+        <!-- Title bar -->
+        <rect class="hi-bar" x="10" y="30" width="380" height="38" rx="12"/>
+        <rect class="hi-bar-b" x="10" y="56" width="380" height="12"/>
+        <!-- Traffic lights -->
+        <circle cx="34" cy="49" r="6" fill="#ff5f57"/>
+        <circle cx="54" cy="49" r="6" fill="#febc2e"/>
+        <circle cx="74" cy="49" r="6" fill="#28c840"/>
+        <!-- Tab label -->
+        <rect class="hi-tab" x="94" y="38" width="90" height="22" rx="6"/>
+        <text class="hi-tab-txt" x="139" y="53">main.py</text>
+        <!-- Code lines -->
+        <!-- line 1 -->
+        <text class="hi-ln" x="30" y="102">1</text>
+        <text class="hi-kw" x="50" y="102">from</text>
+        <text class="hi-plain" x="86" y="102">fastapi</text>
+        <text class="hi-kw" x="148" y="102">import</text>
+        <text class="hi-plain" x="198" y="102">FastAPI, Depends</text>
+        <!-- line 2 -->
+        <text class="hi-ln" x="30" y="122">2</text>
+        <text class="hi-kw" x="50" y="122">from</text>
+        <text class="hi-plain" x="86" y="122">auth</text>
+        <text class="hi-kw" x="118" y="122">import</text>
+        <text class="hi-plain" x="168" y="122">verify_token</text>
+        <!-- line 3 blank -->
+        <text class="hi-ln" x="30" y="142">3</text>
+        <!-- line 4 -->
+        <text class="hi-ln" x="30" y="162">4</text>
+        <text class="hi-plain" x="50" y="162">app = FastAPI()</text>
+        <!-- line 5 blank -->
+        <text class="hi-ln" x="30" y="182">5</text>
+        <!-- line 6 -->
+        <text class="hi-ln" x="30" y="202">6</text>
+        <text class="hi-dec" x="50" y="202">@app.get</text>
+        <text class="hi-plain" x="104" y="202">("/users/me")</text>
+        <!-- line 7 -->
+        <text class="hi-ln" x="30" y="222">7</text>
+        <text class="hi-kw" x="50" y="222">async def</text>
+        <text class="hi-fn" x="106" y="222">get_current_user</text>
+        <text class="hi-plain" x="230" y="222">(</text>
+        <!-- line 8 -->
+        <text class="hi-ln" x="30" y="242">8</text>
+        <text class="hi-plain" x="66" y="242">token: str = Depends(verify_token)</text>
+        <!-- line 9 -->
+        <text class="hi-ln" x="30" y="262">9</text>
+        <text class="hi-plain" x="50" y="262">):</text>
+        <!-- line 10 -->
+        <text class="hi-ln" x="30" y="282">10</text>
+        <text class="hi-kw" x="54" y="282">return</text>
+        <text class="hi-str" x="98" y="282">{"user": token}</text>
+        <!-- cursor blink -->
+        <rect class="hi-cursor" x="172" y="271" width="8" height="14" rx="1"/>
+        <!-- Status bar -->
+        <rect class="hi-status" x="10" y="288" width="380" height="12" rx="0"/>
+        <rect class="hi-status" x="10" y="294" width="380" height="6" rx="0"/>
+        <rect class="hi-statusb" x="10" y="288" width="380" height="12"/>
+        <text class="hi-stxt" x="20" y="298">Python 3.12  FastAPI  UTF-8</text>
+        <text class="hi-stxt hi-stxt-r" x="400" y="298">Ln 10, Col 22</text>
+      </svg>
+      <!-- floating badges -->
+      <div class="hi-badge hi-badge-a">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" fill="#3776ab"/></svg>
+        Python 3.12
+      </div>
+      <div class="hi-badge hi-badge-b">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="4" fill="#009688"/><text x="3" y="17" font-size="11" font-weight="700" fill="white">FA</text></svg>
+        FastAPI
+      </div>
+      <div class="hi-badge hi-badge-c">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="4" fill="#2496ed"/><text x="3" y="17" font-size="9" font-weight="700" fill="white">🐳</text></svg>
+        Docker
+      </div>
     </div>
   </div>
   <div class="scroll-hint">
