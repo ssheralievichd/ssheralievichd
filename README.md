@@ -34,11 +34,18 @@ Results-driven Full-Stack Engineer with 3+ years of experience architecting and 
 - Optimize PostgreSQL query performance, achieving 50%+ reduction in response times on high-traffic endpoints
 - Lead containerization initiatives with Docker and implement automated CI/CD pipelines for rapid deployment cycles
 
+**Python Developer** | Formika, Tajikistan
+*October 2024 - January 2025*
+
+- Developed backend services and REST APIs using Python and FastAPI
+- Integrated third-party services and maintained existing codebase
+- Participated in code reviews and improved test coverage
+
 **Python Software Engineer** | Alif Bank, Tajikistan
 *August 2022 - October 2024*
 
 - Developed and maintained high-availability RESTful APIs
-- Designed complex database schemas and optimized queries, decrng query latency
+- Designed complex database schemas and optimized queries, reducing query latency
 - Spearheaded Docker adoption and production deployment automation, reducing deployment time by 60%
 
 **National Service** | Tajikistan
