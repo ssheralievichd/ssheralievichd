@@ -25,11 +25,11 @@
   --nav-stuck-border:    oklch(0 0 0 / 6%);
   --glass-bg:            oklch(0.998 0.002 80 / 85%);
   --glass-border:        oklch(0 0 0 / 6%);
-  --glass-shadow-sm:     oklch(0 0 0 / 3%);
-  --glass-shadow-lg:     oklch(0 0 0 / 6%);
+  --glass-shadow-sm:     oklch(0 0 0 / 0%);
+  --glass-shadow-lg:     oklch(0 0 0 / 0%);
   --highlight-bg:        oklch(0.988 0.012 262);
-  --highlight-border:    oklch(0.50 0.22 262 / 14%);
-  --highlight-glow:      oklch(0.50 0.22 262 / 0%);
+  --highlight-border:    oklch(0 0 0 / 8%);
+  --highlight-glow:      oklch(0 0 0 / 0%);
   --tag-bg:              oklch(0.958 0.006 72);
   --tag-bg-hover:        oklch(0.46 0.2 262 / 8%);
   --tag-border-hover:    oklch(0.46 0.2 262 / 28%);
@@ -450,8 +450,10 @@ html:not([data-theme="dark"]) .card:hover {
 }
 .hi-svg {
   width: 100%; height: auto;
-  filter: drop-shadow(0 24px 48px oklch(0.48 0.22 262 / 18%));
   border-radius: 12px;
+}
+html[data-theme="dark"] .hi-svg {
+  filter: drop-shadow(0 24px 48px oklch(0.48 0.22 262 / 18%));
 }
 .hi-win { fill: oklch(0.16 0.015 260); stroke: oklch(1 0 0 / 8%); stroke-width: 1; }
 .hi-bar { fill: oklch(0.22 0.015 260); }
@@ -485,7 +487,7 @@ html[data-theme="dark"] .hi-badge {
 }
 html:not([data-theme="dark"]) .hi-badge {
   background: oklch(0.99 0 0 / 88%);
-  box-shadow: 0 8px 24px oklch(0 0 0 / 10%);
+  box-shadow: none;
 }
 .hi-badge-a {
   top: -18px; right: 10px;
