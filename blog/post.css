@@ -1,0 +1,21 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root { --bg: oklch(0.978 0.005 75); --fg: oklch(0.1 0.005 50); --muted: oklch(0.45 0.006 60); --border: oklch(0 0 0 / 8%); --code-bg: oklch(0.955 0.006 72); --primary: oklch(0.46 0.2 262); --tag-bg: oklch(0.955 0.006 72); --nav-bg: oklch(0.998 0.002 80 / 90%); }
+html[data-theme="dark"] { --bg: oklch(0.07 0.005 260); --fg: oklch(0.96 0.004 260); --muted: oklch(0.55 0.005 260); --border: oklch(1 0 0 / 8%); --code-bg: oklch(0.12 0.008 260); --primary: oklch(0.68 0.2 262); --tag-bg: oklch(0.12 0.008 260); --nav-bg: oklch(0.07 0.005 260 / 90%); }
+body { background: var(--bg); color: var(--fg); font-family: 'Inter', ui-sans-serif, sans-serif; font-size: 16px; line-height: 1.7; min-height: 100vh; }
+.bp-nav { position: sticky; top: 0; z-index: 10; background: var(--nav-bg); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0 24px; height: 52px; display: flex; align-items: center; }
+.bp-back { display: flex; align-items: center; gap: 6px; color: var(--muted); text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.15s; }
+.bp-back:hover { color: var(--fg); }
+.bp-back svg { width: 15px; height: 15px; }
+.bp-main { max-width: 680px; margin: 0 auto; padding: 56px 24px 96px; }
+.bp-header { margin-bottom: 40px; display: flex; flex-direction: column; gap: 16px; }
+.bp-meta { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--muted); }
+.bp-dot { width: 3px; height: 3px; border-radius: 50%; background: var(--muted); }
+.bp-header h1 { font-size: clamp(24px, 5vw, 36px); font-weight: 700; line-height: 1.2; letter-spacing: -0.02em; }
+.bp-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.bp-tag { padding: 3px 10px; border-radius: 999px; background: var(--tag-bg); border: 1px solid var(--border); font-size: 12px; font-weight: 500; color: var(--muted); }
+.bp-body { border-top: 1px solid var(--border); padding-top: 36px; display: flex; flex-direction: column; gap: 20px; }
+.bp-body h2 { font-size: 20px; font-weight: 700; margin-top: 12px; }
+.bp-body p { color: var(--fg); opacity: 0.85; }
+.bp-body pre { background: var(--code-bg); border: 1px solid var(--border); border-radius: 8px; padding: 18px; overflow-x: auto; }
+.bp-body code { font-family: ui-monospace, 'Cascadia Code', monospace; font-size: 13.5px; line-height: 1.6; }
+.bp-body p code { background: var(--code-bg); padding: 2px 6px; border-radius: 4px; font-size: 13px; }

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>FastAPI at Scale: Async Patterns That Actually Matter</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+<link rel="stylesheet" href="/blog/post.css">
+</head>
+<body>
+<nav class="bp-nav"><a href="/" class="bp-back"><i data-lucide="arrow-left"></i> Back</a></nav>
+<main class="bp-main">
+  <header class="bp-header">
+    <div class="bp-meta"><span>March 12, 2026</span><span class="bp-dot"></span><span>6 min read</span></div>
+    <h1>FastAPI at Scale: Async Patterns That Actually Matter</h1>
+    <div class="bp-tags"><span class="bp-tag">Python</span><span class="bp-tag">FastAPI</span><span class="bp-tag">Backend</span></div>
+  </header>
+  <article class="bp-body">
+    <p>Most FastAPI tutorials stop at hello-world endpoints. Here's what I learned running async services under real traffic.</p>
+    <h2>The async trap</h2>
+    <p>Marking a route <code>async def</code> doesn't make it faster — it only helps if you await non-blocking I/O. If you call a synchronous library (like a standard ORM query) inside an async route, you block the event loop for every request.</p>
+    <p>The fix: use <code>run_in_executor</code> for blocking calls, or switch to an async driver (asyncpg, motor, aioredis).</p>
+    <h2>Connection pool sizing</h2>
+    <p>Default asyncpg pool size is 10. Under load that's almost always wrong. Start with <code>min_size=5, max_size=20</code> and tune based on your DB server's <code>max_connections</code> and observed wait times. Don't guess — instrument with Prometheus counters on pool checkout time.</p>
+    <h2>Background tasks vs workers</h2>
+    <p>FastAPI's <code>BackgroundTasks</code> run in the same process after the response is sent. Good for fire-and-forget logging. Bad for anything that takes >500ms or needs retry logic. Use Celery or ARQ for real background work.</p>
+    <h2>Lifespan for startup/shutdown</h2>
+    <p>Move pool creation into the <code>@asynccontextmanager</code> lifespan handler — not into a global or <code>@app.on_event</code> (deprecated). This gives you clean startup sequencing and guaranteed teardown.</p>
+    <pre><code>from contextlib import asynccontextmanager
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    app.state.pool = await asyncpg.create_pool(DATABASE_URL)
+    yield
+    await app.state.pool.close()</code></pre>
+    <h2>Where async hurts</h2>
+    <p>CPU-bound work (image processing, heavy computation) doesn't benefit from async — it saturates one core. Offload to a process pool or a dedicated worker. Async shines for I/O-bound, high-concurrency workloads.</p>
+  </article>
+</main>
+<script>lucide.createIcons(); const t=localStorage.getItem('theme')||'dark'; document.documentElement.dataset.theme=t;</script>
+</body>
+</html>

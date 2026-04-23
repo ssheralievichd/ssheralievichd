@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>PostgreSQL Query Optimization: From 2s to 40ms</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+<link rel="stylesheet" href="/blog/post.css">
+</head>
+<body>
+<nav class="bp-nav"><a href="/" class="bp-back"><i data-lucide="arrow-left"></i> Back</a></nav>
+<main class="bp-main">
+  <header class="bp-header">
+    <div class="bp-meta"><span>February 3, 2026</span><span class="bp-dot"></span><span>8 min read</span></div>
+    <h1>PostgreSQL Query Optimization: From 2s to 40ms</h1>
+    <div class="bp-tags"><span class="bp-tag">PostgreSQL</span><span class="bp-tag">Performance</span></div>
+  </header>
+  <article class="bp-body">
+    <p>A slow dashboard query was costing us 2 seconds per page load under moderate traffic. Here's the full diagnostic process.</p>
+    <h2>Start with EXPLAIN ANALYZE</h2>
+    <p>Never guess. Run <code>EXPLAIN (ANALYZE, BUFFERS, FORMAT TEXT)</code> and look for Seq Scans on large tables, high row estimates vs actual rows, and nested loop joins on unindexed columns.</p>
+    <pre><code>EXPLAIN (ANALYZE, BUFFERS)
+SELECT u.id, count(o.id)
+FROM users u
+LEFT JOIN orders o ON o.user_id = u.id
+WHERE u.created_at > NOW() - INTERVAL '30 days'
+GROUP BY u.id;</code></pre>
+    <h2>The problem: missing partial index</h2>
+    <p>The planner was doing a full sequential scan on <code>orders</code> (4M rows) because the index on <code>user_id</code> had poor selectivity — most users had orders. A partial index on active users only cut the scan to ~80k rows.</p>
+    <pre><code>CREATE INDEX CONCURRENTLY idx_orders_recent_users
+ON orders (user_id)
+WHERE created_at > '2024-01-01';</code></pre>
+    <h2>ORM-generated SQL often needs help</h2>
+    <p>Django's ORM generated a subquery where a JOIN would have been faster. <code>select_related</code> and <code>prefetch_related</code> are good defaults but check the SQL with <code>queryset.query</code> or django-debug-toolbar on complex aggregations.</p>
+    <h2>Statistics and vacuuming</h2>
+    <p>Bad row estimates usually mean stale statistics. Run <code>ANALYZE table_name</code> and check <code>pg_stat_user_tables</code> for tables with high <code>n_dead_tup</code>. Autovacuum defaults are often too conservative for high-write tables.</p>
+    <h2>Result</h2>
+    <p>Partial index + rewritten join: 2100ms → 40ms. No schema changes, no caching layer needed.</p>
+  </article>
+</main>
+<script>lucide.createIcons(); const t=localStorage.getItem('theme')||'dark'; document.documentElement.dataset.theme=t;</script>
+</body>
+</html>

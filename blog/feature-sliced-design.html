@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Feature-Sliced Design: Why I Stopped Fighting Vue's Folder Structure</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+<link rel="stylesheet" href="/blog/post.css">
+</head>
+<body>
+<nav class="bp-nav"><a href="/" class="bp-back"><i data-lucide="arrow-left"></i> Back</a></nav>
+<main class="bp-main">
+  <header class="bp-header">
+    <div class="bp-meta"><span>January 18, 2026</span><span class="bp-dot"></span><span>5 min read</span></div>
+    <h1>Feature-Sliced Design: Why I Stopped Fighting Vue's Folder Structure</h1>
+    <div class="bp-tags"><span class="bp-tag">Vue.js</span><span class="bp-tag">Nuxt.js</span><span class="bp-tag">Architecture</span></div>
+  </header>
+  <article class="bp-body">
+    <p>After wrestling with feature folders, domain folders, and flat structures — FSD finally gave me a mental model that scales.</p>
+    <h2>The problem with flat structure</h2>
+    <p>Early-stage projects start flat: <code>components/</code>, <code>pages/</code>, <code>store/</code>. It works until you hit ~20 features. Then you're searching for <code>UserCard</code> in a directory with 80 components.</p>
+    <h2>What FSD actually is</h2>
+    <p>FSD organises code into layers (<code>app → pages → widgets → features → entities → shared</code>), each containing slices (business domains), each slice containing segments (<code>ui</code>, <code>model</code>, <code>api</code>). The strict rule: a layer can only import from layers below it.</p>
+    <pre><code>src/
+  app/         # providers, router, global styles
+  pages/       # route-level compositions
+  widgets/     # self-contained UI blocks
+  features/    # user actions (auth, cart, search)
+  entities/    # business models (user, product)
+  shared/      # ui kit, helpers, types</code></pre>
+    <h2>Applying it in Nuxt.js</h2>
+    <p>Nuxt's <code>pages/</code> maps to FSD's <code>pages</code> layer naturally. I keep Nuxt's auto-imports for <code>shared/ui</code> and configure path aliases so <code>@entities/user</code> resolves correctly. Pinia stores live in the <code>model</code> segment of their slice.</p>
+    <h2>The one rule that matters</h2>
+    <p>The import direction rule is what makes FSD work. Enforce it with eslint-plugin-boundaries. Without the linter, teams slowly break it and you lose the benefit.</p>
+    <h2>When not to use it</h2>
+    <p>FSD adds upfront structure overhead. For a landing page or a &lt;5 screen app, it's overkill. The break-even point is roughly when you have 3+ developers or 10+ distinct user flows.</p>
+  </article>
+</main>
+<script>lucide.createIcons(); const t=localStorage.getItem('theme')||'dark'; document.documentElement.dataset.theme=t;</script>
+</body>
+</html>
