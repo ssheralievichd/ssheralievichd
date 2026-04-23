@@ -15,12 +15,12 @@
 :root {
   --background:          oklch(0.978 0.005 75);
   --foreground:          oklch(0.1 0.005 50);
-  --card:                oklch(0.998 0.002 80);
+  --card:                oklch(1 0 0);
   --primary:             oklch(0.46 0.2 262);
   --primary-fg:          oklch(0.99 0 0);
   --muted:               oklch(0.952 0.006 72);
   --muted-fg:            oklch(0.40 0.008 60);
-  --border:              oklch(0 0 0 / 7%);
+  --border:              oklch(0 0 0 / 11%);
   --nav-stuck-bg:        oklch(0.998 0.002 80 / 94%);
   --nav-stuck-border:    oklch(0 0 0 / 6%);
   --glass-bg:            oklch(0.998 0.002 80 / 85%);
@@ -30,7 +30,7 @@
   --highlight-bg:        oklch(0.988 0.012 262);
   --highlight-border:    oklch(0 0 0 / 8%);
   --highlight-glow:      oklch(0 0 0 / 0%);
-  --tag-bg:              oklch(0.958 0.006 72);
+  --tag-bg:              oklch(1 0 0);
   --tag-bg-hover:        oklch(0.46 0.2 262 / 8%);
   --tag-border-hover:    oklch(0.46 0.2 262 / 28%);
   --btn-sec-bg:          oklch(0.998 0.002 80);
@@ -588,10 +588,11 @@ html:not([data-theme="dark"]) .aa-bg { fill: oklch(0.16 0.01 260); }
 .sc { padding: 22px 24px; }
 .sc-cat {
   font-size: 10px; font-weight: 700; letter-spacing: 0.1em;
-  text-transform: uppercase; color: var(--primary);
+  text-transform: uppercase; color: var(--muted-fg);
   display: flex; align-items: center; gap: 6px;
   margin-bottom: 16px;
 }
+html[data-theme="dark"] .sc-cat { color: var(--primary); }
 .sc-cat svg { width: 11px; height: 11px; }
 
 .tags { display: flex; flex-wrap: wrap; gap: 5px; }
