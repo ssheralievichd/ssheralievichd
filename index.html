@@ -12,14 +12,14 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --background:          oklch(0.95 0.004 260);
+  --background:          oklch(0.94 0.004 260);
   --foreground:          oklch(0.12 0.006 260);
   --card:                oklch(1 0 0);
-  --primary:             oklch(0.50 0.22 262);
+  --primary:             oklch(0.48 0.22 262);
   --primary-fg:          oklch(0.98 0.002 260);
-  --muted:               oklch(0.93 0.003 260);
-  --muted-fg:            oklch(0.44 0.008 260);
-  --border:              oklch(0 0 0 / 10%);
+  --muted:               oklch(0.92 0.003 260);
+  --muted-fg:            oklch(0.42 0.008 260);
+  --border:              oklch(0 0 0 / 11%);
   --nav-stuck-bg:        oklch(1 0 0 / 92%);
   --nav-stuck-border:    oklch(0 0 0 / 8%);
   --glass-bg:            oklch(1 0 0 / 80%);
@@ -29,9 +29,9 @@
   --highlight-bg:        oklch(0.985 0.01 262);
   --highlight-border:    oklch(0.50 0.22 262 / 18%);
   --highlight-glow:      oklch(0.50 0.22 262 / 0%);
-  --tag-bg:              oklch(0.93 0.003 260);
-  --tag-bg-hover:        oklch(0.90 0.008 262);
-  --tag-border-hover:    oklch(0.50 0.22 262 / 25%);
+  --tag-bg:              oklch(0.97 0.002 260);
+  --tag-bg-hover:        oklch(0.48 0.22 262 / 8%);
+  --tag-border-hover:    oklch(0.48 0.22 262 / 35%);
   --btn-sec-bg:          oklch(1 0 0);
   --btn-sec-bg-hover:    oklch(0.96 0.008 262);
   --btn-sec-border-hover:oklch(0.50 0.22 262 / 25%);
@@ -448,25 +448,25 @@ section { padding: 96px 0; }
 
 /* ── STACK ── */
 .stack-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; }
-.sc { padding: 20px 22px; }
+.sc { padding: 22px 24px; }
 .sc-cat {
-  font-size: 10px; font-weight: 600; letter-spacing: 0.1em;
-  text-transform: uppercase; color: var(--muted-fg);
+  font-size: 10px; font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--primary);
   display: flex; align-items: center; gap: 6px;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
 .sc-cat svg { width: 11px; height: 11px; }
 
-.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tags { display: flex; flex-wrap: wrap; gap: 5px; }
 .tag {
-  font-size: 12px; font-weight: 500; color: var(--muted-fg);
-  padding: 3px 10px; border-radius: var(--radius);
+  font-size: 11.5px; font-weight: 500; color: var(--muted-fg);
+  padding: 3px 9px; border-radius: 5px;
   background: var(--tag-bg);
   border: 1px solid var(--border);
   transition: color 0.15s, border-color 0.15s, background 0.15s;
 }
 .tag:hover {
-  color: var(--foreground);
+  color: var(--primary);
   border-color: var(--tag-border-hover);
   background: var(--tag-bg-hover);
 }
