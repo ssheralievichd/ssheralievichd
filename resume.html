@@ -135,13 +135,21 @@ body {
   @page { margin: 0; size: A4; }
 }
 
-.lang-btn-r {
-  font-size: 12px; font-weight: 700; letter-spacing: 0.05em;
-  background: #2a2a2a; color: #ccc; border: 1px solid #444;
-  padding: 4px 10px; border-radius: 4px; cursor: pointer;
-  font-family: Arial, sans-serif; transition: background 0.15s;
+.lang-toggle-r {
+  display: flex; align-items: center;
+  height: 32px; padding: 3px; border-radius: 999px;
+  background: #f0eeeb; border: 1px solid #d4d0cb;
+  gap: 1px;
 }
-.lang-btn-r:hover { background: #3a3a3a; color: #fff; }
+.lang-toggle-r-opt {
+  display: flex; align-items: center; justify-content: center;
+  height: 24px; min-width: 32px; padding: 0 8px;
+  border-radius: 999px; border: none; background: transparent;
+  color: #888; cursor: pointer; font-size: 11px;
+  font-weight: 700; letter-spacing: 0.06em;
+  font-family: Arial, sans-serif; transition: background 0.15s, color 0.15s;
+}
+.lang-toggle-r-opt.active { background: #1a1a1a; color: #fff; }
 
 /* ── Mobile ── */
 @media (max-width: 680px) {
@@ -161,7 +169,10 @@ body {
       <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
       Back to portfolio
     </a>
-    <button id="lang-btn" class="lang-btn-r">RU</button>
+    <div class="lang-toggle-r">
+      <button class="lang-toggle-r-opt" data-lang="en">EN</button>
+      <button class="lang-toggle-r-opt" data-lang="ru">RU</button>
+    </div>
     <span class="print-bar-title">Abdurahmon Sheralievich — Resume</span>
   </div>
   <button class="btn-print" onclick="window.print()">
@@ -404,16 +415,20 @@ function applyResumeLang(lang) {
     const key = el.dataset.i18n;
     if (rT[lang][key] !== undefined) el.textContent = rT[lang][key];
   });
-  document.getElementById('lang-btn').textContent = lang === 'en' ? 'RU' : 'EN';
   document.documentElement.setAttribute('lang', lang === 'ru' ? 'ru' : 'en');
+  document.querySelectorAll('.lang-toggle-r-opt').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.lang === lang);
+  });
 }
 
 let rLang = localStorage.getItem('lang') || 'en';
 applyResumeLang(rLang);
-document.getElementById('lang-btn').addEventListener('click', () => {
-  rLang = rLang === 'en' ? 'ru' : 'en';
-  localStorage.setItem('lang', rLang);
-  applyResumeLang(rLang);
+document.querySelectorAll('.lang-toggle-r-opt').forEach(btn => {
+  btn.addEventListener('click', () => {
+    rLang = btn.dataset.lang;
+    localStorage.setItem('lang', rLang);
+    applyResumeLang(rLang);
+  });
 });
 </script>
 </body>
