@@ -220,19 +220,23 @@ section { padding: 96px 0; }
 }
 
 /* ── Lang toggle ── */
-.lang-btn {
+.lang-toggle {
+  display: flex; align-items: center;
+  height: 34px; padding: 3px; border-radius: 999px;
+  background: var(--muted); border: 1px solid var(--border);
+  gap: 1px; flex-shrink: 0;
+}
+.lang-toggle-opt {
   display: flex; align-items: center; justify-content: center;
-  height: 34px; padding: 0 10px; border-radius: 8px;
-  background: var(--nav-cta-bg); border: 1px solid var(--border);
+  height: 26px; min-width: 34px; padding: 0 8px;
+  border-radius: 999px; border: none; background: transparent;
   color: var(--muted-fg); cursor: pointer; font-size: 11px;
   font-weight: 700; letter-spacing: 0.06em;
-  transition: background 0.18s, border-color 0.18s, color 0.18s;
-  flex-shrink: 0;
+  transition: background 0.18s, color 0.18s;
 }
-.lang-btn:hover {
-  background: var(--nav-cta-bg-hover);
-  border-color: var(--nav-cta-border-hover);
-  color: var(--foreground);
+.lang-toggle-opt.active {
+  background: var(--foreground);
+  color: var(--background);
 }
 
 /* ── Theme toggle ── */
@@ -866,7 +870,10 @@ footer {
     <li><a href="/resume.html" class="nav-cta"><i data-lucide="file-text"></i><span data-i18n="nav_resume">Resume</span></a></li>
   </ul>
   <div style="display:flex;align-items:center;gap:10px">
-    <button id="lang-btn" class="lang-btn">RU</button>
+    <div class="lang-toggle">
+      <button class="lang-toggle-opt" data-lang="en">EN</button>
+      <button class="lang-toggle-opt" data-lang="ru">RU</button>
+    </div>
     <button class="theme-btn" id="theme-btn" aria-label="Toggle theme">
       <i data-lucide="moon" id="icon-dark" style="width:15px;height:15px"></i>
       <i data-lucide="sun" id="icon-light" style="width:15px;height:15px;display:none"></i>
@@ -1656,17 +1663,20 @@ function applyLang(lang) {
     const key = el.dataset.i18nHtml;
     if (translations[lang][key] !== undefined) el.innerHTML = translations[lang][key];
   });
-  document.getElementById('lang-btn').textContent = lang === 'en' ? 'RU' : 'EN';
   document.documentElement.setAttribute('lang', lang === 'ru' ? 'ru' : 'en');
+  document.querySelectorAll('.lang-toggle-opt').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.lang === lang);
+  });
 }
 
-const langBtn = document.getElementById('lang-btn');
 let currentLang = localStorage.getItem('lang') || 'en';
 applyLang(currentLang);
-langBtn.addEventListener('click', () => {
-  currentLang = currentLang === 'en' ? 'ru' : 'en';
-  localStorage.setItem('lang', currentLang);
-  applyLang(currentLang);
+document.querySelectorAll('.lang-toggle-opt').forEach(btn => {
+  btn.addEventListener('click', () => {
+    currentLang = btn.dataset.lang;
+    localStorage.setItem('lang', currentLang);
+    applyLang(currentLang);
+  });
 });
 </script>
 </body>
