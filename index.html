@@ -458,6 +458,55 @@ section { padding: 96px 0; }
 .cl:hover { background: oklch(0.14 0.004 260 / 80%); border-color: oklch(1 0 0 / 12%); color: var(--foreground); }
 .cl svg { width: 14px; height: 14px; }
 
+/* ── LIFE ── */
+.life-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+.life-body p { color: var(--muted-fg); font-size: 15.5px; line-height: 1.85; margin-bottom: 16px; }
+.life-body strong { color: var(--foreground); font-weight: 600; }
+.life-body p:last-child { margin-bottom: 0; }
+
+.life-values { display: flex; flex-direction: column; gap: 12px; }
+.value-item {
+  display: flex; align-items: flex-start; gap: 14px;
+  padding: 16px 18px; border-radius: var(--radius-xl);
+  background: var(--card); border: 1px solid var(--border);
+  transition: border-color 0.22s, transform 0.22s;
+}
+.value-item:hover { border-color: oklch(1 0 0 / 12%); transform: translateX(4px); }
+.value-icon {
+  width: 32px; height: 32px; border-radius: 8px; flex-shrink: 0;
+  background: oklch(0.65 0.2 262 / 12%);
+  border: 1px solid oklch(0.65 0.2 262 / 20%);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--primary);
+}
+.value-icon svg { width: 15px; height: 15px; }
+.value-text strong { display: block; font-size: 13px; font-weight: 600; color: var(--foreground); margin-bottom: 2px; }
+.value-text span { font-size: 12.5px; color: var(--muted-fg); line-height: 1.5; }
+
+/* ── HOBBIES ── */
+.hobbies-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; }
+.hobby-card { padding: 24px 22px; display: flex; flex-direction: column; gap: 12px; }
+.hobby-icon {
+  width: 40px; height: 40px; border-radius: 10px;
+  background: oklch(0.65 0.2 262 / 10%);
+  border: 1px solid oklch(0.65 0.2 262 / 18%);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--primary);
+}
+.hobby-icon svg { width: 18px; height: 18px; }
+.hobby-title { font-size: 14px; font-weight: 600; color: var(--foreground); letter-spacing: -0.01em; }
+.hobby-desc { font-size: 13px; color: var(--muted-fg); line-height: 1.6; }
+
+/* ── RESUME ── */
+.resume-bar {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 24px; flex-wrap: wrap;
+  padding: 24px 32px; border-radius: var(--radius-xl);
+  margin-top: 48px;
+}
+.resume-bar-text strong { display: block; font-size: 15px; font-weight: 600; color: var(--foreground); margin-bottom: 3px; }
+.resume-bar-text span { font-size: 13px; color: var(--muted-fg); }
+
 /* ── FOOTER ── */
 footer {
   border-top: 1px solid var(--border);
@@ -469,7 +518,9 @@ footer {
 /* ── RESPONSIVE ── */
 @media (max-width: 900px) {
   .about-grid { grid-template-columns: 1fr; gap: 40px; }
+  .life-grid { grid-template-columns: 1fr; gap: 32px; }
   .stack-grid { grid-template-columns: 1fr 1fr; }
+  .hobbies-grid { grid-template-columns: 1fr 1fr; }
   .cbox { padding: 40px 28px; }
 }
 
@@ -492,8 +543,10 @@ footer {
 
   .hbg { display: flex; }
   .stack-grid { grid-template-columns: 1fr; }
+  .hobbies-grid { grid-template-columns: 1fr; }
   .edu-grid { grid-template-columns: 1fr; }
   .stats { grid-template-columns: 1fr 1fr; }
+  .resume-bar { flex-direction: column; align-items: flex-start; padding: 20px; }
 }
 </style>
 </head>
@@ -509,7 +562,10 @@ footer {
     <li><a href="#about">About</a></li>
     <li><a href="#stack">Stack</a></li>
     <li><a href="#experience">Experience</a></li>
-    <li><a href="#contact" class="nav-cta">Contact</a></li>
+    <li><a href="#life">Life</a></li>
+    <li><a href="/resume.pdf" download class="nav-cta">
+      <i data-lucide="download" style="width:12px;height:12px;display:inline;vertical-align:middle;margin-right:4px"></i>Resume
+    </a></li>
   </ul>
   <button class="hbg" id="hbg" aria-label="Menu">
     <span class="hl"></span>
@@ -529,6 +585,10 @@ footer {
       <a href="#experience" class="btn btn-primary">
         <i data-lucide="briefcase" style="width:14px;height:14px"></i>
         View Experience
+      </a>
+      <a href="/resume.pdf" download class="btn btn-secondary">
+        <i data-lucide="download" style="width:14px;height:14px"></i>
+        Download CV
       </a>
       <a href="#contact" class="btn btn-secondary">
         <i data-lucide="send" style="width:14px;height:14px"></i>
@@ -672,6 +732,91 @@ footer {
         </div>
       </div>
 
+    </div>
+  </div>
+</section>
+
+<!-- LIFE & HOBBIES -->
+<section id="life">
+  <div class="w">
+    <p class="lbl">Life & Interests</p>
+    <h2 class="sh">Beyond the code.</h2>
+
+    <div class="life-grid fade-up" style="margin-bottom: 48px;">
+      <div class="life-body">
+        <p>I grew up in <strong>Tajikistan</strong>, where curiosity about how computers work set me on a path into software engineering. Starting with simple scripts and gradually moving to full production systems, every project taught me something new about building things that actually matter.</p>
+        <p>After graduating with a <strong>B.Sc. in Computer Science</strong>, I joined Alif Bank — one of Tajikistan's leading fintech companies — where I worked on high-availability APIs and deployment infrastructure.</p>
+        <p>In 2024–2025 I completed <strong>mandatory national service</strong>, sharpening discipline and time management while contributing to open-source on the side. Today I'm back in full-stack engineering, building microservices and looking for remote opportunities to work on hard problems.</p>
+      </div>
+      <div class="life-values">
+        <div class="value-item">
+          <div class="value-icon"><i data-lucide="shield-check"></i></div>
+          <div class="value-text"><strong>Reliability first</strong><span>I design for failure, write tests, and monitor everything.</span></div>
+        </div>
+        <div class="value-item">
+          <div class="value-icon"><i data-lucide="layers"></i></div>
+          <div class="value-text"><strong>Clean architecture</strong><span>Complexity is earned, not assumed. Code should be easy to change.</span></div>
+        </div>
+        <div class="value-item">
+          <div class="value-icon"><i data-lucide="trending-up"></i></div>
+          <div class="value-text"><strong>Continuous learning</strong><span>I stay curious, read deeply, and build side projects to stay sharp.</span></div>
+        </div>
+        <div class="value-item">
+          <div class="value-icon"><i data-lucide="users"></i></div>
+          <div class="value-text"><strong>Collaboration</strong><span>I communicate clearly, review code thoughtfully, and help others grow.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hobbies-grid fade-up">
+
+      <div class="glass-card hobby-card">
+        <div class="hobby-icon"><i data-lucide="terminal"></i></div>
+        <div class="hobby-title">Open Source & Side Projects</div>
+        <div class="hobby-desc">I contribute to open-source projects and build personal tools to scratch my own itches — mostly around developer tooling, automation, and CLI utilities.</div>
+      </div>
+
+      <div class="glass-card hobby-card">
+        <div class="hobby-icon"><i data-lucide="book-open"></i></div>
+        <div class="hobby-title">Reading & Research</div>
+        <div class="hobby-desc">From distributed systems papers to philosophy — I read broadly. Understanding the "why" behind things matters as much as the "how" in engineering.</div>
+      </div>
+
+      <div class="glass-card hobby-card">
+        <div class="hobby-icon"><i data-lucide="mountain"></i></div>
+        <div class="hobby-title">Outdoors & Sport</div>
+        <div class="hobby-desc">Tajikistan has stunning mountains. I hike, stay active, and believe physical discipline and mental clarity go hand in hand.</div>
+      </div>
+
+      <div class="glass-card hobby-card">
+        <div class="hobby-icon"><i data-lucide="cpu"></i></div>
+        <div class="hobby-title">Linux & Tooling</div>
+        <div class="hobby-desc">I run Linux daily and obsess over my development environment. Neovim, tmux, shell scripts — I treat my tools as seriously as my code.</div>
+      </div>
+
+      <div class="glass-card hobby-card">
+        <div class="hobby-icon"><i data-lucide="globe-2"></i></div>
+        <div class="hobby-title">Languages & Cultures</div>
+        <div class="hobby-desc">I speak Tajik, Russian, and English. Learning how different cultures approach problems gives me perspective I bring to engineering decisions.</div>
+      </div>
+
+      <div class="glass-card hobby-card">
+        <div class="hobby-icon"><i data-lucide="music"></i></div>
+        <div class="hobby-title">Music</div>
+        <div class="hobby-desc">Deep focus work pairs best with ambient and electronic music. I have opinionated playlists for every kind of task.</div>
+      </div>
+
+    </div>
+
+    <div class="highlight-card resume-bar fade-up">
+      <div class="resume-bar-text">
+        <strong>Want the full picture?</strong>
+        <span>Download my CV for a complete overview of experience, education, and skills.</span>
+      </div>
+      <a href="/resume.pdf" download class="btn btn-primary">
+        <i data-lucide="download" style="width:14px;height:14px"></i>
+        Download Resume
+      </a>
     </div>
   </div>
 </section>
