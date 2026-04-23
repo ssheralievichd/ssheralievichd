@@ -808,6 +808,10 @@ footer {
   font-size: 12px; color: var(--muted-fg);
   position: relative; z-index: 1;
 }
+.footer-inner { display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap; }
+.visitor-counter { display: flex; align-items: center; gap: 5px; }
+.visitor-counter i { width: 12px; height: 12px; opacity: 0.6; }
+#visitor-count { font-weight: 600; color: var(--muted-fg); min-width: 2ch; }
 
 /* ── RESPONSIVE ── */
 @media (max-width: 900px) {
@@ -1536,7 +1540,14 @@ footer {
 </section>
 
 <footer>
-  <div class="w" data-i18n="footer_txt">© 2026 Abdurahmon Sheralievich</div>
+  <div class="w footer-inner">
+    <span data-i18n="footer_txt">© 2026 Abdurahmon Sheralievich</span>
+    <span class="visitor-counter">
+      <i data-lucide="eye"></i>
+      <span id="visitor-count">—</span>
+      <span data-i18n="footer_visitors">visitors</span>
+    </span>
+  </div>
 </footer>
 
 <script>
@@ -1699,7 +1710,7 @@ const translations = {
     blog3_date:'January 18, 2026', blog3_read:'5 min read', blog3_title:'Feature-Sliced Design: Why I Stopped Fighting Vue\'s Folder Structure', blog3_excerpt:'After wrestling with feature folders, domain folders, and flat structures — FSD finally gave me a mental model that scales. Here\'s how I apply it in Nuxt.js projects.',
     blog_readmore:'Read →',
     contact_lbl:'Contact', contact_ch:'Let\'s build something <span class="shimmer">remarkable.</span>', contact_cp:'Open to full-time roles, freelance, and technical conversations.',
-    scroll_txt:'scroll', footer_txt:'© 2026 Abdurahmon Sheralievich',
+    scroll_txt:'scroll', footer_txt:'© 2026 Abdurahmon Sheralievich', footer_visitors:'visitors',
   },
   ru: {
     nav_about:'О себе', nav_stack:'Стек', nav_exp:'Опыт', nav_life:'Интересы', nav_blog:'Блог', nav_resume:'Резюме',
@@ -1755,7 +1766,7 @@ const translations = {
     blog3_date:'18 января 2026', blog3_read:'5 мин чтения', blog3_title:'Feature-Sliced Design: как я перестал бороться со структурой папок Vue', blog3_excerpt:'После экспериментов с feature-папками, domain-папками и плоской структурой — FSD дала мне ментальную модель, которая масштабируется. Рассказываю, как применяю её в Nuxt.js проектах.',
     blog_readmore:'Читать →',
     contact_lbl:'Контакт', contact_ch:'Создадим что-то <span class="shimmer">выдающееся.</span>', contact_cp:'Открыт к постоянной работе, фрилансу и техническим обсуждениям.',
-    scroll_txt:'скролл', footer_txt:'© 2026 Абдурахмон Шералиевич',
+    scroll_txt:'скролл', footer_txt:'© 2026 Абдурахмон Шералиевич', footer_visitors:'посетителей',
   }
 };
 
@@ -1783,6 +1794,14 @@ document.querySelectorAll('.lang-toggle-opt').forEach(btn => {
     applyLang(currentLang);
   });
 });
+
+fetch('https://api.counterapi.dev/v1/ssheralievichd-portfolio/visits/up')
+  .then(r => r.json())
+  .then(d => {
+    const el = document.getElementById('visitor-count');
+    if (el && d.count) el.textContent = d.count.toLocaleString();
+  })
+  .catch(() => {});
 </script>
 </body>
 </html>
