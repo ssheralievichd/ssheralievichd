@@ -24,11 +24,11 @@
   --nav-stuck-border:    oklch(0 0 0 / 8%);
   --glass-bg:            oklch(0.95 0.004 260 / 92%);
   --glass-border:        oklch(0 0 0 / 8%);
-  --glass-shadow-sm:     oklch(0 0 0 / 8%);
-  --glass-shadow-lg:     oklch(0 0 0 / 14%);
+  --glass-shadow-sm:     oklch(0 0 0 / 0%);
+  --glass-shadow-lg:     oklch(0 0 0 / 3%);
   --highlight-bg:        oklch(0.96 0.008 262 / 97%);
   --highlight-border:    oklch(0.50 0.22 262 / 15%);
-  --highlight-glow:      oklch(0.50 0.22 262 / 6%);
+  --highlight-glow:      oklch(0.50 0.22 262 / 0%);
   --tag-bg:              oklch(0.90 0.004 260 / 70%);
   --tag-bg-hover:        oklch(0.88 0.004 260);
   --tag-border-hover:    oklch(0 0 0 / 12%);
@@ -40,13 +40,13 @@
   --link-border-hover:   oklch(0 0 0 / 10%);
   --mobile-menu-bg:      oklch(0.97 0.004 260 / 97%);
   --dot-color:           oklch(0 0 0 / 4%);
-  --glow-top-c:          oklch(0.55 0.18 262 / 10%);
-  --glow-bottom-c:       oklch(0.55 0.15 300 / 7%);
+  --glow-top-c:          oklch(0.55 0.18 262 / 4%);
+  --glow-bottom-c:       oklch(0.55 0.15 300 / 3%);
   --scroll-line-c:       oklch(0 0 0 / 18%);
   --scroll-sweep-c:      oklch(0 0 0 / 55%);
   --scroll-txt-c:        oklch(0 0 0 / 28%);
   --card-hover-border:   oklch(0 0 0 / 14%);
-  --card-hover-shadow:   oklch(0 0 0 / 10%);
+  --card-hover-shadow:   oklch(0 0 0 / 4%);
   --nav-cta-bg:          oklch(0.90 0.004 260 / 50%);
   --nav-cta-bg-hover:    oklch(0.88 0.004 260);
   --nav-cta-border-hover:oklch(0 0 0 / 14%);
@@ -338,7 +338,7 @@ section { padding: 96px 0; }
 .btn-primary:hover {
   opacity: 0.88;
   transform: translateY(-1px);
-  box-shadow: 0 4px 20px oklch(0.65 0.2 262 / 30%);
+  box-shadow: 0 4px 16px var(--highlight-glow);
 }
 
 .btn-secondary {
