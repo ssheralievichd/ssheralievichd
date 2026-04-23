@@ -12,11 +12,11 @@
 <nav class="bp-nav">
   <div class="bp-nav-left">
     <a href="/" class="bp-logo">AS.</a>
-    <ul class="bp-nav-links">
-      <li><a href="/#about">About</a></li>
-      <li><a href="/#stack">Stack</a></li>
-      <li><a href="/#experience">Experience</a></li>
-      <li><a href="/#blog">Blog</a></li>
+    <ul class="bp-nav-links" id="bp-nl">
+      <li><a href="/#about"><i data-lucide="user"></i>About</a></li>
+      <li><a href="/#stack"><i data-lucide="layers"></i>Stack</a></li>
+      <li><a href="/#experience"><i data-lucide="briefcase"></i>Experience</a></li>
+      <li><a href="/#blog"><i data-lucide="pen-line"></i>Blog</a></li>
     </ul>
   </div>
   <div class="bp-nav-right">
@@ -27,6 +27,9 @@
     <button class="bp-theme-btn" id="theme-btn" aria-label="Toggle theme">
       <i data-lucide="moon" id="icon-dark"></i>
       <i data-lucide="sun" id="icon-light" style="display:none"></i>
+    </button>
+    <button class="bp-hbg" id="bp-hbg" aria-label="Menu">
+      <span class="bp-hl"></span><span class="bp-hl"></span><span class="bp-hl"></span>
     </button>
   </div>
 </nav>
@@ -78,6 +81,10 @@
   });
   const lang = localStorage.getItem('lang') || 'en';
   document.querySelectorAll('.bp-lang-opt').forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
+  const hbg = document.getElementById('bp-hbg');
+  const nl = document.getElementById('bp-nl');
+  hbg.addEventListener('click', () => { hbg.classList.toggle('open'); nl.classList.toggle('open'); });
+  nl.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { hbg.classList.remove('open'); nl.classList.remove('open'); }));
 </script>
 </body>
 </html>
