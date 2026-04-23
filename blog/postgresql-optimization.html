@@ -9,7 +9,27 @@
 <link rel="stylesheet" href="/blog/post.css">
 </head>
 <body>
-<nav class="bp-nav"><a href="/" class="bp-back"><i data-lucide="arrow-left"></i> Back</a></nav>
+<nav class="bp-nav">
+  <div class="bp-nav-left">
+    <a href="/" class="bp-logo">AS.</a>
+    <ul class="bp-nav-links">
+      <li><a href="/#about">About</a></li>
+      <li><a href="/#stack">Stack</a></li>
+      <li><a href="/#experience">Experience</a></li>
+      <li><a href="/#blog">Blog</a></li>
+    </ul>
+  </div>
+  <div class="bp-nav-right">
+    <div class="bp-lang-toggle">
+      <button class="bp-lang-opt active" data-lang="en">EN</button>
+      <button class="bp-lang-opt" data-lang="ru">RU</button>
+    </div>
+    <button class="bp-theme-btn" id="theme-btn" aria-label="Toggle theme">
+      <i data-lucide="moon" id="icon-dark"></i>
+      <i data-lucide="sun" id="icon-light" style="display:none"></i>
+    </button>
+  </div>
+</nav>
 <main class="bp-main">
   <header class="bp-header">
     <div class="bp-meta"><span>February 3, 2026</span><span class="bp-dot"></span><span>8 min read</span></div>
@@ -39,6 +59,27 @@ WHERE created_at > '2024-01-01';</code></pre>
     <p>Partial index + rewritten join: 2100ms → 40ms. No schema changes, no caching layer needed.</p>
   </article>
 </main>
-<script>lucide.createIcons(); const t=localStorage.getItem('theme')||'dark'; document.documentElement.dataset.theme=t;</script>
+<script>
+  const t = localStorage.getItem('theme') || 'dark';
+  document.documentElement.dataset.theme = t;
+  document.getElementById('icon-dark').style.display = t === 'dark' ? '' : 'none';
+  document.getElementById('icon-light').style.display = t === 'light' ? '' : 'none';
+  lucide.createIcons();
+  document.getElementById('theme-btn').addEventListener('click', () => {
+    const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+    document.documentElement.dataset.theme = next;
+    localStorage.setItem('theme', next);
+    document.getElementById('icon-dark').style.display = next === 'dark' ? '' : 'none';
+    document.getElementById('icon-light').style.display = next === 'light' ? '' : 'none';
+  });
+  document.querySelectorAll('.bp-lang-opt').forEach(btn => {
+    btn.addEventListener('click', () => {
+      localStorage.setItem('lang', btn.dataset.lang);
+      document.querySelectorAll('.bp-lang-opt').forEach(b => b.classList.toggle('active', b === btn));
+    });
+  });
+  const lang = localStorage.getItem('lang') || 'en';
+  document.querySelectorAll('.bp-lang-opt').forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
+</script>
 </body>
 </html>
