@@ -54,7 +54,7 @@ Results-driven Full-Stack Engineer with 4+ years of experience architecting and 
 Completed mandatory service while maintaining technical skills and contributing to open-source projects.
 
 **Freelance Python Developer** | Self-employed, Remote
-*2021 - 2024*
+*2021 - 2022*
 
 - Built web applications and REST APIs for clients using Python, Django, and Flask
 - Developed automation scripts and data processing tools for small businesses
