@@ -96,18 +96,6 @@ I care about clean architecture, query performance, and shipping containerized s
 
 ---
 
-## GitHub Stats
-
-<div align="center">
-
-![Abdurahmon's GitHub stats](https://github-readme-stats.vercel.app/api?username=ssheralievichd&show_icons=true&theme=tokyonight&hide_border=true&count_private=true)
-
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=ssheralievichd&layout=compact&theme=tokyonight&hide_border=true&langs_count=8)
-
-</div>
-
----
-
 ## Education
 
 **B.Sc. in Computer Science** — Russian-Tajik Slavonic University, Dushanbe · *2020 – 2024*
