@@ -58,6 +58,7 @@
   --value-hover-border:  oklch(0 0 0 / 10%);
   --cbox-glow:           oklch(0.50 0.22 262 / 9%);
   --scrollbar-thumb:     oklch(0.50 0.22 262 / 20%);
+  --gh-l0: oklch(0.90 0.005 260); --gh-l1: oklch(0.78 0.10 262); --gh-l2: oklch(0.66 0.16 262); --gh-l3: oklch(0.56 0.20 262); --gh-l4: oklch(0.48 0.22 262);
   --card-shadow:         none;
   --card-shadow-hover:   none;
   --radius:              0.75rem;
@@ -112,6 +113,7 @@ html[data-theme="dark"] {
   --value-hover-border:  oklch(1 0 0 / 12%);
   --cbox-glow:           oklch(0.65 0.2 262 / 8%);
   --scrollbar-thumb:     oklch(0.65 0.2 262 / 25%);
+  --gh-l0: oklch(0.18 0.01 260); --gh-l1: oklch(0.32 0.10 262); --gh-l2: oklch(0.45 0.16 262); --gh-l3: oklch(0.58 0.19 262); --gh-l4: oklch(0.72 0.20 262);
 }
 
 html { scroll-behavior: smooth; }
@@ -611,6 +613,24 @@ html:not([data-theme="dark"]) .aa-bg { fill: oklch(0.16 0.01 260); }
 .gh-foot a { color: var(--primary); text-decoration: none; font-weight: 600; }
 .gh-foot a:hover { text-decoration: underline; }
 .gh-live-dot { width: 6px; height: 6px; border-radius: 50%; background: oklch(0.75 0.18 145); box-shadow: 0 0 0 0 oklch(0.75 0.18 145 / 50%); animation: dotpulse 2.4s ease-out infinite; }
+
+/* ── GitHub contribution heatmap ── */
+#gh-heat { margin-top: 12px; opacity: 0; transition: opacity 0.4s; }
+#gh-heat.ready { opacity: 1; }
+.gh-heat-card { padding: 18px 20px; }
+.gh-heat-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 14px; flex-wrap: wrap; }
+.gh-heat-title { display: flex; align-items: center; gap: 7px; font-size: 12px; font-weight: 600; color: var(--foreground); }
+.gh-heat-title svg { width: 13px; height: 13px; color: var(--primary); }
+.gh-heat-sum { font-size: 11.5px; color: var(--muted-fg); }
+.gh-heat-sum strong { color: var(--foreground); font-weight: 700; }
+.gh-heat-grid { display: grid; grid-auto-flow: column; grid-template-rows: repeat(7, 1fr); gap: 3px; overflow-x: auto; padding-bottom: 2px; }
+.gh-cell { width: 11px; height: 11px; border-radius: 2px; background: var(--gh-l0); }
+.gh-cell.l1 { background: var(--gh-l1); }
+.gh-cell.l2 { background: var(--gh-l2); }
+.gh-cell.l3 { background: var(--gh-l3); }
+.gh-cell.l4 { background: var(--gh-l4); }
+.gh-heat-legend { display: flex; align-items: center; justify-content: flex-end; gap: 5px; margin-top: 12px; font-size: 10.5px; color: var(--muted-fg); }
+.gh-heat-legend .gh-cell { width: 9px; height: 9px; }
 
 /* ── STACK ── */
 .stack-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; }
@@ -1177,6 +1197,26 @@ footer {
             <span data-i18n="gh_live">Live from GitHub</span>
             <span>·</span>
             <a href="https://github.com/ssheralievichd" target="_blank" rel="noopener">@ssheralievichd</a>
+          </div>
+        </div>
+
+        <!-- GITHUB CONTRIBUTION HEATMAP (live, ~90 days, graceful fallback) -->
+        <div id="gh-heat" aria-live="polite">
+          <div class="glass-card gh-heat-card">
+            <div class="gh-heat-head">
+              <div class="gh-heat-title"><i data-lucide="activity"></i><span data-i18n="gh_heat_title">Recent activity</span></div>
+              <div class="gh-heat-sum"><strong id="gh-heat-count">0</strong> <span data-i18n="gh_heat_sub">contributions · last 90 days</span></div>
+            </div>
+            <div class="gh-heat-grid" id="gh-heat-grid"></div>
+            <div class="gh-heat-legend">
+              <span data-i18n="gh_heat_less">Less</span>
+              <span class="gh-cell"></span>
+              <span class="gh-cell l1"></span>
+              <span class="gh-cell l2"></span>
+              <span class="gh-cell l3"></span>
+              <span class="gh-cell l4"></span>
+              <span data-i18n="gh_heat_more">More</span>
+            </div>
           </div>
         </div>
       </div>
@@ -1807,11 +1847,12 @@ function onScroll() {
 checkReveal();
 checkCounters();
 
-/* ── GitHub live activity (public REST API, graceful fallback) ── */
+/* ── GitHub live activity + contribution heatmap (public REST API, graceful fallback) ── */
 (function loadGitHub() {
   const USER = 'ssheralievichd';
   const strip = document.getElementById('gh-strip');
-  if (!strip) return;
+  const heat = document.getElementById('gh-heat');
+
   const animate = (el, target) => {
     if (!el) return;
     const dur = 1000, start = performance.now();
@@ -1823,22 +1864,104 @@ checkCounters();
     }
     requestAnimationFrame(tick);
   };
-  Promise.all([
-    fetch(`https://api.github.com/users/${USER}`).then(r => r.ok ? r.json() : Promise.reject()),
-    fetch(`https://api.github.com/users/${USER}/repos?per_page=100&type=owner&sort=updated`).then(r => r.ok ? r.json() : Promise.reject())
-  ]).then(([user, repos]) => {
-    if (!user || !Array.isArray(repos)) throw new Error('bad data');
-    let stars = 0, forks = 0;
-    repos.forEach(r => { stars += r.stargazers_count || 0; forks += r.forks_count || 0; });
-    animate(document.getElementById('gh-stars'), stars);
-    animate(document.getElementById('gh-repos'), user.public_repos || repos.length);
-    animate(document.getElementById('gh-followers'), user.followers || 0);
-    animate(document.getElementById('gh-forks'), forks);
-    strip.classList.add('ready');
-  }).catch(() => {
-    // API unreachable or rate-limited → hide the strip entirely rather than show errors
-    strip.style.display = 'none';
-  });
+
+  // ---- Stats strip: resilient. Show the user call first; add repo-derived
+  // stars/forks only if that second call also succeeds. Hide only if the
+  // core user call fails (network down / rate-limited / user not found).
+  if (strip) {
+    fetch(`https://api.github.com/users/${USER}`)
+      .then(r => r.ok ? r.json() : Promise.reject(new Error('user ' + r.status)))
+      .then(user => {
+        animate(document.getElementById('gh-repos'), user.public_repos || 0);
+        animate(document.getElementById('gh-followers'), user.followers || 0);
+        strip.classList.add('ready');
+        // Best-effort: sum stars/forks across public repos. If this fails,
+        // those two cards simply keep their "—" rather than hiding the strip.
+        return fetch(`https://api.github.com/users/${USER}/repos?per_page=100&type=owner&sort=updated`);
+      })
+      .then(r => (r && r.ok) ? r.json() : Promise.reject(new Error('repos')))
+      .then(repos => {
+        if (!Array.isArray(repos)) return;
+        let stars = 0, forks = 0;
+        repos.forEach(r => { stars += r.stargazers_count || 0; forks += r.forks_count || 0; });
+        animate(document.getElementById('gh-stars'), stars);
+        animate(document.getElementById('gh-forks'), forks);
+      })
+      .catch(err => {
+        // If the strip never became ready (core user call failed), hide it.
+        if (!strip.classList.contains('ready')) strip.style.display = 'none';
+      });
+  }
+
+  // ---- Contribution heatmap from recent public events (~last 90 days).
+  // The public API only returns recent events (up to ~300, ~90 days), so this
+  // is a live "recent activity" heatmap rather than a full 365-day graph.
+  if (heat) {
+    const grid = document.getElementById('gh-heat-grid');
+    const DAYS = 91; // 13 weeks
+    // Build a date->count map seeded to 0 for the window.
+    const today = new Date(); today.setHours(0,0,0,0);
+    const counts = {};
+    const keyOf = d => d.toISOString().slice(0,10);
+    for (let i = 0; i < DAYS; i++) {
+      const d = new Date(today); d.setDate(today.getDate() - i);
+      counts[keyOf(d)] = 0;
+    }
+
+    const paint = () => {
+      if (!grid) return;
+      // Align the grid so the last column ends on today; pad start to a Sunday.
+      const start = new Date(today); start.setDate(today.getDate() - (DAYS - 1));
+      const padStart = start.getDay(); // 0=Sun
+      grid.innerHTML = '';
+      let total = 0;
+      // leading empty cells so weeks line up by weekday rows
+      for (let p = 0; p < padStart; p++) {
+        const c = document.createElement('span');
+        c.className = 'gh-cell'; c.style.visibility = 'hidden';
+        grid.appendChild(c);
+      }
+      for (let i = 0; i < DAYS; i++) {
+        const d = new Date(start); d.setDate(start.getDate() + i);
+        const n = counts[keyOf(d)] || 0;
+        total += n;
+        const lvl = n === 0 ? 0 : n <= 1 ? 1 : n <= 3 ? 2 : n <= 6 ? 3 : 4;
+        const c = document.createElement('span');
+        c.className = 'gh-cell' + (lvl ? ' l' + lvl : '');
+        c.title = `${n} contribution${n === 1 ? '' : 's'} on ${keyOf(d)}`;
+        grid.appendChild(c);
+      }
+      const countEl = document.getElementById('gh-heat-count');
+      if (countEl) animate(countEl, total);
+      heat.classList.add('ready');
+      if (window.lucide && typeof window.lucide.createIcons === 'function') window.lucide.createIcons();
+    };
+
+    // Pull up to 3 pages of events for a fuller window.
+    const fetchEvents = (page) =>
+      fetch(`https://api.github.com/users/${USER}/events/public?per_page=100&page=${page}`)
+        .then(r => r.ok ? r.json() : Promise.reject(new Error('events ' + r.status)));
+
+    Promise.all([fetchEvents(1), fetchEvents(2), fetchEvents(3)].map(p => p.catch(() => [])))
+      .then(pages => {
+        const events = [].concat(...pages.filter(Array.isArray));
+        if (!events.length) throw new Error('no events');
+        events.forEach(ev => {
+          if (!ev || !ev.created_at) return;
+          const k = ev.created_at.slice(0, 10);
+          if (k in counts) {
+            // Weight by payload size where available (commits per push).
+            let inc = 1;
+            if (ev.type === 'PushEvent' && ev.payload && Array.isArray(ev.payload.commits)) {
+              inc = Math.max(1, ev.payload.commits.length);
+            }
+            counts[k] += inc;
+          }
+        });
+        paint();
+      })
+      .catch(() => { heat.style.display = 'none'; });
+  }
 })();
 
 const translations = {
@@ -1855,6 +1978,7 @@ const translations = {
     about_p3:"Outside of full-time work I ship production side projects — from a RAG-based contact-center platform to S3-over-Telegram storage. Open to remote backend, full-stack, and DevOps roles worldwide.",
     stat_years:'Years of experience', stat_fintech:'In fintech (Alif Bank)', stat_deploy:'Faster deployments', stat_langs:'Languages spoken',
     gh_stars:'Stars', gh_repos:'Repos', gh_followers:'Followers', gh_forks:'Forks', gh_live:'Live from GitHub',
+    gh_heat_title:'Recent activity', gh_heat_sub:'contributions · last 90 days', gh_heat_less:'Less', gh_heat_more:'More',
     stack_lbl:'Tech Stack', stack_sh:'Tools of the trade.',
     sc_languages:'Core Languages', sc_backend:'Backend', sc_frontend:'Frontend & Mobile', sc_databases:'Databases', sc_devops:'DevOps & Infra', sc_practices:'Practices',
     exp_lbl:'Experience', exp_sh:"Where I've shipped.",
@@ -1923,6 +2047,7 @@ const translations = {
     about_p3:'Помимо основной работы я создаю production пет-проекты — от RAG-платформы контакт-центра до S3-хранилища поверх Telegram. Открыт к удалённым backend, full-stack и DevOps ролям.',
     stat_years:'Лет опыта', stat_fintech:'В финтехе (Alif Bank)', stat_deploy:'Быстрее деплой', stat_langs:'Языка владения',
     gh_stars:'Звёзды', gh_repos:'Репозитории', gh_followers:'Подписчики', gh_forks:'Форки', gh_live:'Живые данные GitHub',
+    gh_heat_title:'Недавняя активность', gh_heat_sub:'вкладов · за 90 дней', gh_heat_less:'Меньше', gh_heat_more:'Больше',
     stack_lbl:'Технологии', stack_sh:'Инструменты.',
     sc_languages:'Основные языки', sc_backend:'Бэкенд', sc_frontend:'Фронтенд и мобильные', sc_databases:'Базы данных', sc_devops:'DevOps и инфра', sc_practices:'Практики',
     exp_lbl:'Опыт', exp_sh:'Где я работал.',
