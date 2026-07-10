@@ -34,7 +34,7 @@ export const site = {
 	gh_forks: 'Forks',
 	gh_live: 'Live from GitHub',
 	gh_heat_title: 'Recent activity',
-	gh_heat_sub: 'contributions · last 90 days',
+	gh_heat_sub: 'contributions · last year',
 	gh_heat_less: 'Less',
 	gh_heat_more: 'More',
 	stack_lbl: 'Tech Stack',

@@ -34,7 +34,7 @@ export const site = {
 	gh_forks: 'Форки',
 	gh_live: 'Живые данные GitHub',
 	gh_heat_title: 'Недавняя активность',
-	gh_heat_sub: 'вкладов · за 90 дней',
+	gh_heat_sub: 'вкладов · за год',
 	gh_heat_less: 'Меньше',
 	gh_heat_more: 'Больше',
 	stack_lbl: 'Технологии',
