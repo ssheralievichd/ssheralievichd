@@ -15,8 +15,8 @@
 		let frame = 0;
 
 		const tick = (now: number) => {
-			const progress = Math.min((now - start) / duration, 1);
-			shown = Math.round((1 - Math.pow(1 - progress, 3)) * target);
+			const progress = Math.min(Math.max((now - start) / duration, 0), 1);
+			shown = Math.round((1 - Math.pow(1 - progress, 3)) * target) + 0;
 			if (progress < 1) frame = requestAnimationFrame(tick);
 		};
 
@@ -25,4 +25,4 @@
 	});
 </script>
 
-{shown === null ? placeholder : shown.toLocaleString()}
+<span>{shown === null ? placeholder : shown.toLocaleString()}</span>
