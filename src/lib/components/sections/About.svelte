@@ -23,9 +23,12 @@
 			<div class="about-right" use:reveal>
 				<div class="about-arch"><ArchDiagram /></div>
 				<Stats />
-				<GithubStats />
-				<GithubHeatmap />
 			</div>
+		</div>
+
+		<div class="about-github" use:reveal>
+			<GithubStats />
+			<GithubHeatmap />
 		</div>
 	</div>
 </section>

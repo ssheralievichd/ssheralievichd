@@ -20,6 +20,10 @@
 	gap: 20px;
 }
 
+.about-github {
+	margin-top: 40px;
+}
+
 .about-arch {
 	border-radius: var(--radius-xl);
 	border: 1px solid var(--glass-border);
