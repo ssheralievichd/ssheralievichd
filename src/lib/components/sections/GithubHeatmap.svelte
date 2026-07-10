@@ -2,7 +2,6 @@
 	import { Activity } from '@lucide/svelte';
 	import { onMount } from 'svelte';
 	import Counter from '../Counter.svelte';
-	import { profile } from '$lib/data/site';
 	import { fetchContributions, type Contributions } from '$lib/services/contributions';
 	import { t } from '$lib/stores/lang';
 
@@ -14,7 +13,7 @@
 
 	onMount(async () => {
 		try {
-			data = await fetchContributions(profile.githubUser);
+			data = await fetchContributions();
 		} catch {
 			failed = true;
 		}
