@@ -1,7 +1,12 @@
 import { base } from '$app/paths';
 
 export type Cell = { date: string; count: number; level: number };
-export type Contributions = { total: number; leading: number; cells: Cell[] };
+export type Contributions = {
+	total: number;
+	activeDays: number;
+	leading: number;
+	cells: Cell[];
+};
 
 type Day = { date: string; count: number };
 type Calendar = { total: number; days: Day[] };
@@ -37,6 +42,7 @@ export const fetchContributions = async (): Promise<Contributions> => {
 
 	return {
 		total: calendar.total,
+		activeDays: calendar.days.filter((day) => day.count > 0).length,
 		leading: new Date(`${cells[0].date}T00:00:00Z`).getUTCDay(),
 		cells
 	};
