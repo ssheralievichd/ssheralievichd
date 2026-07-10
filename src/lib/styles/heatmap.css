@@ -1,0 +1,74 @@
+.gh-heat-card {
+	padding: 18px 20px;
+}
+.gh-heat-head {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 8px;
+	margin-bottom: 14px;
+	flex-wrap: wrap;
+}
+.gh-heat-title {
+	display: flex;
+	align-items: center;
+	gap: 7px;
+	font-size: 12px;
+	font-weight: 600;
+	color: var(--foreground);
+}
+.gh-heat-title svg {
+	width: 13px;
+	height: 13px;
+	color: var(--primary);
+}
+.gh-heat-sum {
+	font-size: 11.5px;
+	color: var(--muted-fg);
+}
+.gh-heat-sum strong {
+	color: var(--foreground);
+	font-weight: 700;
+}
+.gh-heat-grid {
+	display: grid;
+	grid-auto-flow: column;
+	grid-template-rows: repeat(7, 1fr);
+	gap: 3px;
+	overflow-x: auto;
+	padding-bottom: 2px;
+}
+.gh-cell {
+	width: 11px;
+	height: 11px;
+	border-radius: 2px;
+	background: var(--gh-l0);
+}
+.gh-cell.pad {
+	visibility: hidden;
+}
+.gh-cell.l1 {
+	background: var(--gh-l1);
+}
+.gh-cell.l2 {
+	background: var(--gh-l2);
+}
+.gh-cell.l3 {
+	background: var(--gh-l3);
+}
+.gh-cell.l4 {
+	background: var(--gh-l4);
+}
+.gh-heat-legend {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 5px;
+	margin-top: 12px;
+	font-size: 10.5px;
+	color: var(--muted-fg);
+}
+.gh-heat-legend .gh-cell {
+	width: 9px;
+	height: 9px;
+}

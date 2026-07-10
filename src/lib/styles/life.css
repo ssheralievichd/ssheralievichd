@@ -1,0 +1,108 @@
+.life-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 40px;
+	align-items: start;
+	margin-bottom: 48px;
+}
+.life-body p {
+	color: var(--muted-fg);
+	font-size: 15.5px;
+	line-height: 1.85;
+	margin-bottom: 16px;
+}
+.life-body strong {
+	color: var(--foreground);
+	font-weight: 600;
+}
+.life-body p:last-child {
+	margin-bottom: 0;
+}
+
+.life-values {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+.value-item {
+	display: flex;
+	align-items: flex-start;
+	gap: 14px;
+	padding: 16px 18px;
+	border-radius: var(--radius-xl);
+	background: var(--card);
+	border: 1px solid var(--border);
+	transition:
+		border-color 0.22s,
+		transform 0.22s;
+}
+.value-item:hover {
+	border-color: var(--value-hover-border);
+	transform: translateX(4px);
+}
+.value-icon {
+	width: 32px;
+	height: 32px;
+	border-radius: 8px;
+	flex-shrink: 0;
+	background: oklch(0.65 0.2 262 / 12%);
+	border: 1px solid oklch(0.65 0.2 262 / 20%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--primary);
+}
+.value-icon svg {
+	width: 15px;
+	height: 15px;
+}
+.value-text strong {
+	display: block;
+	font-size: 13px;
+	font-weight: 600;
+	color: var(--foreground);
+	margin-bottom: 2px;
+}
+.value-text span {
+	font-size: 12.5px;
+	color: var(--muted-fg);
+	line-height: 1.5;
+}
+
+.hobbies-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 12px;
+}
+.hobby-card {
+	padding: 24px 22px;
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+.hobby-icon {
+	width: 40px;
+	height: 40px;
+	border-radius: 10px;
+	background: oklch(0.65 0.2 262 / 10%);
+	border: 1px solid oklch(0.65 0.2 262 / 18%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--primary);
+}
+.hobby-icon svg {
+	width: 18px;
+	height: 18px;
+}
+.hobby-title {
+	font-size: 14px;
+	font-weight: 600;
+	color: var(--foreground);
+	letter-spacing: -0.01em;
+}
+.hobby-desc {
+	font-size: 13px;
+	color: var(--muted-fg);
+	line-height: 1.6;
+}

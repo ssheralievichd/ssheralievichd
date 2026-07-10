@@ -1,0 +1,91 @@
+.post-main {
+	max-width: 680px;
+	margin: 0 auto;
+	padding: 112px 24px 96px;
+	position: relative;
+	z-index: 1;
+}
+
+.post-header {
+	margin-bottom: 40px;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+.post-meta {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	font-size: 13px;
+	color: var(--muted-fg);
+}
+.post-meta-dot {
+	width: 3px;
+	height: 3px;
+	border-radius: 50%;
+	background: var(--muted-fg);
+}
+.post-header h1 {
+	font-size: clamp(24px, 5vw, 36px);
+	font-weight: 700;
+	line-height: 1.2;
+	letter-spacing: -0.02em;
+	color: var(--foreground);
+}
+
+.post-body {
+	border-top: 1px solid var(--border);
+	padding-top: 36px;
+	line-height: 1.7;
+}
+.post-body h2 {
+	font-size: 20px;
+	font-weight: 700;
+	color: var(--foreground);
+	margin: 32px 0 12px;
+}
+.post-body p {
+	color: var(--foreground);
+	opacity: 0.85;
+	margin-bottom: 20px;
+}
+.post-body pre {
+	background: var(--muted);
+	border: 1px solid var(--border);
+	border-radius: 8px;
+	padding: 18px;
+	overflow-x: auto;
+	margin-bottom: 20px;
+}
+.post-body code {
+	font-family: ui-monospace, 'Cascadia Code', monospace;
+	font-size: 13.5px;
+	line-height: 1.6;
+}
+.post-body p code,
+.post-body li code {
+	background: var(--muted);
+	padding: 2px 6px;
+	border-radius: 4px;
+	font-size: 13px;
+}
+.post-body ul,
+.post-body ol {
+	margin: 0 0 20px 20px;
+	color: var(--foreground);
+	opacity: 0.85;
+}
+
+.post-back {
+	display: inline-flex;
+	align-items: center;
+	gap: 7px;
+	margin-top: 48px;
+	font-size: 13px;
+	font-weight: 600;
+	color: var(--primary);
+	text-decoration: none;
+}
+.post-back:hover {
+	text-decoration: underline;
+}

@@ -1,0 +1,69 @@
+.stack-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 12px;
+}
+.sc {
+	padding: 22px 24px;
+}
+.sc-cat {
+	font-size: 10px;
+	font-weight: 700;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: var(--muted-fg);
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	margin-bottom: 16px;
+}
+html[data-theme='dark'] .sc-cat {
+	color: var(--primary);
+}
+.sc-cat svg {
+	width: 11px;
+	height: 11px;
+}
+
+.edu-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 12px;
+}
+.ec {
+	padding: 22px 24px;
+}
+.ec-deg {
+	font-size: 14px;
+	font-weight: 600;
+	color: var(--foreground);
+	margin-bottom: 4px;
+	letter-spacing: -0.01em;
+}
+.ec-sch {
+	font-size: 13px;
+	color: var(--muted-fg);
+	margin-bottom: 12px;
+}
+.ec-yr {
+	font-size: 11px;
+	color: var(--primary);
+	font-weight: 500;
+	letter-spacing: 0.02em;
+}
+.ec-remote {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	text-align: center;
+}
+.ec-remote svg {
+	color: var(--muted-fg);
+	opacity: 0.5;
+}
+.ec-remote span {
+	font-size: 13px;
+	color: var(--muted-fg);
+}

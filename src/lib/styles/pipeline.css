@@ -1,0 +1,58 @@
+.exp-pipeline {
+	margin-bottom: 40px;
+	border-radius: var(--radius-xl);
+	border: 1px solid var(--glass-border);
+	background: var(--glass-bg);
+	overflow: hidden;
+}
+.exp-pipeline svg {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+.ep-bg {
+	fill: oklch(0.12 0.01 260);
+}
+html:not([data-theme='dark']) .ep-bg {
+	fill: oklch(0.16 0.01 260);
+}
+.ep-step {
+	fill: oklch(0.18 0.015 260);
+	stroke: oklch(1 0 0 / 8%);
+	stroke-width: 1;
+}
+.ep-step-active {
+	fill: oklch(0.22 0.04 262);
+	stroke: oklch(0.68 0.2 262 / 50%);
+	stroke-width: 1;
+}
+.ep-arrow {
+	fill: oklch(0.55 0.18 262 / 50%);
+}
+.ep-arrow-line {
+	stroke: oklch(0.55 0.18 262 / 40%);
+	stroke-width: 1.5;
+	stroke-dasharray: 5 3;
+}
+.ep-label {
+	font-family: var(--mono);
+	font-size: 9px;
+	fill: oklch(0.75 0.005 260);
+	text-anchor: middle;
+	dominant-baseline: middle;
+	font-weight: 500;
+}
+.ep-label-hi {
+	fill: oklch(0.78 0.18 262);
+}
+.ep-dot {
+	fill: oklch(0.68 0.2 262);
+	animation: aa-pulse 2.8s ease-in-out infinite;
+}
+.ep-commit {
+	font-family: var(--mono);
+	font-size: 7px;
+	fill: oklch(0.55 0.18 262 / 80%);
+	text-anchor: middle;
+	dominant-baseline: middle;
+}

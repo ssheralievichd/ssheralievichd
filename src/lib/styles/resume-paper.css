@@ -1,0 +1,104 @@
+.page-wrap {
+	max-width: 816px;
+	margin: 68px auto 48px;
+	background: #fff;
+	box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
+	padding: 56px 72px 64px;
+}
+
+.r-header {
+	text-align: center;
+	margin-bottom: 16px;
+}
+.r-name {
+	font-size: 22px;
+	font-weight: 700;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	margin-bottom: 4px;
+}
+.r-title {
+	font-size: 14px;
+	font-weight: 400;
+	font-style: italic;
+	margin-bottom: 10px;
+}
+.r-contact-row {
+	font-size: 12px;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 0;
+}
+.r-contact-row a {
+	color: #000;
+	text-decoration: none;
+}
+.r-contact-row a:hover {
+	text-decoration: underline;
+}
+.r-ci {
+	display: flex;
+	align-items: center;
+	gap: 4px;
+}
+.r-ci::after {
+	content: '|';
+	margin: 0 8px;
+	color: #666;
+}
+.r-ci:last-child::after {
+	display: none;
+}
+.r-ci svg {
+	opacity: 0.5;
+	flex-shrink: 0;
+}
+
+.r-section {
+	margin-bottom: 18px;
+}
+.r-section:last-child {
+	margin-bottom: 0;
+}
+.r-sec-title {
+	font-size: 14px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+	border-bottom: 1.5px solid #000;
+	padding-bottom: 2px;
+	margin-bottom: 10px;
+}
+.r-summary {
+	font-size: 14px;
+	line-height: 1.6;
+	text-align: justify;
+}
+
+.r-skills-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 10px 24px;
+}
+.r-skill-label {
+	font-size: 13px;
+	font-weight: 700;
+	margin-bottom: 3px;
+}
+.r-skill-val {
+	font-size: 13px;
+	line-height: 1.5;
+}
+
+.r-lang-row {
+	display: flex;
+	gap: 32px;
+	flex-wrap: wrap;
+}
+.r-lang-item {
+	font-size: 14px;
+}
+.r-lang-item strong {
+	font-weight: 700;
+}
