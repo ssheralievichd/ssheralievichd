@@ -2,7 +2,7 @@
 	import { Activity } from '@lucide/svelte';
 	import { onMount } from 'svelte';
 	import Counter from '../Counter.svelte';
-	import { fetchContributions, type Contributions } from '$lib/services/contributions';
+	import { loadContributions, type Contributions } from '$lib/stores/contributions';
 	import { t } from '$lib/stores/lang';
 
 	let data = $state<Contributions | null>(null);
@@ -13,7 +13,7 @@
 
 	onMount(async () => {
 		try {
-			data = await fetchContributions();
+			data = await loadContributions();
 		} catch {
 			failed = true;
 		}
