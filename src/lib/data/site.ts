@@ -34,5 +34,5 @@ export const cycleWords = [
 	'Vue.js',
 	'Docker',
 	'DevOps',
-	'Go'
+	'Kubernetes'
 ];

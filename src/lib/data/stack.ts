@@ -9,37 +9,33 @@ const plain = (...labels: string[]): StackTag[] => labels.map((label) => ({ labe
 
 export const stackGroups: StackGroup[] = [
 	{
-		titleKey: 'sc_languages',
-		icon: Code2,
-		tags: [
-			...plain('Python', 'TypeScript', 'JavaScript', 'PHP'),
-			{ label: 'Dart', muted: true },
-			{ label: 'Go', muted: true }
-		]
-	},
-	{
 		titleKey: 'sc_backend',
 		icon: Server,
-		tags: plain('FastAPI', 'Django', 'Flask', 'Laravel', 'Celery')
+		tags: plain('Python', 'FastAPI', 'Django', 'Flask', 'Celery')
+	},
+	{
+		titleKey: 'sc_backend2',
+		icon: Code2,
+		tags: plain('PHP', 'Laravel')
 	},
 	{
 		titleKey: 'sc_frontend',
 		icon: Layout,
-		tags: plain('Vue.js', 'Nuxt.js', 'React', 'Next.js', 'Flutter')
+		tags: plain('TypeScript', 'Vue.js', 'Nuxt.js', 'React', 'Next.js')
 	},
 	{
 		titleKey: 'sc_databases',
 		icon: Database,
-		tags: plain('PostgreSQL', 'MySQL', 'Redis', 'MongoDB')
+		tags: plain('PostgreSQL', 'Redis', 'MongoDB')
 	},
 	{
 		titleKey: 'sc_devops',
 		icon: Box,
-		tags: plain('Docker', 'Kubernetes', 'NGINX', 'GitHub Actions', 'Linux')
+		tags: plain('Docker', 'Kubernetes', 'GitHub Actions', 'Linux')
 	},
 	{
 		titleKey: 'sc_practices',
 		icon: GitBranch,
-		tags: plain('Microservices', 'CI/CD', 'REST APIs', 'WebSockets', 'Async')
+		tags: plain('Microservices', 'CI/CD', 'REST APIs', 'Async')
 	}
 ];
