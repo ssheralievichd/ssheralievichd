@@ -44,12 +44,10 @@ export const resumeRoles: ResumeRole[] = [
 ];
 
 export const skillGroups: SkillGroup[] = [
-	{ labelKey: 'r_sk_lang', valueKey: 'r_sk_lang_v' },
-	{ labelKey: 'r_sk_back', valueKey: 'r_sk_back_v' },
-	{ labelKey: 'r_sk_front', valueKey: 'r_sk_front_v' },
-	{ labelKey: 'r_sk_db', valueKey: 'r_sk_db_v' },
-	{ labelKey: 'r_sk_devops', valueKey: 'r_sk_devops_v' },
-	{ labelKey: 'r_sk_practices', valueKey: 'r_sk_practices_v' }
+	{ labelKey: 'r_sk_be', valueKey: 'r_sk_be_v' },
+	{ labelKey: 'r_sk_be2', valueKey: 'r_sk_be2_v' },
+	{ labelKey: 'r_sk_fe', valueKey: 'r_sk_fe_v' },
+	{ labelKey: 'r_sk_infra', valueKey: 'r_sk_infra_v' }
 ];
 
 export const languageSkills: LanguageSkill[] = [
