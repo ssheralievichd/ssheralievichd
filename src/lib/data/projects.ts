@@ -23,7 +23,8 @@ export const projects: Project[] = [
 		tags: ['Laravel 12', 'Vue 3', 'Inertia', 'PostgreSQL']
 	},
 	{
-		name: 'Velora',
+		name: 'Discovery Trio',
+		href: 'https://play.google.com/store/apps/details?id=com.velocehub&hl=en',
 		kind: 'personal',
 		descKey: 'proj5_desc',
 		tags: ['Flutter', 'FastAPI', 'PostgreSQL', 'Docker']
