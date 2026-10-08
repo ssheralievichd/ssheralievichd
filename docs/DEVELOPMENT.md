@@ -22,7 +22,7 @@ npm run preview # serve build/ locally
 | --- | --- |
 | `src/routes/` | Pages: `/`, `/resume`, `/blog/[slug]` |
 | `src/lib/components/sections/` | Portfolio sections |
-| `src/lib/components/art/` | Decorative SVG illustrations |
+| `src/lib/components/art/` | Brand icons (GitHub, LinkedIn) |
 | `src/lib/data/` | Typed content (projects, experience, stack, posts) |
 | `src/lib/i18n/` | English and Russian dictionaries |
 | `src/lib/services/` | GitHub stats, contribution heatmap, visitor counter |
