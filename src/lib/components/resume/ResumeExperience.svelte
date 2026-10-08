@@ -3,30 +3,30 @@
 	import { t } from '$lib/stores/lang';
 </script>
 
-<div class="r-section">
-	<div class="r-sec-title">{$t.r_sec_exp}</div>
+<section class="r-sec">
+	<h2 class="r-sec-title">{$t.r_sec_exp}</h2>
 
 	{#each resumeRoles as role (role.roleKey)}
-		<div class="r-exp">
-			<div class="r-exp-head">
-				<span class="r-exp-role">{$t[role.roleKey]}</span>
-				<span class="r-exp-date">{role.date}</span>
+		<article class="r-item">
+			<div class="r-item-head">
+				<h3 class="r-item-title">{$t[role.roleKey]}</h3>
+				<span class="r-item-date">{role.date}</span>
 			</div>
-			<div class="r-exp-org">{$t[role.orgKey]}</div>
-			<ul class="r-exp-ul">
+			<p class="r-item-org">{$t[role.orgKey]}</p>
+			<ul class="r-list">
 				{#each role.bulletKeys as bullet (bullet)}
 					<li>{$t[bullet]}</li>
 				{/each}
 			</ul>
 
 			{#if role.achievementsKey && role.achievementKeys}
-				<div class="r-exp-ach">{$t[role.achievementsKey]}</div>
-				<ul class="r-exp-ul">
+				<p class="r-item-sub">{$t[role.achievementsKey]}</p>
+				<ul class="r-list">
 					{#each role.achievementKeys as achievement (achievement)}
 						<li>{$t[achievement]}</li>
 					{/each}
 				</ul>
 			{/if}
-		</div>
+		</article>
 	{/each}
-</div>
+</section>

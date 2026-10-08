@@ -6,57 +6,56 @@
 	import { profile } from '$lib/data/site';
 	import { t } from '$lib/stores/lang';
 	import '$lib/styles/resume.css';
-	import '$lib/styles/resume-paper.css';
-	import '$lib/styles/resume-print.css';
+	import '$lib/styles/resume-sheet.css';
+	import '$lib/styles/resume-items.css';
 </script>
 
 <svelte:head>
-	<title>{profile.name} — Resume</title>
+	<title>{profile.name} — {$t.nav_resume}</title>
 </svelte:head>
 
-<div class="resume-body">
-	<ResumeBar />
+<ResumeBar />
 
-	<div class="page-wrap">
+<main class="resume">
+	<div class="sheet">
 		<ResumeHeader />
 
-		<div class="r-section">
-			<div class="r-sec-title">{$t.r_sec_summary}</div>
-			<p class="r-summary">{$t.r_summary}</p>
-		</div>
+		<section class="r-sec">
+			<h2 class="r-sec-title">{$t.r_sec_summary}</h2>
+			<p>{$t.r_summary}</p>
+		</section>
 
 		<ResumeExperience />
 
-		<div class="r-section">
-			<div class="r-sec-title">{$t.r_sec_skills}</div>
-			<div class="r-skills-grid">
+		<section class="r-sec">
+			<h2 class="r-sec-title">{$t.r_sec_skills}</h2>
+			<dl class="r-skills">
 				{#each skillGroups as group (group.labelKey)}
-					<div class="r-skill-group">
-						<div class="r-skill-label">{$t[group.labelKey]}</div>
-						<div class="r-skill-val">{$t[group.valueKey]}</div>
-					</div>
+					<dt>{$t[group.labelKey]}</dt>
+					<dd>{$t[group.valueKey]}</dd>
 				{/each}
-			</div>
-		</div>
+			</dl>
+		</section>
 
-		<div class="r-section">
-			<div class="r-sec-title">{$t.r_edu_sec}</div>
-			<div class="r-edu-head">
-				<span class="r-edu-deg">{$t.r_edu_deg}</span>
-				<span class="r-edu-date">2020 — 2024</span>
-			</div>
-			<div class="r-edu-school">{$t.r_edu_sch}</div>
-		</div>
+		<section class="r-sec">
+			<h2 class="r-sec-title">{$t.r_edu_sec}</h2>
+			<article class="r-item">
+				<div class="r-item-head">
+					<h3 class="r-item-title">{$t.r_edu_deg}</h3>
+					<span class="r-item-date">2020 — 2024</span>
+				</div>
+				<p class="r-item-org">{$t.r_edu_sch}</p>
+			</article>
+		</section>
 
-		<div class="r-section">
-			<div class="r-sec-title">{$t.r_lang_sec}</div>
-			<div class="r-lang-row">
-				{#each languageSkills as skill (skill.nameKey)}
-					<span class="r-lang-item">
-						<strong>{$t[skill.nameKey]}</strong> — <span>{$t[skill.levelKey]}</span>
-					</span>
+		<section class="r-sec">
+			<h2 class="r-sec-title">{$t.r_lang_sec}</h2>
+			<p>
+				{#each languageSkills as skill, index (skill.nameKey)}
+					{index ? ' · ' : ''}<strong>{$t[skill.nameKey]}</strong>
+					{$t[skill.levelKey].toLowerCase()}
 				{/each}
-			</div>
-		</div>
+			</p>
+		</section>
 	</div>
-</div>
+</main>

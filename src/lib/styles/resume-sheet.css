@@ -1,0 +1,50 @@
+.r-head {
+	padding-bottom: 3.6mm;
+	border-bottom: 1.5pt solid var(--sheet-accent);
+}
+
+.r-name {
+	font-family: var(--display);
+	font-size: 2.6em;
+	font-weight: 600;
+	line-height: 1;
+	letter-spacing: -0.035em;
+	color: var(--sheet-accent);
+}
+
+.r-role {
+	margin-top: 0.45em;
+	font-family: var(--display);
+	font-size: 1.25em;
+	font-weight: 500;
+	letter-spacing: -0.015em;
+}
+
+.r-contact {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.15em 1.1em;
+	margin-top: 0.9em;
+	color: var(--sheet-ink-2);
+	font-size: 0.94em;
+	font-variant-numeric: tabular-nums lining-nums;
+}
+
+.r-contact a {
+	text-decoration: none;
+}
+
+.r-sec {
+	margin-top: 3.1mm;
+}
+
+.r-sec-title {
+	margin-bottom: 0.55em;
+	padding-bottom: 0.3em;
+	border-bottom: 0.5pt solid var(--sheet-rule);
+	font-family: var(--display);
+	font-size: 1.08em;
+	font-weight: 600;
+	letter-spacing: -0.01em;
+	color: var(--sheet-accent);
+}
