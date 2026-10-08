@@ -14,14 +14,14 @@ export const roles: Role[] = [
 		orgKey: 'org_current',
 		dateKey: 'period_teamlead',
 		active: true,
-		bulletKeys: ['exp0_b1']
+		bulletKeys: ['exp0_b1', 'exp0_b2', 'exp0_b3', 'exp0_b4']
 	},
 	{
 		roleKey: 'role_fullstack',
 		orgKey: 'org_current',
 		dateKey: 'period_current',
 		active: false,
-		bulletKeys: ['exp1_b1', 'exp1_b2', 'exp1_b3', 'exp1_b4']
+		bulletKeys: ['exp1_b1', 'exp1_b2', 'exp1_b3', 'exp1_b4', 'exp1_b5', 'exp1_b6']
 	},
 	{
 		roleKey: 'role_formika',

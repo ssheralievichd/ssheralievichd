@@ -5,7 +5,7 @@
 **Senior Full-Stack Software Engineer · Python · FastAPI · Vue · DevOps**
 
 Backend-focused engineer shipping production fintech systems and scalable microservices.<br>
-Team Lead at a fintech startup. Based in Tajikistan, open to remote.
+Team Lead at TojikTelecom. Based in Tajikistan, open to remote.
 
 [![Website](https://img.shields.io/badge/Website-ssheralievichd.baselinux.net-0e75b6?style=flat-square&logo=googlechrome&logoColor=white)](https://ssheralievichd.baselinux.net)
 [![Email](https://img.shields.io/badge/Email-ssheralievichd@gmail.com-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:ssheralievichd@gmail.com)
@@ -33,14 +33,17 @@ I care about clean architecture, query performance, and shipping containerized s
 
 ## Experience
 
-**Team Lead** — Fintech Startup, Tajikistan · *Jun 2026 – Present*
-- Promoted to Team Lead after eight months as Senior Full-Stack Software Engineer
+**Team Lead** — TojikTelecom, Tajikistan · *Jun 2026 – Present*
+- Lead the development team behind the operator's internal and customer-facing platforms, staying hands-on as lead developer of its core systems
+- Plan and assign the team's work and own releases across the organization's repositories
+- Established shared CI/CD deployment templates, containerized environments, and single sign-on across internal services
 
-**Senior Full-Stack Software Engineer** — Fintech Startup, Tajikistan · *Oct 2025 – Jun 2026*
-- Architected scalable microservices with FastAPI, Django REST Framework, and Laravel
-- Built responsive SPAs with Vue.js, Nuxt.js, React, and Next.js
-- Optimized PostgreSQL queries — 50%+ reduction in response times on high-traffic endpoints
-- Led Docker containerization and automated CI/CD pipelines
+**Senior Full-Stack Software Engineer** — TojikTelecom, Tajikistan · *Oct 2025 – Jun 2026*
+- Built the telephony billing platform on Laravel and PostgreSQL: call-record processing, tariff-based pricing, client balances, and invoicing
+- Developed the national .tj domain registry system with registration workflow, availability checks, DNS management, and role-based access
+- Delivered a real-time contact-center platform with multi-channel chat and an AI assistant, using Laravel, Vue, and WebSockets
+- Built Python and FastAPI services for network-performance monitoring and social-media sentiment analysis
+- Tuned PostgreSQL queries and indexing — 50%+ faster responses on high-traffic endpoints
 
 **Python Developer** — Formika, Tajikistan · *Oct 2024 – Jan 2025*
 - Developed backend services and REST APIs with Python and FastAPI

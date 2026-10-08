@@ -10,7 +10,7 @@ export const site = {
 	nav_theme: 'Switch theme',
 	nav_lang: 'Language',
 	hero_lead:
-		'<strong>Senior Full-Stack Software Engineer</strong> and Team Lead at a fintech startup. I build production fintech systems and microservices in Python, and the Vue and React interfaces on top of them. Earlier, two years at Alif Bank. Based in Tajikistan, available for remote roles.',
+		'<strong>Senior Full-Stack Software Engineer</strong> and Team Lead at TojikTelecom. I build production telecom and fintech systems in Python and PHP, and the Vue and React interfaces on top of them. Earlier, two years at Alif Bank. Based in Tajikistan, available for remote roles.',
 	hero_btn_contact: 'Get in touch',
 	hero_btn_cv: 'Resume',
 	fig_years: 'years building production systems',
@@ -19,7 +19,7 @@ export const site = {
 	fig_deploy: 'faster deployments after adopting Docker',
 	about_sh: 'Profile',
 	about_p1:
-		'Backend-focused full-stack engineer with 4+ years building high-availability APIs and production systems in fintech and enterprise domains. I currently work as Team Lead at a fintech startup.',
+		'Backend-focused full-stack engineer with 4+ years building high-availability APIs and production systems in telecom, fintech, and enterprise domains. I currently work as Team Lead at TojikTelecom.',
 	about_p2:
 		'I work mainly in <strong>Python (FastAPI, Django)</strong> on PostgreSQL and deliver frontends in Vue and React. I care about clean architecture, query performance, and shipping containerized services through CI/CD.',
 	about_p3:

@@ -19,14 +19,6 @@
 				{/each}
 			</ul>
 
-			{#if role.achievementsKey && role.achievementKeys}
-				<p class="r-item-sub">{$t[role.achievementsKey]}</p>
-				<ul class="r-list">
-					{#each role.achievementKeys as achievement (achievement)}
-						<li>{$t[achievement]}</li>
-					{/each}
-				</ul>
-			{/if}
 		</article>
 	{/each}
 </section>

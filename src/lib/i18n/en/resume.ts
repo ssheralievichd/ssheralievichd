@@ -2,55 +2,38 @@ export const resume = {
 	r_title: 'Senior Full-Stack Software Engineer',
 	r_loc: 'Tajikistan · Remote (CET-ready)',
 	r_summary:
-		'Full-Stack Software Engineer with 4+ years of experience building high-availability backend services, real-time APIs, and production web platforms across fintech and enterprise domains. Specialized in Python (FastAPI, Django) backends backed by scalable PostgreSQL data layers, with strong frontend delivery in Vue and React. Experienced shipping containerized services through automated CI/CD pipelines, owning features end to end from schema design to production deployment.',
+		'Senior full-stack engineer and team lead with 4+ years building high-availability backend services, real-time APIs, and production web platforms across telecom, fintech, and enterprise domains. Works in Python (FastAPI, Django) and PHP (Laravel) on PostgreSQL, with Vue and React on the frontend. Currently leads a development team at TojikTelecom, owning systems end to end from schema design to CI/CD and production operation.',
 	r_sec_summary: 'Summary',
 	r_sec_exp: 'Experience',
 	r_sec_skills: 'Technical Skills',
 	r_print: 'Print / Save PDF',
 	r_role1: 'Senior Full-Stack Software Engineer',
-	r_org1: 'Fintech Startup · Tajikistan',
-	r_b1_1:
-		'Architected scalable microservices with FastAPI, Django REST Framework, and Laravel for business-critical applications',
-	r_b1_2:
-		'Built responsive SPAs with Vue.js, Nuxt.js, React, and Next.js, raising user engagement across key flows',
+	r_org1: 'TojikTelecom · Tajikistan',
 	r_b1_3:
 		'Tuned PostgreSQL queries and indexing strategy, cutting response times by 50%+ on high-traffic endpoints',
-	r_b1_4:
-		'Led Docker containerization and automated CI/CD pipelines, shortening release cycles and reducing manual deploys',
-	r_a1: 'Key achievements:',
-	r_a1_1: 'Delivered 3+ production services end to end, from schema design to deployment',
-	r_a1_2: "Reduced average API latency by ~50% on the platform's busiest endpoints",
 	r_role3: 'Python Software Engineer',
 	r_org3: 'Alif Bank · Tajikistan',
 	r_b3_1:
-		'Built and maintained high-availability RESTful APIs serving production-scale financial traffic',
+		'Built and maintained high-availability REST APIs for core banking, handling thousands of daily financial transactions',
 	r_b3_2:
 		'Designed complex relational schemas and optimized queries, significantly decreasing query latency',
-	r_b3_3: 'Spearheaded Docker adoption and deployment automation, reducing deployment time by ~60%',
+	r_b3_3: 'Led Docker adoption and deployment automation, cutting deployment time by ~60%',
 	r_b3_4:
 		'Partnered with cross-functional teams on fintech product features and system reliability improvements',
-	r_a3: 'Key achievements:',
-	r_a3_1: 'Supported core banking APIs handling thousands of daily financial transactions',
-	r_a3_2: 'Improved deployment throughput by ~60% through containerization and automation',
 	r_role2: 'Python Developer',
 	r_org2: 'Formika · Tajikistan',
 	r_b2_1:
-		'Developed backend services and REST APIs with Python and FastAPI for internal automation tooling',
-	r_b2_2:
-		'Integrated third-party services and refactored legacy modules for reliability and maintainability',
-	r_b2_3: 'Drove code reviews and expanded automated test coverage across core modules',
+		'Developed backend services and REST APIs with Python and FastAPI, integrated third-party services, and expanded automated test coverage',
 	r_role4: 'Freelance Python Developer',
 	r_org4: 'Self-employed · Remote',
-	r_b4_1: 'Built web applications and REST APIs for clients using Python, Django, and Flask',
-	r_b4_2:
-		'Developed automation scripts and data-processing tools that cut manual work for small businesses',
-	r_b4_3: 'Owned the full project lifecycle — requirements, development, deployment, and support',
+	r_b4_1:
+		'Built web applications, REST APIs, and automation tools for clients with Python, Django, and Flask, from requirements through support',
 	r_sk_be: 'Backend',
-	r_sk_be2: 'Backend (secondary)',
+	r_sk_be2: 'Backend, PHP',
 	r_sk_fe: 'Frontend',
 	r_sk_infra: 'Data & Infra',
-	r_sk_be_v: 'Python — FastAPI, Django, Flask, Celery, REST APIs, async, microservices',
-	r_sk_be2_v: 'PHP, Laravel',
+	r_sk_be_v: 'Python — FastAPI, Django, Flask, Celery, async, REST APIs, microservices',
+	r_sk_be2_v: 'Laravel, Inertia, queues, WebSockets',
 	r_sk_fe_v: 'TypeScript, Vue / Nuxt, React / Next',
 	r_sk_infra_v: 'PostgreSQL, Redis, MongoDB, Docker, Kubernetes, GitHub Actions, Linux',
 	r_edu_sec: 'Education',

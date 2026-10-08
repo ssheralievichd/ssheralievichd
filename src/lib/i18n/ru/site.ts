@@ -10,7 +10,7 @@ export const site = {
 	nav_theme: 'Сменить тему',
 	nav_lang: 'Язык',
 	hero_lead:
-		'<strong>Senior Full-Stack инженер</strong> и Team Lead в финтех-стартапе. Создаю production-системы для финтеха и микросервисы на Python, а также интерфейсы к ним на Vue и React. Ранее два года работал в Alif Bank. Живу в Таджикистане, работаю удалённо.',
+		'<strong>Senior Full-Stack инженер</strong> и Team Lead в TojikTelecom. Создаю production-системы для телекома и финтеха на Python и PHP, а также интерфейсы к ним на Vue и React. Ранее два года работал в Alif Bank. Живу в Таджикистане, работаю удалённо.',
 	hero_btn_contact: 'Связаться',
 	hero_btn_cv: 'Резюме',
 	fig_years: 'года разработки production-систем',
@@ -19,7 +19,7 @@ export const site = {
 	fig_deploy: 'быстрее деплой после внедрения Docker',
 	about_sh: 'Профиль',
 	about_p1:
-		'Full-stack инженер с упором на бэкенд: более 4 лет создаю высокодоступные API и production-системы в финтехе и корпоративном секторе. Сейчас работаю Team Lead в финтех-стартапе.',
+		'Full-stack инженер с упором на бэкенд: более 4 лет создаю высокодоступные API и production-системы в телекоме, финтехе и корпоративном секторе. Сейчас работаю Team Lead в TojikTelecom.',
 	about_p2:
 		'Основной стек: <strong>Python (FastAPI, Django)</strong> и PostgreSQL, фронтенд на Vue и React. Для меня важны чистая архитектура, производительность запросов и поставка контейнеризованных сервисов через CI/CD.',
 	about_p3:

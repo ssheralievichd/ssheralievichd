@@ -5,8 +5,6 @@ export type ResumeRole = {
 	orgKey: TranslationKey;
 	dateKey: TranslationKey;
 	bulletKeys: TranslationKey[];
-	achievementsKey?: TranslationKey;
-	achievementKeys?: TranslationKey[];
 };
 
 export type SkillGroup = { labelKey: TranslationKey; valueKey: TranslationKey };
@@ -17,35 +15,31 @@ export const resumeRoles: ResumeRole[] = [
 		roleKey: 'role_teamlead',
 		orgKey: 'r_org1',
 		dateKey: 'period_teamlead',
-		bulletKeys: ['exp0_b1']
+		bulletKeys: ['exp0_b1', 'exp0_b2', 'exp0_b3', 'exp0_b4']
 	},
 	{
 		roleKey: 'r_role1',
 		orgKey: 'r_org1',
 		dateKey: 'period_current',
-		bulletKeys: ['r_b1_1', 'r_b1_2', 'r_b1_3', 'r_b1_4'],
-		achievementsKey: 'r_a1',
-		achievementKeys: ['r_a1_1', 'r_a1_2']
+		bulletKeys: ['exp1_b1', 'exp1_b2', 'exp1_b3', 'exp1_b4', 'exp1_b5', 'r_b1_3']
 	},
 	{
 		roleKey: 'r_role2',
 		orgKey: 'r_org2',
 		dateKey: 'period_formika',
-		bulletKeys: ['r_b2_1', 'r_b2_2', 'r_b2_3']
+		bulletKeys: ['r_b2_1']
 	},
 	{
 		roleKey: 'r_role3',
 		orgKey: 'r_org3',
 		dateKey: 'period_alif',
-		bulletKeys: ['r_b3_1', 'r_b3_2', 'r_b3_3', 'r_b3_4'],
-		achievementsKey: 'r_a3',
-		achievementKeys: ['r_a3_1', 'r_a3_2']
+		bulletKeys: ['r_b3_1', 'r_b3_2', 'r_b3_3', 'r_b3_4']
 	},
 	{
 		roleKey: 'r_role4',
 		orgKey: 'r_org4',
 		dateKey: 'period_freelance',
-		bulletKeys: ['r_b4_1', 'r_b4_2', 'r_b4_3']
+		bulletKeys: ['r_b4_1']
 	}
 ];
 

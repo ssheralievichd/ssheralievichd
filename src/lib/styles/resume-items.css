@@ -23,11 +23,6 @@
 	color: var(--sheet-ink-2);
 }
 
-.r-item-sub {
-	margin-top: 0.35em;
-	font-weight: 600;
-}
-
 .r-list {
 	margin-top: 0.25em;
 }

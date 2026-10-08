@@ -9,16 +9,29 @@ export const content = {
 	role_formika: 'Python Developer',
 	role_alif: 'Python Software Engineer',
 	role_freelance: 'Freelance Python Developer',
-	org_current: 'Fintech Startup · Tajikistan',
+	org_current: 'TojikTelecom · Tajikistan',
 	org_formika: 'Formika · Tajikistan',
 	org_alif: 'Alif Bank · Tajikistan',
 	org_freelance: 'Self-employed · Remote',
-	exp0_b1: 'Promoted to Team Lead after eight months as Senior Full-Stack Software Engineer',
-	exp1_b1: 'Architected scalable microservices using FastAPI, Django REST Framework, and Laravel',
-	exp1_b2: 'Built responsive SPAs with Vue.js, Nuxt.js, React, and Next.js',
+	exp0_b1:
+		'Lead the development team behind the operator\'s internal and customer-facing platforms, staying hands-on as lead developer of its core systems',
+	exp0_b2:
+		'Plan and assign the team\'s work and own releases across the organization\'s repositories',
+	exp0_b3:
+		'Established shared CI/CD deployment templates, containerized environments, and single sign-on across internal services',
+	exp0_b4: 'Set team conventions for project structure, deployment, and API documentation',
+	exp1_b1:
+		'Built the telephony billing platform on Laravel and PostgreSQL: call-record processing, tariff-based pricing, client balances, and invoicing',
+	exp1_b2:
+		'Developed the national .tj domain registry system with registration workflow, availability checks, DNS management, and role-based access',
 	exp1_b3:
-		'Optimized PostgreSQL queries — <span class="metric">50%+ reduction</span> in response times on high-traffic endpoints',
-	exp1_b4: 'Led Docker containerization and automated CI/CD pipelines',
+		'Delivered a real-time contact-center platform with multi-channel chat and an AI assistant, using Laravel, Vue, and WebSockets',
+	exp1_b4:
+		'Built Python and FastAPI services for network-performance monitoring and social-media sentiment analysis, with asynchronous pipelines on Redis',
+	exp1_b5:
+		'Implemented an OAuth2 single sign-on service for internal applications and automated deployments with Docker and GitHub Actions',
+	exp1_b6:
+		'Tuned PostgreSQL queries and indexing — <span class="metric">50%+ faster responses</span> on high-traffic endpoints',
 	exp2_b1: 'Developed backend services and REST APIs using Python and FastAPI',
 	exp2_b2: 'Integrated third-party services and refactored legacy modules for reliability',
 	exp2_b3: 'Drove code reviews and expanded automated test coverage',
