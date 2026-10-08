@@ -28,7 +28,7 @@ export const navLinks: NavLink[] = [
 
 export const figures: Figure[] = [
 	{ value: '4+', labelKey: 'fig_years' },
-	{ value: '2', labelKey: 'fig_fintech' },
+	{ value: '10+', labelKey: 'fig_products' },
 	{ value: '50%+', labelKey: 'fig_latency' },
 	{ value: '~60%', labelKey: 'fig_deploy' }
 ];

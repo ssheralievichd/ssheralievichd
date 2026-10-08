@@ -28,18 +28,18 @@ export const resumeRoles: ResumeRole[] = [
 		achievementKeys: ['r_a1_1', 'r_a1_2']
 	},
 	{
+		roleKey: 'r_role2',
+		orgKey: 'r_org2',
+		dateKey: 'period_formika',
+		bulletKeys: ['r_b2_1', 'r_b2_2', 'r_b2_3']
+	},
+	{
 		roleKey: 'r_role3',
 		orgKey: 'r_org3',
 		dateKey: 'period_alif',
 		bulletKeys: ['r_b3_1', 'r_b3_2', 'r_b3_3', 'r_b3_4'],
 		achievementsKey: 'r_a3',
 		achievementKeys: ['r_a3_1', 'r_a3_2']
-	},
-	{
-		roleKey: 'r_role2',
-		orgKey: 'r_org2',
-		dateKey: 'period_formika',
-		bulletKeys: ['r_b2_1', 'r_b2_2', 'r_b2_3']
 	},
 	{
 		roleKey: 'r_role4',

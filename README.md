@@ -5,7 +5,7 @@
 **Senior Full-Stack Software Engineer · Python · FastAPI · Vue · DevOps**
 
 Backend-focused engineer shipping production fintech systems and scalable microservices.<br>
-Ex–Alif Bank. Based in Tajikistan, open to remote.
+Team Lead at a fintech startup. Based in Tajikistan, open to remote.
 
 [![Website](https://img.shields.io/badge/Website-ssheralievichd.baselinux.net-0e75b6?style=flat-square&logo=googlechrome&logoColor=white)](https://ssheralievichd.baselinux.net)
 [![Email](https://img.shields.io/badge/Email-ssheralievichd@gmail.com-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:ssheralievichd@gmail.com)
@@ -42,15 +42,15 @@ I care about clean architecture, query performance, and shipping containerized s
 - Optimized PostgreSQL queries — 50%+ reduction in response times on high-traffic endpoints
 - Led Docker containerization and automated CI/CD pipelines
 
-**Python Software Engineer** — Alif Bank, Tajikistan · *Aug 2022 – Oct 2024*
-- Built and maintained high-availability RESTful APIs serving production-scale financial traffic
-- Designed complex database schemas and optimized queries, significantly reducing latency
-- Spearheaded Docker adoption and deployment automation — ~60% faster deploys
-
 **Python Developer** — Formika, Tajikistan · *Oct 2024 – Jan 2025*
 - Developed backend services and REST APIs with Python and FastAPI
 - Integrated third-party services and refactored legacy modules for reliability
 - Drove code reviews and expanded automated test coverage
+
+**Python Software Engineer** — Alif Bank, Tajikistan · *Aug 2022 – Oct 2024*
+- Built and maintained high-availability RESTful APIs serving production-scale financial traffic
+- Designed complex database schemas and optimized queries, significantly reducing latency
+- Spearheaded Docker adoption and deployment automation — ~60% faster deploys
 
 **Freelance Python Developer** — Self-employed, Remote · *2021 – 2022*
 - Built web applications and REST APIs for clients using Python, Django, and Flask

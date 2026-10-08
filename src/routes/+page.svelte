@@ -15,7 +15,7 @@
 	<title>Abdurahmon Sheralievich — Senior Full-Stack Software Engineer</title>
 	<meta
 		name="description"
-		content="Backend-focused full-stack engineer building production fintech systems and microservices in Python. Previously at Alif Bank."
+		content="Backend-focused full-stack engineer building production fintech systems and microservices in Python. Team Lead at a fintech startup."
 	/>
 </svelte:head>
 

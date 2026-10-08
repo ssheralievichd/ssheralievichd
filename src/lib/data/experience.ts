@@ -24,18 +24,18 @@ export const roles: Role[] = [
 		bulletKeys: ['exp1_b1', 'exp1_b2', 'exp1_b3', 'exp1_b4']
 	},
 	{
-		roleKey: 'role_alif',
-		orgKey: 'org_alif',
-		dateKey: 'period_alif',
-		active: false,
-		bulletKeys: ['exp3_b1', 'exp3_b2', 'exp3_b3', 'exp3_b4']
-	},
-	{
 		roleKey: 'role_formika',
 		orgKey: 'org_formika',
 		dateKey: 'period_formika',
 		active: false,
 		bulletKeys: ['exp2_b1', 'exp2_b2', 'exp2_b3']
+	},
+	{
+		roleKey: 'role_alif',
+		orgKey: 'org_alif',
+		dateKey: 'period_alif',
+		active: false,
+		bulletKeys: ['exp3_b1', 'exp3_b2', 'exp3_b3', 'exp3_b4']
 	},
 	{
 		roleKey: 'role_freelance',
