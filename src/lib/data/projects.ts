@@ -28,7 +28,7 @@ export const projects: Project[] = [
 		href: 'https://cloud.telecom-zehn.tj/',
 		kind: 'commercial',
 		descKey: 'proj10_desc',
-		tags: ['FOSSBilling', 'PHP 8', 'MariaDB', 'PowerDNS', 'Docker']
+		tags: ['PHP 8', 'MariaDB', 'PowerDNS', 'Docker']
 	},
 	{
 		name: 'Discovery Trio',

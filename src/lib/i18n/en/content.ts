@@ -55,7 +55,7 @@ export const content = {
 	proj9_desc:
 		'Minimal OAuth2 SSO server that authenticates users against a mail server — no local user database required. Stateless, lightweight, and designed to front internal tools without managing credentials.',
 	proj10_desc:
-		'Domain registration and hosting storefront for the Tajik market, built on FOSSBilling. Live .tj availability checks against the nic.tj registry, payment through the Dushanbe City and Alif Mobi bank apps with automatic confirmation, a client area in Tajik, Russian, and English, and an installable PWA.',
+		'Domain registration and hosting storefront for the Tajik market. Live .tj availability checks against the nic.tj registry, payment through the Dushanbe City and Alif Mobi bank apps with automatic confirmation, a client area in Tajik, Russian, and English, and an installable PWA.',
 	blog1_date: 'March 12, 2026',
 	blog1_read: '6 min read',
 	blog1_title: 'FastAPI at Scale: Async Patterns That Actually Matter',
