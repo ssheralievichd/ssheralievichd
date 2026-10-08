@@ -47,7 +47,8 @@ export const skillGroups: SkillGroup[] = [
 	{ labelKey: 'r_sk_be', valueKey: 'r_sk_be_v' },
 	{ labelKey: 'r_sk_be2', valueKey: 'r_sk_be2_v' },
 	{ labelKey: 'r_sk_fe', valueKey: 'r_sk_fe_v' },
-	{ labelKey: 'r_sk_infra', valueKey: 'r_sk_infra_v' }
+	{ labelKey: 'r_sk_infra', valueKey: 'r_sk_infra_v' },
+	{ labelKey: 'r_sk_ai', valueKey: 'r_sk_ai_v' }
 ];
 
 export const languageSkills: LanguageSkill[] = [

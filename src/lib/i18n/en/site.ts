@@ -39,6 +39,7 @@ export const site = {
 	sc_databases: 'Databases',
 	sc_devops: 'DevOps and infrastructure',
 	sc_practices: 'Practices',
+	sc_ai: 'AI and workflow',
 	exp_sh: 'Experience',
 	exp_current: 'Current',
 	proj_sh: 'Projects',

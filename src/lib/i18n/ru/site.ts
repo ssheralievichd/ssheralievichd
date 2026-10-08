@@ -39,6 +39,7 @@ export const site = {
 	sc_databases: 'Базы данных',
 	sc_devops: 'DevOps и инфраструктура',
 	sc_practices: 'Практики',
+	sc_ai: 'AI и процессы',
 	exp_sh: 'Опыт',
 	exp_current: 'Сейчас',
 	proj_sh: 'Проекты',

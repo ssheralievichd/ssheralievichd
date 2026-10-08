@@ -35,6 +35,13 @@
 					<dt>{$t[group.labelKey]}</dt>
 					<dd>{$t[group.valueKey]}</dd>
 				{/each}
+				<dt>{$t.r_lang_sec}</dt>
+				<dd>
+					{#each languageSkills as skill, index (skill.nameKey)}
+						{index ? ' · ' : ''}{$t[skill.nameKey]}
+						{$t[skill.levelKey].toLowerCase()}
+					{/each}
+				</dd>
 			</dl>
 		</section>
 
@@ -47,16 +54,6 @@
 				</div>
 				<p class="r-item-org">{$t.r_edu_sch}</p>
 			</article>
-		</section>
-
-		<section class="r-sec">
-			<h2 class="r-sec-title">{$t.r_lang_sec}</h2>
-			<p>
-				{#each languageSkills as skill, index (skill.nameKey)}
-					{index ? ' · ' : ''}<strong>{$t[skill.nameKey]}</strong>
-					{$t[skill.levelKey].toLowerCase()}
-				{/each}
-			</p>
 		</section>
 	</div>
 </main>

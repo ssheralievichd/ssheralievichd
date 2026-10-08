@@ -8,5 +8,14 @@ export const stackGroups: StackGroup[] = [
 	{ titleKey: 'sc_frontend', items: ['TypeScript', 'Vue.js', 'Nuxt.js', 'React', 'Next.js'] },
 	{ titleKey: 'sc_databases', items: ['PostgreSQL', 'Redis', 'MongoDB'] },
 	{ titleKey: 'sc_devops', items: ['Docker', 'Kubernetes', 'GitHub Actions', 'Linux'] },
-	{ titleKey: 'sc_practices', items: ['Microservices', 'CI/CD', 'REST APIs', 'Async'] }
+	{ titleKey: 'sc_practices', items: ['Microservices', 'CI/CD', 'REST APIs', 'Async', 'TDD'] },
+	{
+		titleKey: 'sc_ai',
+		items: [
+			'LLM integration (RAG, AI assistants)',
+			'Prompt engineering',
+			'AI-assisted development',
+			'Spec-driven development'
+		]
+	}
 ];

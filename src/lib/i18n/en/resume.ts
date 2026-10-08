@@ -36,6 +36,9 @@ export const resume = {
 	r_sk_be2_v: 'Laravel, Inertia, queues, WebSockets',
 	r_sk_fe_v: 'TypeScript, Vue / Nuxt, React / Next',
 	r_sk_infra_v: 'PostgreSQL, Redis, MongoDB, Docker, Kubernetes, GitHub Actions, Linux',
+	r_sk_ai: 'AI & Workflow',
+	r_sk_ai_v:
+		'LLM integration (RAG), prompt engineering, AI-assisted and spec-driven development, TDD',
 	r_edu_sec: 'Education',
 	r_edu_deg: 'Bachelor of Science in Computer Science',
 	r_edu_sch: 'Russian-Tajik Slavonic University · Dushanbe, Tajikistan',
