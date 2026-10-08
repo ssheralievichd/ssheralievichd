@@ -13,13 +13,13 @@ export const site = {
 		'<strong>Senior Full-Stack инженер</strong> и Team Lead в TojikTelecom. Создаю production-системы для телекома и финтеха на Python и PHP, а также интерфейсы к ним на Vue и React. Живу в Таджикистане, работаю удалённо.',
 	hero_btn_contact: 'Связаться',
 	hero_btn_cv: 'Резюме',
-	fig_years: 'года разработки production-систем',
+	fig_years: 'лет разработки production-систем',
 	fig_products: 'продуктов создано, коммерческих и личных',
 	fig_latency: 'быстрее ответы нагруженных эндпоинтов',
 	fig_deploy: 'быстрее деплой после внедрения Docker',
 	about_sh: 'Профиль',
 	about_p1:
-		'Full-stack инженер с упором на бэкенд: более 4 лет создаю высокодоступные API и production-системы в телекоме, финтехе и корпоративном секторе. Сейчас работаю Team Lead в TojikTelecom.',
+		'Full-stack инженер с упором на бэкенд: более 5 лет создаю высокодоступные API и production-системы в телекоме, финтехе и корпоративном секторе. Сейчас работаю Team Lead в TojikTelecom.',
 	about_p2:
 		'Основной стек: <strong>Python (FastAPI, Django)</strong> и PostgreSQL, фронтенд на Vue и React. Для меня важны чистая архитектура, производительность запросов и поставка контейнеризованных сервисов через CI/CD.',
 	about_p3:

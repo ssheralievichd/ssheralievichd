@@ -2,7 +2,7 @@ export const resume = {
 	r_title: 'Senior Full-Stack Software Engineer',
 	r_loc: 'Tajikistan · Remote (CET-ready)',
 	r_summary:
-		'Senior full-stack engineer and team lead with 4+ years building high-availability backend services, real-time APIs, and production web platforms across telecom, fintech, and enterprise domains. Works in Python (FastAPI, Django) and PHP (Laravel) on PostgreSQL, with Vue and React on the frontend. Currently leads a development team at TojikTelecom, owning systems end to end from schema design to CI/CD and production operation.',
+		'Senior full-stack engineer and team lead with 5+ years building high-availability backend services, real-time APIs, and production web platforms across telecom, fintech, and enterprise domains. Works in Python (FastAPI, Django) and PHP (Laravel) on PostgreSQL, with Vue and React on the frontend. Currently leads a development team at TojikTelecom, owning systems end to end from schema design to CI/CD and production operation.',
 	r_sec_summary: 'Summary',
 	r_sec_exp: 'Experience',
 	r_sec_skills: 'Technical Skills',

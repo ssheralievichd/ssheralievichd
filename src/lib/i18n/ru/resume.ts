@@ -2,7 +2,7 @@ export const resume = {
 	r_title: 'Senior Full-Stack инженер',
 	r_loc: 'Таджикистан · Удалённо (CET)',
 	r_summary:
-		'Senior full-stack инженер и тимлид с опытом более 4 лет: высокодоступные бэкенд-сервисы, real-time API и production веб-платформы в телекоме, финтехе и корпоративном секторе. Работаю на Python (FastAPI, Django) и PHP (Laravel) с PostgreSQL, фронтенд на Vue и React. Сейчас руковожу командой разработки в TojikTelecom и веду системы от схемы данных до CI/CD и эксплуатации.',
+		'Senior full-stack инженер и тимлид с опытом более 5 лет: высокодоступные бэкенд-сервисы, real-time API и production веб-платформы в телекоме, финтехе и корпоративном секторе. Работаю на Python (FastAPI, Django) и PHP (Laravel) с PostgreSQL, фронтенд на Vue и React. Сейчас руковожу командой разработки в TojikTelecom и веду системы от схемы данных до CI/CD и эксплуатации.',
 	r_sec_summary: 'Резюме',
 	r_sec_exp: 'Опыт',
 	r_sec_skills: 'Технические навыки',

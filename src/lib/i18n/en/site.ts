@@ -19,7 +19,7 @@ export const site = {
 	fig_deploy: 'faster deployments after adopting Docker',
 	about_sh: 'Profile',
 	about_p1:
-		'Backend-focused full-stack engineer with 4+ years building high-availability APIs and production systems in telecom, fintech, and enterprise domains. I currently work as Team Lead at TojikTelecom.',
+		'Backend-focused full-stack engineer with 5+ years building high-availability APIs and production systems in telecom, fintech, and enterprise domains. I currently work as Team Lead at TojikTelecom.',
 	about_p2:
 		'I work mainly in <strong>Python (FastAPI, Django)</strong> on PostgreSQL and deliver frontends in Vue and React. I care about clean architecture, query performance, and shipping containerized services through CI/CD.',
 	about_p3:
