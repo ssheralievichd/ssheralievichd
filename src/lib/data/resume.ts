@@ -3,7 +3,7 @@ import type { TranslationKey } from '$lib/i18n';
 export type ResumeRole = {
 	roleKey: TranslationKey;
 	orgKey: TranslationKey;
-	date: string;
+	dateKey: TranslationKey;
 	bulletKeys: TranslationKey[];
 	achievementsKey?: TranslationKey;
 	achievementKeys?: TranslationKey[];
@@ -16,7 +16,7 @@ export const resumeRoles: ResumeRole[] = [
 	{
 		roleKey: 'r_role1',
 		orgKey: 'r_org1',
-		date: 'Oct 2025 — Present',
+		dateKey: 'period_current',
 		bulletKeys: ['r_b1_1', 'r_b1_2', 'r_b1_3', 'r_b1_4'],
 		achievementsKey: 'r_a1',
 		achievementKeys: ['r_a1_1', 'r_a1_2']
@@ -24,7 +24,7 @@ export const resumeRoles: ResumeRole[] = [
 	{
 		roleKey: 'r_role3',
 		orgKey: 'r_org3',
-		date: 'Aug 2022 — Oct 2024',
+		dateKey: 'period_alif',
 		bulletKeys: ['r_b3_1', 'r_b3_2', 'r_b3_3', 'r_b3_4'],
 		achievementsKey: 'r_a3',
 		achievementKeys: ['r_a3_1', 'r_a3_2']
@@ -32,13 +32,13 @@ export const resumeRoles: ResumeRole[] = [
 	{
 		roleKey: 'r_role2',
 		orgKey: 'r_org2',
-		date: 'Oct 2024 — Jan 2025',
+		dateKey: 'period_formika',
 		bulletKeys: ['r_b2_1', 'r_b2_2', 'r_b2_3']
 	},
 	{
 		roleKey: 'r_role4',
 		orgKey: 'r_org4',
-		date: '2021 — 2022',
+		dateKey: 'period_freelance',
 		bulletKeys: ['r_b4_1', 'r_b4_2', 'r_b4_3']
 	}
 ];

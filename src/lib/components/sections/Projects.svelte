@@ -18,14 +18,22 @@
 		<div>
 			<div class="rows">
 				{#each projects as project (project.name)}
-					<a href={project.href} target="_blank" rel="noopener" class="project">
+					<svelte:element
+						this={project.href ? 'a' : 'div'}
+						href={project.href}
+						target={project.href ? '_blank' : undefined}
+						rel={project.href ? 'noopener' : undefined}
+						class="project"
+					>
 						<div>
-							<h3 class="project-name">{project.name}<ArrowUpRight /></h3>
+							<h3 class="project-name">
+								{project.name}{#if project.href}<ArrowUpRight />{/if}
+							</h3>
 							<p class="project-kind">{$t[badgeKey(project.kind)]}</p>
 						</div>
 						<p class="project-desc">{$t[project.descKey]}</p>
 						<p class="project-stack">{project.tags.join(', ')}</p>
-					</a>
+					</svelte:element>
 				{/each}
 			</div>
 

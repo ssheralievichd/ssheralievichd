@@ -1,4 +1,8 @@
 export const content = {
+	period_current: 'Oct 2025 — Present',
+	period_alif: 'Aug 2022 — Oct 2024',
+	period_formika: 'Oct 2024 — Jan 2025',
+	period_freelance: '2021 — 2022',
 	role_fullstack: 'Senior Full-Stack Software Engineer',
 	role_formika: 'Python Developer',
 	role_alif: 'Python Software Engineer',

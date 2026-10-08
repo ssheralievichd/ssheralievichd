@@ -16,7 +16,6 @@
 
 .r-item-date {
 	color: var(--sheet-ink-2);
-	font-variant-numeric: tabular-nums lining-nums;
 	white-space: nowrap;
 }
 

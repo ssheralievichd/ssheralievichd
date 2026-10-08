@@ -14,7 +14,7 @@ export const site = {
 	hero_btn_contact: 'Get in touch',
 	hero_btn_cv: 'Resume',
 	fig_years: 'years building production systems',
-	fig_fintech: 'years in fintech at Alif Bank',
+	fig_fintech: 'years at Alif Bank',
 	fig_latency: 'faster responses on high-traffic endpoints',
 	fig_deploy: 'faster deployments after adopting Docker',
 	about_sh: 'Profile',

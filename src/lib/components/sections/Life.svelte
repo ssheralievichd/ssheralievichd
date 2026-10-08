@@ -14,10 +14,10 @@
 			</div>
 
 			<div class="block">
-				<h3 class="sub-title">{$t.values_sh}</h3>
-				<dl class="values">
+				<h3 class="sub-title rows-title">{$t.values_sh}</h3>
+				<dl class="rows">
 					{#each values as value (value.titleKey)}
-						<div>
+						<div class="row">
 							<dt><strong>{$t[value.titleKey]}</strong></dt>
 							<dd>{$t[value.subKey]}</dd>
 						</div>

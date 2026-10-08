@@ -1,0 +1,24 @@
+@media print {
+	@page {
+		size: A4;
+		margin: 0;
+	}
+	html,
+	body {
+		background: #fff;
+	}
+	.resume-bar {
+		display: none;
+	}
+	.resume {
+		padding: 0;
+		background: #fff;
+		min-height: 0;
+	}
+	.sheet {
+		max-width: none;
+		min-height: 0;
+		border: 0;
+		print-color-adjust: exact;
+	}
+}

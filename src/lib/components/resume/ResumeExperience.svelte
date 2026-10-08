@@ -10,7 +10,7 @@
 		<article class="r-item">
 			<div class="r-item-head">
 				<h3 class="r-item-title">{$t[role.roleKey]}</h3>
-				<span class="r-item-date">{role.date}</span>
+				<span class="r-item-date">{$t[role.dateKey]}</span>
 			</div>
 			<p class="r-item-org">{$t[role.orgKey]}</p>
 			<ul class="r-list">

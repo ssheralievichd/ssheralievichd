@@ -10,7 +10,7 @@
 		<ol class="rows">
 			{#each roles as role (role.roleKey)}
 				<li class="row">
-					<p class="row-key">{role.date}</p>
+					<p class="row-key">{$t[role.dateKey]}</p>
 					<div>
 						<h3 class="row-title">
 							{$t[role.roleKey]}{#if role.active}<span class="mark">{$t.exp_current}</span>{/if}

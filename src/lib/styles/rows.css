@@ -19,7 +19,6 @@
 .row-key {
 	color: var(--ink-2);
 	font-size: 0.9375rem;
-	font-variant-numeric: tabular-nums lining-nums;
 	line-height: 1.7;
 }
 

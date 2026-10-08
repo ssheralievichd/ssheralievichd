@@ -1,4 +1,8 @@
 export const content = {
+	period_current: 'Окт 2025 — наст. время',
+	period_alif: 'Авг 2022 — окт 2024',
+	period_formika: 'Окт 2024 — янв 2025',
+	period_freelance: '2021 — 2022',
 	role_fullstack: 'Senior Full-Stack инженер',
 	role_formika: 'Python разработчик',
 	role_alif: 'Python инженер',

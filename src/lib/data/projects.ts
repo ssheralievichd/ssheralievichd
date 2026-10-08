@@ -2,13 +2,11 @@ import type { TranslationKey } from '$lib/i18n';
 
 export type Project = {
 	name: string;
-	href: string;
+	href?: string;
 	kind: 'commercial' | 'personal';
 	descKey: TranslationKey;
 	tags: string[];
 };
-
-const GITHUB = 'https://github.com/ssheralievichd';
 
 export const projects: Project[] = [
 	{
@@ -20,28 +18,24 @@ export const projects: Project[] = [
 	},
 	{
 		name: 'Domains Hub',
-		href: GITHUB,
 		kind: 'commercial',
 		descKey: 'proj2_desc',
 		tags: ['Laravel 12', 'Vue 3', 'Inertia', 'PostgreSQL']
 	},
 	{
 		name: 'Velora',
-		href: GITHUB,
 		kind: 'personal',
 		descKey: 'proj5_desc',
 		tags: ['Flutter', 'FastAPI', 'PostgreSQL', 'Docker']
 	},
 	{
 		name: 'GoClaw',
-		href: GITHUB,
 		kind: 'personal',
 		descKey: 'proj3_desc',
 		tags: ['Laravel 13', 'React 19', 'Docker', 'PostgreSQL', 'Yookassa']
 	},
 	{
 		name: 'Lumio',
-		href: GITHUB,
 		kind: 'personal',
 		descKey: 'proj4_desc',
 		tags: ['Laravel 12', 'React 19', 'FAL.ai', 'GPT-4o', 'Horizon']
@@ -55,14 +49,12 @@ export const projects: Project[] = [
 	},
 	{
 		name: 'MinioTeleFuse',
-		href: GITHUB,
 		kind: 'personal',
 		descKey: 'proj8_desc',
 		tags: ['Python', 'Docker', 'FUSE', 'MinIO']
 	},
 	{
 		name: 'Auth1',
-		href: GITHUB,
 		kind: 'personal',
 		descKey: 'proj9_desc',
 		tags: ['Python', 'FastAPI', 'OAuth2']

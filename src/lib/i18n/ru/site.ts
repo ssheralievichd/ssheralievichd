@@ -10,11 +10,11 @@ export const site = {
 	nav_theme: 'Сменить тему',
 	nav_lang: 'Язык',
 	hero_lead:
-		'<strong>Senior Full-Stack разработчик.</strong> Создаю production-системы для финтеха и микросервисы на Python, а также интерфейсы к ним на Vue и React. Ранее работал в Alif Bank. Живу в Таджикистане, работаю удалённо.',
+		'<strong>Senior Full-Stack инженер.</strong> Создаю production-системы для финтеха и микросервисы на Python, а также интерфейсы к ним на Vue и React. Ранее работал в Alif Bank. Живу в Таджикистане, работаю удалённо.',
 	hero_btn_contact: 'Связаться',
 	hero_btn_cv: 'Резюме',
 	fig_years: 'года разработки production-систем',
-	fig_fintech: 'года в финтехе, Alif Bank',
+	fig_fintech: 'года в Alif Bank',
 	fig_latency: 'быстрее ответы нагруженных эндпоинтов',
 	fig_deploy: 'быстрее деплой после внедрения Docker',
 	about_sh: 'Профиль',

@@ -32,6 +32,14 @@
 	text-decoration: none;
 	white-space: nowrap;
 	margin-right: auto;
+	transition:
+		opacity 0.3s var(--ease),
+		visibility 0.3s;
+}
+
+.nav:not(.solid) .nav-name {
+	opacity: 0;
+	visibility: hidden;
 }
 
 .nav-links {

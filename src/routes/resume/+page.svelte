@@ -8,6 +8,7 @@
 	import '$lib/styles/resume.css';
 	import '$lib/styles/resume-sheet.css';
 	import '$lib/styles/resume-items.css';
+	import '$lib/styles/resume-print.css';
 </script>
 
 <svelte:head>
