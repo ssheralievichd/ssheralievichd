@@ -56,22 +56,24 @@ export const content = {
 		'Enterprise contact center platform with real-time multi-channel support across Web, Telegram, and WhatsApp. Features RAG-based AI operator for automated responses and smart routing by operator workload and language.',
 	proj2_desc:
 		'Enterprise TLD Registry Management System with full domain lifecycle — registration workflow, real-time availability checking, DNS nameserver management, bulk operations, and multi-role access control.',
-	proj3_desc:
-		'Multi-tenant SaaS platform for deploying personal AI Telegram bots. Each subscriber gets an isolated Docker instance provisioned on-demand with a dedicated API sub-key, Telegram OAuth, and subscription billing.',
-	proj4_desc:
-		'AI content generation platform via Telegram. Image and video generation through FAL.ai models with GPT-4o prompt enhancement, async webhook callbacks, wallet top-up, referral commissions, and Filament admin panel.',
 	proj5_desc:
 		'Full-stack automotive marketplace with Flutter mobile app and FastAPI backend. JWT authentication, Google and Apple OAuth, full-text search with multi-criteria filtering, and a comprehensive test suite with 96% coverage.',
 	proj6_desc:
 		'Full-stack tire and wheel e-commerce monorepo with multi-supplier product sync, Redis cart with 7-day TTL, Awilix dependency injection, and a cron-based price parser running alongside the storefront.',
-	proj7_desc:
-		'Telegram Stars reseller bot with no-KYC instant delivery via Fragment API. Supports preset and custom amounts, multiple payment methods via Yookassa, automatic retry on failed deliveries, and admin notifications.',
 	proj8_desc:
 		'S3-compatible object storage backed by Telegram. Combines MinIO with a FUSE filesystem layer to expose Telegram as an S3 endpoint — compatible with any S3 client including AWS CLI and SDKs.',
 	proj9_desc:
 		'Minimal OAuth2 SSO server that authenticates users against a mail server — no local user database required. Stateless, lightweight, and designed to front internal tools without managing credentials.',
 	proj10_desc:
 		'Domain registration and hosting storefront for the Tajik market. Live .tj availability checks against the nic.tj registry, payment through the Dushanbe City and Alif Mobi bank apps with automatic confirmation, a client area in Tajik, Russian, and English, and an installable PWA.',
+	proj11_desc:
+		'Billing platform for fixed-line telephony. Imports and processes call detail records, prices calls by zone and tariff, keeps client balances with accounting-style transactions and VAT, manages recurring service subscriptions, and exposes an OAuth2 API with generated OpenAPI documentation.',
+	proj12_desc:
+		'Monitoring and management dashboards for telecom operations: network and incident statistics, CRM integrations, call-record parsing, and role-based access behind a JWT-secured API.',
+	proj13_desc:
+		'Social-media monitoring and sentiment analysis. Collectors gather posts and comments, asynchronous workers on Redis Streams detect language and score sentiment with an LLM, and a dashboard shows topic ratings and scheduled crawls.',
+	proj14_desc:
+		'Backend for monitoring mobile-network quality. Ingests performance data over SFTP, normalizes vendor formats, computes KPIs at cell, site, and network level, and serves analytics for dashboards, maps, and reports.',
 	blog1_date: 'March 12, 2026',
 	blog1_read: '6 min read',
 	blog1_title: 'FastAPI at Scale: Async Patterns That Actually Matter',

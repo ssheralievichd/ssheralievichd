@@ -10,6 +10,12 @@ export type Project = {
 
 export const projects: Project[] = [
 	{
+		name: 'Telephony Billing',
+		kind: 'commercial',
+		descKey: 'proj11_desc',
+		tags: ['Laravel 12', 'PostgreSQL', 'Horizon', 'OAuth2', 'Vue 3']
+	},
+	{
 		name: 'Chat Tojiktelecom',
 		href: 'https://chat.tojiktelecom.tj',
 		kind: 'commercial',
@@ -24,6 +30,24 @@ export const projects: Project[] = [
 		tags: ['Laravel 12', 'Vue 3', 'Inertia', 'PostgreSQL']
 	},
 	{
+		name: 'Network Monitoring',
+		kind: 'commercial',
+		descKey: 'proj14_desc',
+		tags: ['Python', 'FastAPI', 'PostgreSQL', 'SQLAlchemy', 'Docker']
+	},
+	{
+		name: 'Zehn Vision',
+		kind: 'commercial',
+		descKey: 'proj13_desc',
+		tags: ['Python', 'FastAPI', 'Redis Streams', 'Vue 3', 'LLM']
+	},
+	{
+		name: 'Operations Dashboard',
+		kind: 'commercial',
+		descKey: 'proj12_desc',
+		tags: ['Vue 3', 'Chart.js', 'Laravel 11', 'JWT', 'MS SQL']
+	},
+	{
 		name: 'Zehn Cloud',
 		href: 'https://cloud.telecom-zehn.tj/',
 		kind: 'commercial',
@@ -31,23 +55,17 @@ export const projects: Project[] = [
 		tags: ['PHP 8', 'MariaDB', 'PowerDNS', 'Docker']
 	},
 	{
+		name: 'Auth1',
+		kind: 'commercial',
+		descKey: 'proj9_desc',
+		tags: ['Python', 'FastAPI', 'OAuth2']
+	},
+	{
 		name: 'Discovery Trio',
 		href: 'https://play.google.com/store/apps/details?id=com.velocehub&hl=en',
 		kind: 'personal',
 		descKey: 'proj5_desc',
 		tags: ['Flutter', 'FastAPI', 'PostgreSQL', 'Docker']
-	},
-	{
-		name: 'GoClaw',
-		kind: 'personal',
-		descKey: 'proj3_desc',
-		tags: ['Laravel 13', 'React 19', 'Docker', 'PostgreSQL', 'Yookassa']
-	},
-	{
-		name: 'Lumio',
-		kind: 'personal',
-		descKey: 'proj4_desc',
-		tags: ['Laravel 12', 'React 19', 'FAL.ai', 'GPT-4o', 'Horizon']
 	},
 	{
 		name: 'WheelBase',
@@ -61,18 +79,5 @@ export const projects: Project[] = [
 		kind: 'personal',
 		descKey: 'proj8_desc',
 		tags: ['Python', 'Docker', 'FUSE', 'MinIO']
-	},
-	{
-		name: 'Auth1',
-		kind: 'personal',
-		descKey: 'proj9_desc',
-		tags: ['Python', 'FastAPI', 'OAuth2']
-	},
-	{
-		name: 'Stars Bot',
-		href: 'https://t.me/StarzaMarket_bot',
-		kind: 'personal',
-		descKey: 'proj7_desc',
-		tags: ['Python', 'FastAPI', 'aiogram', 'PostgreSQL']
 	}
 ];

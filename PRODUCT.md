@@ -42,7 +42,7 @@ A backend-focused full-stack engineer with production fintech experience at Alif
 
 - Employment history with dates: TojikTelecom (Senior Full-Stack Engineer Oct 2025–Jun 2026, Team Lead Jun 2026–present), Alif Bank (Aug 2022–Oct 2024), Formika (Oct 2024–Jan 2025), freelance (2021–2022). `src/lib/data/experience.ts`
 - Stated results: 50%+ faster responses on high-traffic endpoints, about 60% faster deployments.
-- Ten listed projects with stack tags (a selection, not the full count); six have public links. `src/lib/data/projects.ts`
+- Eleven listed projects with stack tags (a selection, not the full count), eight of them commercial TojikTelecom systems; five have public links. `src/lib/data/projects.ts`
 - Three blog posts. `src/posts/`
 - B.Sc. Computer Science, Russian-Tajik Slavonic University, 2020–2024.
 - No photo, no testimonials, no client logos, no screenshots of projects. Do not fabricate any.
