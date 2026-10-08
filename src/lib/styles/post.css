@@ -1,0 +1,84 @@
+.post {
+	padding-block: calc(var(--nav-h) + clamp(40px, 7vw, 88px)) clamp(64px, 9vw, 120px);
+}
+
+.post-head {
+	padding-bottom: clamp(28px, 4vw, 44px);
+	border-bottom: 1px solid var(--rule-strong);
+}
+
+.post-title {
+	max-width: 20ch;
+	font-family: var(--display);
+	font-size: clamp(2.1rem, 5.2vw, 4rem);
+	font-weight: 600;
+	line-height: 1.02;
+	letter-spacing: -0.036em;
+	text-wrap: balance;
+}
+
+.post-meta {
+	margin-top: 20px;
+	color: var(--ink-2);
+	font-size: 0.9375rem;
+	font-variant-numeric: tabular-nums lining-nums;
+}
+
+.post-body {
+	max-width: 68ch;
+	margin-top: clamp(28px, 4vw, 44px);
+	font-size: 1.125rem;
+	line-height: 1.65;
+}
+
+.post-body > * + * {
+	margin-top: 1.15em;
+}
+
+.post-body p {
+	text-wrap: pretty;
+}
+
+.post-body > p:first-child {
+	font-size: clamp(1.25rem, 1.8vw, 1.45rem);
+	line-height: 1.42;
+	letter-spacing: -0.012em;
+}
+
+.post-body h2 {
+	margin-top: 2.2em;
+	font-family: var(--display);
+	font-size: 1.6rem;
+	font-weight: 600;
+	line-height: 1.15;
+	letter-spacing: -0.025em;
+}
+
+.post-body a {
+	color: var(--accent);
+}
+
+.post-body ul,
+.post-body ol {
+	padding-left: 1.3em;
+}
+
+.post-body ul {
+	list-style: disc;
+}
+
+.post-body ol {
+	list-style: decimal;
+}
+
+.post-body li + li {
+	margin-top: 0.4em;
+}
+
+.post-back {
+	margin-top: clamp(40px, 6vw, 72px);
+}
+
+.post-back:hover svg {
+	translate: -3px 0;
+}

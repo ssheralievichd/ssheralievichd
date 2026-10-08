@@ -1,0 +1,25 @@
+.post-body code {
+	padding: 0.12em 0.36em;
+	border-radius: 2px;
+	background: var(--paper-2);
+	font-family: var(--mono);
+	font-size: 0.86em;
+}
+
+.post-body pre {
+	padding: 20px 22px;
+	border-left: 0;
+	border-radius: 2px;
+	background: var(--field);
+	color: var(--field-ink);
+	font-size: 0.9375rem;
+	line-height: 1.6;
+	overflow-x: auto;
+	scrollbar-color: var(--field-rule) transparent;
+}
+
+.post-body pre code {
+	padding: 0;
+	background: none;
+	font-size: inherit;
+}
