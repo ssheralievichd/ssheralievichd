@@ -10,7 +10,7 @@ export const site = {
 	nav_theme: 'Switch theme',
 	nav_lang: 'Language',
 	hero_lead:
-		'<strong>Senior Full-Stack Software Engineer</strong> and Team Lead at TojikTelecom. I build production telecom and fintech systems in Python and PHP, and the Vue and React interfaces on top of them. Earlier, two years at Alif Bank. Based in Tajikistan, available for remote roles.',
+		'<strong>Senior Full-Stack Software Engineer</strong> and Team Lead at TojikTelecom. I build production telecom and fintech systems in Python and PHP, and the Vue and React interfaces on top of them. Based in Tajikistan, available for remote roles.',
 	hero_btn_contact: 'Get in touch',
 	hero_btn_cv: 'Resume',
 	fig_years: 'years building production systems',
@@ -48,7 +48,7 @@ export const site = {
 	proj_badge_personal: 'Personal',
 	life_sh: 'Beyond work',
 	life_p1:
-		'I grew up in Tajikistan and came to software through curiosity about how computers work, starting with small scripts and moving on to full production systems. I joined Alif Bank while studying for my B.Sc. in Computer Science and have stayed in backend and full-stack engineering since.',
+		'I grew up in Tajikistan and came to software through curiosity about how computers work, starting with small scripts and moving on to full production systems. I started working in fintech while studying for my B.Sc. in Computer Science and have stayed in backend and full-stack engineering since.',
 	life_p2:
 		'Away from work: open-source and side projects, reading, hiking in the Tajik mountains, Linux and tooling, languages, and music.',
 	values_sh: 'How I work',

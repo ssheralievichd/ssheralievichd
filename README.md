@@ -19,12 +19,12 @@ Team Lead at TojikTelecom. Based in Tajikistan, open to remote.
 
 ## About
 
-Backend-focused full-stack engineer with **4+ years** building high-availability APIs and production systems — including core infrastructure at **Alif Bank**, one of Tajikistan's leading fintech companies. I specialize in **Python (FastAPI, Django)** backends on scalable PostgreSQL data layers, with strong delivery in Vue and React.
+Backend-focused full-stack engineer with **4+ years** building high-availability APIs and production systems across telecom and fintech. I specialize in **Python (FastAPI, Django)** backends on scalable PostgreSQL data layers, with strong delivery in Vue and React.
 
 I care about clean architecture, query performance, and shipping containerized services through automated CI/CD. Outside of full-time work I've shipped a range of production side projects, from a RAG-based contact-center platform to S3-compatible storage backed by Telegram.
 
 - 🔭 Currently building scalable microservices and SPAs as a Team Lead
-- 🏦 2 years in fintech at Alif Bank — high-availability APIs and deployment automation
+- 🏦 Fintech background — high-availability banking APIs and deployment automation
 - 🌍 Open to **remote** backend, full-stack, and DevOps roles worldwide
 - 🗣️ Tajik (native), Russian (fluent), English (professional)
 - 🚀 Selected work and case studies on my [portfolio](https://ssheralievichd.baselinux.net)
