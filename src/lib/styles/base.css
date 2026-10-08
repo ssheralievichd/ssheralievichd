@@ -8,76 +8,75 @@
 
 html {
 	scroll-behavior: smooth;
+	scroll-padding-top: calc(var(--nav-h) + 16px);
+	scrollbar-color: var(--ink-2) transparent;
+	scrollbar-width: thin;
 }
 
 body {
-	background: var(--background);
-	color: var(--foreground);
-	font-family: var(--font);
-	font-size: 16px;
+	background: var(--paper);
+	color: var(--ink);
+	font-family: var(--text);
+	font-size: 1.0625rem;
 	line-height: 1.6;
-	overflow-x: hidden;
+	font-variant-numeric: lining-nums;
 	-webkit-font-smoothing: antialiased;
-	transition:
-		background 0.28s,
-		color 0.28s;
+	text-rendering: optimizeLegibility;
+	overflow-x: hidden;
+	caret-color: var(--accent);
 }
 
 ::selection {
-	background: var(--selection-bg);
-	color: var(--foreground);
+	background: var(--field);
+	color: var(--field-ink);
 }
-::-webkit-scrollbar {
-	width: 4px;
+
+.field ::selection {
+	background: var(--signal);
+	color: var(--field);
 }
-::-webkit-scrollbar-track {
-	background: transparent;
+
+a {
+	color: inherit;
+	text-decoration-thickness: 1px;
+	text-underline-offset: 0.2em;
 }
-::-webkit-scrollbar-thumb {
-	background: var(--scrollbar-thumb);
+
+:focus-visible {
+	outline: 2px solid var(--accent);
+	outline-offset: 3px;
 	border-radius: 2px;
 }
 
-.glow-top,
-.glow-bottom {
-	position: fixed;
-	pointer-events: none;
-	z-index: 0;
-	translate: -50% 0;
-	transition: background 0.28s;
-}
-.glow-top {
-	top: -20%;
-	left: 50%;
-	width: 1100px;
-	height: 800px;
-	background: radial-gradient(ellipse at center, var(--glow-top-c), transparent 70%);
-}
-.glow-bottom {
-	bottom: -10%;
-	left: 30%;
-	width: 900px;
-	height: 700px;
-	background: radial-gradient(ellipse at center, var(--glow-bottom-c), transparent 70%);
+.field :focus-visible {
+	outline-color: var(--signal);
 }
 
-.dot-grid {
-	position: fixed;
-	inset: 0;
-	pointer-events: none;
-	z-index: 0;
-	background-image: radial-gradient(var(--dot-color) 1px, transparent 1px);
-	background-size: 24px 24px;
+button {
+	font: inherit;
+	color: inherit;
+	background: none;
+	border: 0;
+	cursor: pointer;
 }
 
-.w {
-	max-width: 1080px;
-	margin: 0 auto;
-	padding: 0 48px;
-	position: relative;
-	z-index: 1;
+ul,
+ol {
+	list-style: none;
 }
 
-section {
-	padding: 96px 0;
+strong {
+	font-weight: 600;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		transition-duration: 0.01ms !important;
+	}
 }

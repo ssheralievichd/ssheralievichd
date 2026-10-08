@@ -1,0 +1,45 @@
+:root {
+	--paper: oklch(0.985 0.004 160);
+	--paper-2: oklch(0.958 0.009 160);
+	--ink: oklch(0.21 0.02 165);
+	--ink-2: oklch(0.42 0.022 165);
+	--rule: oklch(0.21 0.02 165 / 16%);
+	--rule-strong: oklch(0.21 0.02 165);
+	--accent: oklch(0.4 0.085 165);
+	--field: oklch(0.32 0.068 165);
+	--field-2: oklch(0.37 0.072 165);
+	--field-ink: oklch(0.975 0.012 160);
+	--field-ink-2: oklch(0.975 0.012 160 / 76%);
+	--field-rule: oklch(0.975 0.012 160 / 26%);
+	--signal: oklch(0.89 0.105 165);
+	--heat-0: oklch(0.21 0.02 165 / 8%);
+	--heat-1: oklch(0.82 0.06 165);
+	--heat-2: oklch(0.66 0.09 165);
+	--heat-3: oklch(0.48 0.09 165);
+	--heat-4: oklch(0.32 0.068 165);
+	--display: 'Geologica', 'Onest', ui-sans-serif, system-ui, sans-serif;
+	--text: 'Onest', ui-sans-serif, system-ui, sans-serif;
+	--mono: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', monospace;
+	--ease: cubic-bezier(0.16, 1, 0.3, 1);
+	--gutter: clamp(20px, 4vw, 48px);
+	--nav-h: 68px;
+	color-scheme: light;
+}
+
+html[data-theme='dark'] {
+	--paper: oklch(0.165 0.014 165);
+	--paper-2: oklch(0.21 0.02 165);
+	--ink: oklch(0.945 0.012 160);
+	--ink-2: oklch(0.76 0.02 160);
+	--rule: oklch(0.945 0.012 160 / 16%);
+	--rule-strong: oklch(0.945 0.012 160);
+	--accent: oklch(0.82 0.1 165);
+	--field: oklch(0.265 0.058 165);
+	--field-2: oklch(0.31 0.064 165);
+	--heat-0: oklch(0.945 0.012 160 / 9%);
+	--heat-1: oklch(0.36 0.06 165);
+	--heat-2: oklch(0.5 0.085 165);
+	--heat-3: oklch(0.68 0.1 165);
+	--heat-4: oklch(0.86 0.105 165);
+	color-scheme: dark;
+}

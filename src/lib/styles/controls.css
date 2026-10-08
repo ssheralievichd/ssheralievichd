@@ -1,0 +1,42 @@
+.icon-btn {
+	display: inline-grid;
+	place-items: center;
+	width: 40px;
+	height: 40px;
+	border-radius: 2px;
+	transition: background 0.2s var(--ease);
+}
+
+.icon-btn:hover {
+	background: oklch(from currentColor l c h / 10%);
+}
+
+.icon-btn svg {
+	width: 18px;
+	height: 18px;
+}
+
+.toggle {
+	display: inline-flex;
+	gap: 2px;
+}
+
+.toggle button {
+	min-width: 36px;
+	height: 40px;
+	padding: 0 6px;
+	font-size: 0.8125rem;
+	font-weight: 500;
+	opacity: 0.6;
+	border-bottom: 1px solid transparent;
+	transition: opacity 0.2s var(--ease);
+}
+
+.toggle button:hover {
+	opacity: 1;
+}
+
+.toggle button[aria-pressed='true'] {
+	opacity: 1;
+	border-bottom-color: currentColor;
+}

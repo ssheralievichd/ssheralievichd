@@ -6,8 +6,8 @@ export type Theme = 'dark' | 'light';
 const STORAGE_KEY = 'theme';
 
 const initial = (): Theme => {
-	if (!browser) return 'dark';
-	return (document.documentElement.dataset.theme as Theme) || 'dark';
+	if (!browser) return 'light';
+	return (document.documentElement.dataset.theme as Theme) || 'light';
 };
 
 const store = writable<Theme>(initial());
