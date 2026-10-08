@@ -1,51 +1,29 @@
 <script lang="ts">
-	import { Download, Heart } from '@lucide/svelte';
-	import { reveal } from '$lib/actions/reveal';
-	import { hobbies, values } from '$lib/data/life';
+	import { values } from '$lib/data/site';
 	import { t } from '$lib/stores/lang';
 </script>
 
-<section id="life">
-	<div class="w">
-		<p class="lbl"><Heart /><span>{$t.life_lbl}</span></p>
-		<h2 class="sh">{$t.life_sh}</h2>
+<section id="life" class="sec">
+	<div class="wrap sec-grid">
+		<div class="sec-head"><h2 class="sec-title">{$t.life_sh}</h2></div>
 
-		<div class="life-grid" use:reveal>
-			<div class="life-body">
-				<p>{@html $t.life_p1}</p>
-				<p>{@html $t.life_p2}</p>
-				<p>{@html $t.life_p3}</p>
+		<div>
+			<div class="prose">
+				<p>{$t.life_p1}</p>
+				<p>{$t.life_p2}</p>
 			</div>
-			<div class="life-values">
-				{#each values as value (value.titleKey)}
-					<div class="value-item">
-						<div class="value-icon"><value.icon /></div>
-						<div class="value-text">
-							<strong>{$t[value.titleKey]}</strong><span>{$t[value.subKey]}</span>
+
+			<div class="block">
+				<h3 class="sub-title">{$t.values_sh}</h3>
+				<dl class="values">
+					{#each values as value (value.titleKey)}
+						<div>
+							<dt><strong>{$t[value.titleKey]}</strong></dt>
+							<dd>{$t[value.subKey]}</dd>
 						</div>
-					</div>
-				{/each}
+					{/each}
+				</dl>
 			</div>
-		</div>
-
-		<div class="hobbies-grid" use:reveal>
-			{#each hobbies as hobby (hobby.titleKey)}
-				<div class="glass-card hobby-card">
-					<div class="hobby-icon"><hobby.icon /></div>
-					<div class="hobby-title">{$t[hobby.titleKey]}</div>
-					<div class="hobby-desc">{$t[hobby.descKey]}</div>
-				</div>
-			{/each}
-		</div>
-
-		<div class="highlight-card resume-bar" use:reveal>
-			<div class="resume-bar-text">
-				<strong>{$t.rbar_title}</strong>
-				<span>{$t.rbar_sub}</span>
-			</div>
-			<a href="/resume" class="btn btn-primary">
-				<Download size={14} /><span>{$t.rbar_btn}</span>
-			</a>
 		</div>
 	</div>
 </section>

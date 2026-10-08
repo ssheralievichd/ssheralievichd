@@ -1,0 +1,89 @@
+.contact {
+	padding-block: clamp(64px, 10vw, 128px) 0;
+}
+
+.contact-title {
+	font-family: var(--display);
+	font-size: clamp(2.2rem, 6vw, 4.5rem);
+	font-weight: 600;
+	line-height: 1;
+	letter-spacing: -0.038em;
+}
+
+.contact-lead {
+	margin-top: 20px;
+	max-width: 34ch;
+	font-size: clamp(1.125rem, 1.6vw, 1.375rem);
+	line-height: 1.45;
+	color: var(--field-ink-2);
+}
+
+.contact-grid {
+	display: grid;
+	grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+	gap: 40px clamp(24px, 4vw, 64px);
+	align-items: start;
+}
+
+.contact-list {
+	border-bottom: 1px solid var(--field-rule);
+}
+
+.contact-item {
+	display: grid;
+	grid-template-columns: 7.5em minmax(0, 1fr) auto;
+	align-items: baseline;
+	gap: 16px;
+	padding-block: 16px;
+	border-top: 1px solid var(--field-rule);
+	text-decoration: none;
+	transition: color 0.2s var(--ease);
+}
+
+.contact-item dt {
+	color: var(--field-ink-2);
+	font-size: 0.9375rem;
+}
+
+.contact-item dd {
+	font-family: var(--display);
+	font-size: clamp(1.05rem, 1.7vw, 1.3rem);
+	font-weight: 500;
+	letter-spacing: -0.015em;
+	overflow-wrap: anywhere;
+}
+
+.contact-item svg {
+	width: 18px;
+	height: 18px;
+	align-self: center;
+	color: var(--field-ink-2);
+	transition:
+		translate 0.25s var(--ease),
+		color 0.25s var(--ease);
+}
+
+.contact-item:hover {
+	color: var(--signal);
+}
+
+.contact-item:hover svg {
+	translate: 2px -2px;
+	color: var(--signal);
+}
+
+@media (max-width: 860px) {
+	.contact-grid {
+		grid-template-columns: minmax(0, 1fr);
+	}
+}
+
+@media (max-width: 480px) {
+	.contact-item {
+		grid-template-columns: minmax(0, 1fr) auto;
+		row-gap: 2px;
+	}
+	.contact-item dt {
+		grid-column: 1 / -1;
+	}
+}

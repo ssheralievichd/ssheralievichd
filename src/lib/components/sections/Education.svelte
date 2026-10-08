@@ -1,22 +1,28 @@
 <script lang="ts">
-	import { BookOpen, Globe } from '@lucide/svelte';
+	import { languageSkills } from '$lib/data/resume';
 	import { t } from '$lib/stores/lang';
 </script>
 
-<section id="education" style="padding-top:0">
-	<div class="w">
-		<p class="lbl"><BookOpen /><span>{$t.edu_lbl}</span></p>
-		<h2 class="sh" style="margin-bottom:28px">{$t.edu_sh}</h2>
+<section id="education" class="sec">
+	<div class="wrap sec-grid">
+		<div class="sec-head"><h2 class="sec-title">{$t.edu_sh}</h2></div>
 
-		<div class="edu-grid">
-			<div class="glass-card ec">
-				<p class="ec-deg">{$t.edu_deg}</p>
-				<p class="ec-sch">{$t.edu_sch}</p>
-				<p class="ec-yr">{$t.edu_yr}</p>
+		<div class="rows">
+			<div class="row">
+				<p class="row-key">{$t.edu_yr}</p>
+				<div>
+					<h3 class="row-title">{$t.edu_deg}</h3>
+					<p class="row-meta">{$t.edu_sch}</p>
+				</div>
 			</div>
-			<div class="card ec ec-remote">
-				<Globe size={22} />
-				<span>{$t.edu_remote}</span>
+			<div class="row">
+				<p class="row-key">{$t.langs_sh}</p>
+				<p class="list-inline">
+					{#each languageSkills as skill, index (skill.nameKey)}
+						{index ? ', ' : ''}<strong>{$t[skill.nameKey]}</strong>
+						<span class="row-meta">{$t[skill.levelKey].toLowerCase()}</span>
+					{/each}
+				</p>
 			</div>
 		</div>
 	</div>

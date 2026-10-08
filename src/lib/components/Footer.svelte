@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { Eye } from '@lucide/svelte';
 	import { onMount } from 'svelte';
 	import { profile } from '$lib/data/site';
 	import { fetchVisitors } from '$lib/services/visitors';
@@ -12,13 +11,9 @@
 	});
 </script>
 
-<footer>
-	<div class="w footer-inner">
-		<span>{$t.footer_txt}</span>
-		<span class="visitor-counter">
-			<Eye size={12} />
-			<span class="visitor-count">{visitors?.toLocaleString() ?? '—'}</span>
-			<span>{$t.footer_visitors}</span>
-		</span>
-	</div>
+<footer class="footer">
+	<span>{$t.footer_txt}</span>
+	{#if visitors !== null}
+		<span>{visitors.toLocaleString()} {$t.footer_visitors}</span>
+	{/if}
 </footer>

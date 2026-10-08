@@ -10,7 +10,7 @@ export const content = {
 	exp1_b1: 'Architect scalable microservices using FastAPI, Django REST Framework, and Laravel',
 	exp1_b2: 'Engineer responsive SPAs with Vue.js, Nuxt.js, React, and Next.js',
 	exp1_b3:
-		'Optimize PostgreSQL queries — <span class="tl-metric">50%+ reduction</span> in response times on high-traffic endpoints',
+		'Optimize PostgreSQL queries — <span class="metric">50%+ reduction</span> in response times on high-traffic endpoints',
 	exp1_b4: 'Lead Docker containerization and automated CI/CD pipelines',
 	exp2_b1: 'Developed backend services and REST APIs using Python and FastAPI',
 	exp2_b2: 'Integrated third-party services and refactored legacy modules for reliability',
@@ -19,7 +19,7 @@ export const content = {
 		'Built and maintained high-availability RESTful APIs serving production-scale financial traffic',
 	exp3_b2: 'Designed complex database schemas and optimized queries, significantly reducing latency',
 	exp3_b3:
-		'Spearheaded Docker adoption and deployment automation — <span class="tl-metric">~60% faster deploys</span>',
+		'Spearheaded Docker adoption and deployment automation — <span class="metric">~60% faster deploys</span>',
 	exp3_b4: 'Partnered with cross-functional teams on fintech features and system reliability',
 	exp4_b1: 'Built web applications and REST APIs for clients using Python, Django, and Flask',
 	exp4_b2: 'Developed automation scripts and data processing tools for small businesses',
@@ -32,24 +32,6 @@ export const content = {
 	val3_sub: 'I stay curious, read deeply, and build side projects to stay sharp.',
 	val4_title: 'Collaboration',
 	val4_sub: 'I communicate clearly, review code thoughtfully, and help others grow.',
-	hobby1_title: 'Open Source & Side Projects',
-	hobby1_desc:
-		'I contribute to open-source projects and build personal tools to scratch my own itches — mostly around developer tooling, automation, and CLI utilities.',
-	hobby2_title: 'Reading & Research',
-	hobby2_desc:
-		'From distributed systems papers to philosophy — I read broadly. Understanding the "why" behind things matters as much as the "how" in engineering.',
-	hobby3_title: 'Outdoors & Sport',
-	hobby3_desc:
-		'Tajikistan has stunning mountains. I hike, stay active, and believe physical discipline and mental clarity go hand in hand.',
-	hobby4_title: 'Linux & Tooling',
-	hobby4_desc:
-		'I run Linux daily and obsess over my development environment. Neovim, tmux, shell scripts — I treat my tools as seriously as my code.',
-	hobby5_title: 'Languages & Cultures',
-	hobby5_desc:
-		'I speak Tajik, Russian, and English. Learning how different cultures approach problems gives me perspective I bring to engineering decisions.',
-	hobby6_title: 'Music',
-	hobby6_desc:
-		'Deep focus work pairs best with ambient and electronic music. I have opinionated playlists for every kind of task.',
 	proj1_desc:
 		'Enterprise contact center platform with real-time multi-channel support across Web, Telegram, and WhatsApp. Features RAG-based AI operator for automated responses and smart routing by operator workload and language.',
 	proj2_desc:

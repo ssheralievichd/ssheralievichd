@@ -1,0 +1,15 @@
+.footer {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: 8px 24px;
+	padding-block: 20px 28px;
+	border-top: 1px solid var(--field-rule);
+	color: var(--field-ink-2);
+	font-size: 0.875rem;
+	font-variant-numeric: tabular-nums lining-nums;
+}
+
+.contact .footer {
+	margin-top: clamp(56px, 8vw, 104px);
+}

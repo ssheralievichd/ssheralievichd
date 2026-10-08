@@ -1,34 +1,64 @@
 <script lang="ts">
-	import { Mail, Send } from '@lucide/svelte';
-	import ContactNet from '../art/ContactNet.svelte';
-	import GithubIcon from '../art/GithubIcon.svelte';
-	import LinkedinIcon from '../art/LinkedinIcon.svelte';
+	import { ArrowUpRight } from '@lucide/svelte';
+	import Footer from '../Footer.svelte';
 	import { profile } from '$lib/data/site';
+	import type { TranslationKey } from '$lib/i18n';
 	import { t } from '$lib/stores/lang';
+
+	type Channel = { labelKey: TranslationKey; value: string; href: string; external: boolean };
+
+	const channels: Channel[] = [
+		{ labelKey: 'c_email', value: profile.email, href: `mailto:${profile.email}`, external: false },
+		{
+			labelKey: 'c_telegram',
+			value: `@${profile.githubUser}`,
+			href: profile.telegram,
+			external: true
+		},
+		{
+			labelKey: 'c_linkedin',
+			value: `linkedin.com/in/${profile.githubUser}`,
+			href: profile.linkedin,
+			external: true
+		},
+		{
+			labelKey: 'c_github',
+			value: `github.com/${profile.githubUser}`,
+			href: profile.github,
+			external: true
+		}
+	];
 </script>
 
-<section id="contact">
-	<div class="w">
-		<div class="highlight-card cbox">
-			<ContactNet />
-			<p class="lbl clbl"><Mail /><span>{$t.contact_lbl}</span></p>
-			<h2 class="ch">{@html $t.contact_ch}</h2>
-			<p class="cp">{$t.contact_cp}</p>
-
-			<div class="clinks">
-				<a href="mailto:{profile.email}" class="cl">
-					<Mail /> {profile.email}
-				</a>
-				<a href={profile.linkedin} target="_blank" rel="noopener" class="cl">
-					<LinkedinIcon /> linkedin.com/in/{profile.githubUser}
-				</a>
-				<a href={profile.github} target="_blank" rel="noopener" class="cl">
-					<GithubIcon /> github.com/{profile.githubUser}
-				</a>
-				<a href={profile.telegram} target="_blank" rel="noopener" class="cl">
-					<Send /> @{profile.githubUser}
-				</a>
+<section id="contact" class="contact field">
+	<div class="wrap">
+		<div class="contact-grid">
+			<div>
+				<h2 class="contact-title">{$t.contact_sh}</h2>
+				<p class="contact-lead">{$t.contact_cp}</p>
 			</div>
+
+			<dl class="contact-list">
+				{#each channels as channel (channel.labelKey)}
+					<a
+						href={channel.href}
+						class="contact-item"
+						target={channel.external ? '_blank' : undefined}
+						rel={channel.external ? 'noopener' : undefined}
+					>
+						<dt>{$t[channel.labelKey]}</dt>
+						<dd>{channel.value}</dd>
+						<ArrowUpRight />
+					</a>
+				{/each}
+				<a href="/resume" class="contact-item">
+					<dt>{$t.c_resume}</dt>
+					<dd>{$t.c_resume_v}</dd>
+					<ArrowUpRight />
+				</a>
+			</dl>
 		</div>
+
+		<Footer />
 	</div>
 </section>

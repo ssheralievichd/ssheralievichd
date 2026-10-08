@@ -1,0 +1,35 @@
+@media (prefers-reduced-motion: no-preference) {
+	.hero-name,
+	.hero-lead,
+	.hero-actions,
+	.figure {
+		animation: rise 0.9s var(--ease) backwards;
+	}
+	.hero-lead {
+		animation-delay: 0.08s;
+	}
+	.hero-actions {
+		animation-delay: 0.16s;
+	}
+	.figure {
+		animation-name: draw;
+		animation-delay: calc(0.3s + var(--i) * 0.07s);
+	}
+}
+
+@keyframes rise {
+	from {
+		opacity: 0;
+		translate: 0 18px;
+	}
+}
+
+@keyframes draw {
+	from {
+		opacity: 0;
+		clip-path: inset(0 100% 0 0);
+	}
+	to {
+		clip-path: inset(0 0 0 0);
+	}
+}

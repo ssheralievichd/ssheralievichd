@@ -1,0 +1,91 @@
+.hero + .sec {
+	border-top: 0;
+}
+
+.project {
+	position: relative;
+	display: grid;
+	grid-template-columns: minmax(0, 3fr) minmax(0, 6fr) minmax(0, 3fr);
+	align-items: start;
+	column-gap: clamp(16px, 2.5vw, 32px);
+	row-gap: 8px;
+	padding: 20px 12px;
+	margin-inline: -12px;
+	border-top: 1px solid var(--rule);
+	text-decoration: none;
+	transition: background 0.25s var(--ease);
+}
+
+.project:hover {
+	background: var(--paper-2);
+}
+
+.project-name {
+	display: flex;
+	align-items: baseline;
+	gap: 6px;
+	font-family: var(--display);
+	font-size: 1.1875rem;
+	font-weight: 600;
+	letter-spacing: -0.015em;
+	line-height: 1.3;
+}
+
+.project-name svg {
+	width: 16px;
+	height: 16px;
+	flex-shrink: 0;
+	align-self: center;
+	color: var(--ink-2);
+	transition:
+		translate 0.25s var(--ease),
+		color 0.25s var(--ease);
+}
+
+.project:hover .project-name svg {
+	translate: 2px -2px;
+	color: var(--accent);
+}
+
+.project-kind {
+	margin-top: 4px;
+	color: var(--ink-2);
+	font-size: 0.875rem;
+}
+
+.project-desc {
+	font-size: 1rem;
+	line-height: 1.55;
+	text-wrap: pretty;
+}
+
+.project-stack {
+	color: var(--ink-2);
+	font-size: 0.875rem;
+	line-height: 1.6;
+}
+
+.projects-more {
+	margin-top: 28px;
+}
+
+.post-row {
+	text-decoration: none;
+	transition: background 0.25s var(--ease);
+}
+
+.post-row:hover .row-title {
+	color: var(--accent);
+}
+
+.post-row .row-meta {
+	margin-top: 6px;
+	max-width: 62ch;
+	text-wrap: pretty;
+}
+
+@media (max-width: 860px) {
+	.project {
+		grid-template-columns: minmax(0, 1fr);
+	}
+}
