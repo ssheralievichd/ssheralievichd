@@ -14,6 +14,12 @@ export type LanguageSkill = { nameKey: TranslationKey; levelKey: TranslationKey 
 
 export const resumeRoles: ResumeRole[] = [
 	{
+		roleKey: 'role_teamlead',
+		orgKey: 'r_org1',
+		dateKey: 'period_teamlead',
+		bulletKeys: ['exp0_b1']
+	},
+	{
 		roleKey: 'r_role1',
 		orgKey: 'r_org1',
 		dateKey: 'period_current',

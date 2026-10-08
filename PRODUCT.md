@@ -40,7 +40,7 @@ A backend-focused full-stack engineer with production fintech experience at Alif
 
 ## Evidence on Hand
 
-- Employment history with dates: fintech startup (Oct 2025–present), Alif Bank (Aug 2022–Oct 2024), Formika (Oct 2024–Jan 2025), freelance (2021–2022). `src/lib/data/experience.ts`
+- Employment history with dates: fintech startup (Senior Full-Stack Engineer Oct 2025–Jun 2026, Team Lead Jun 2026–present), Alif Bank (Aug 2022–Oct 2024), Formika (Oct 2024–Jan 2025), freelance (2021–2022). `src/lib/data/experience.ts`
 - Stated results: 50%+ faster responses on high-traffic endpoints, about 60% faster deployments.
 - Ten projects with stack tags; six have public links. `src/lib/data/projects.ts`
 - Three blog posts. `src/posts/`

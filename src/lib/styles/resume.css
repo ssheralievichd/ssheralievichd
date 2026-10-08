@@ -50,12 +50,12 @@
 	max-width: 210mm;
 	min-height: 297mm;
 	margin-inline: auto;
-	padding: 12mm 15mm 11mm;
+	padding: 11mm 15mm 9mm;
 	background: #fff;
 	color: var(--sheet-ink);
 	border: 1px solid var(--rule);
-	font-size: 8.9pt;
-	line-height: 1.34;
+	font-size: 8.7pt;
+	line-height: 1.32;
 }
 
 @media (max-width: 720px) {

@@ -23,7 +23,7 @@ Backend-focused full-stack engineer with **4+ years** building high-availability
 
 I care about clean architecture, query performance, and shipping containerized services through automated CI/CD. Outside of full-time work I've shipped a range of production side projects, from a RAG-based contact-center platform to S3-compatible storage backed by Telegram.
 
-- 🔭 Currently building scalable microservices and SPAs as a Senior Full-Stack Engineer
+- 🔭 Currently building scalable microservices and SPAs as a Team Lead
 - 🏦 2 years in fintech at Alif Bank — high-availability APIs and deployment automation
 - 🌍 Open to **remote** backend, full-stack, and DevOps roles worldwide
 - 🗣️ Tajik (native), Russian (fluent), English (professional)
@@ -33,11 +33,14 @@ I care about clean architecture, query performance, and shipping containerized s
 
 ## Experience
 
-**Senior Full-Stack Software Engineer** — Fintech Startup, Tajikistan · *Oct 2025 – Present*
-- Architect scalable microservices with FastAPI, Django REST Framework, and Laravel
-- Engineer responsive SPAs with Vue.js, Nuxt.js, React, and Next.js
-- Optimize PostgreSQL queries — 50%+ reduction in response times on high-traffic endpoints
-- Lead Docker containerization and automated CI/CD pipelines
+**Team Lead** — Fintech Startup, Tajikistan · *Jun 2026 – Present*
+- Promoted to Team Lead after eight months as Senior Full-Stack Software Engineer
+
+**Senior Full-Stack Software Engineer** — Fintech Startup, Tajikistan · *Oct 2025 – Jun 2026*
+- Architected scalable microservices with FastAPI, Django REST Framework, and Laravel
+- Built responsive SPAs with Vue.js, Nuxt.js, React, and Next.js
+- Optimized PostgreSQL queries — 50%+ reduction in response times on high-traffic endpoints
+- Led Docker containerization and automated CI/CD pipelines
 
 **Python Software Engineer** — Alif Bank, Tajikistan · *Aug 2022 – Oct 2024*
 - Built and maintained high-availability RESTful APIs serving production-scale financial traffic

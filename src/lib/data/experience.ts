@@ -10,10 +10,17 @@ export type Role = {
 
 export const roles: Role[] = [
 	{
+		roleKey: 'role_teamlead',
+		orgKey: 'org_current',
+		dateKey: 'period_teamlead',
+		active: true,
+		bulletKeys: ['exp0_b1']
+	},
+	{
 		roleKey: 'role_fullstack',
 		orgKey: 'org_current',
 		dateKey: 'period_current',
-		active: true,
+		active: false,
 		bulletKeys: ['exp1_b1', 'exp1_b2', 'exp1_b3', 'exp1_b4']
 	},
 	{
