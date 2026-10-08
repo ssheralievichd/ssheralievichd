@@ -31,3 +31,9 @@ export const heroBands: Band[] = [
 	{ radius: 232, amplitude: 66, lobes: 12, strands: 8, seconds: 280 },
 	{ radius: 122, amplitude: 58, lobes: 7, strands: 7, seconds: -220 }
 ];
+
+export const contactBands: Band[] = [
+	{ radius: 430, amplitude: 86, lobes: 16, strands: 10, seconds: -460 },
+	{ radius: 296, amplitude: 78, lobes: 9, strands: 9, seconds: 360 },
+	{ radius: 168, amplitude: 70, lobes: 5, strands: 8, seconds: -300 }
+];

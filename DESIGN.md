@@ -147,7 +147,7 @@ The ruled row on the field: label, value in Geologica 500, arrow. The whole row 
 The mark is a small pine tag (2px corners, 0.75rem / 500) beside a title, used for a current state. Text links are accent-coloured, weight 500, with an underline that appears on hover.
 
 ### Engraving
-The opening field carries one guilloché rosette, the interlaced line engraving of banknotes and share certificates. Four braided rings in mint hairlines (0.7px, 40% opacity) sit right of the text, masked out toward the copy and the figures, and counter-rotate over several minutes; reduced motion holds them still. It appears on the first screen only, never on paper and never behind body text.
+The opening field carries one guilloché rosette, the interlaced line engraving of banknotes and share certificates. Four braided rings in mint hairlines (0.7px, 40% opacity) sit right of the text, masked out toward the copy and the figures, and counter-rotate over several minutes; reduced motion holds them still. A second rosette with wider lobes rises from the lower-left of the closing contact band, masked away from the heading and the contact rows. Engravings live only on the two pine fields, never on paper and never behind body text.
 
 ## Do's and Don'ts
 

@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { ArrowUpRight } from '@lucide/svelte';
 	import Footer from '../Footer.svelte';
+	import Guilloche from '../art/Guilloche.svelte';
+	import { contactBands } from '$lib/art/guilloche';
 	import { profile } from '$lib/data/site';
 	import type { TranslationKey } from '$lib/i18n';
 	import { t } from '$lib/stores/lang';
@@ -31,6 +33,7 @@
 </script>
 
 <section id="contact" class="contact field">
+	<Guilloche bands={contactBands} name="contact" />
 	<div class="wrap">
 		<div class="contact-grid">
 			<div>

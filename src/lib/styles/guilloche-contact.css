@@ -1,0 +1,32 @@
+.contact {
+	position: relative;
+	overflow: hidden;
+	isolation: isolate;
+}
+
+.guilloche-contact {
+	top: auto;
+	right: auto;
+	bottom: 0;
+	left: clamp(-220px, -9vw, -60px);
+	width: min(74vw, 940px);
+	translate: 0 46%;
+	opacity: 0.38;
+	mask-image:
+		linear-gradient(to left, transparent 6%, black 52%),
+		linear-gradient(to top, black 46%, transparent 86%);
+	mask-composite: intersect;
+}
+
+@media (max-width: 860px) {
+	.guilloche-contact {
+		top: 0;
+		bottom: auto;
+		left: auto;
+		right: -70vw;
+		width: 150vw;
+		translate: 0 -48%;
+		opacity: 0.36;
+		mask-image: radial-gradient(circle at 50% 50%, black 34%, transparent 70%);
+	}
+}
