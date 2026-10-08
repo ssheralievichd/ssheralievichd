@@ -18,6 +18,7 @@ export const projects: Project[] = [
 	},
 	{
 		name: 'Domains Hub',
+		href: 'http://www.nic.tj/',
 		kind: 'commercial',
 		descKey: 'proj2_desc',
 		tags: ['Laravel 12', 'Vue 3', 'Inertia', 'PostgreSQL']
