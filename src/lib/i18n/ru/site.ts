@@ -42,7 +42,7 @@ export const site = {
 	exp_sh: 'Опыт',
 	exp_current: 'Сейчас',
 	proj_sh: 'Проекты',
-	proj_note: 'Девять продуктов на Python, PHP, Vue и React. Два из них коммерческие.',
+	proj_note: 'Десять продуктов на Python, PHP, Vue и React. Три из них коммерческие.',
 	proj_more: 'Больше на GitHub',
 	proj_badge_commercial: 'Коммерческий',
 	proj_badge_personal: 'Личный',

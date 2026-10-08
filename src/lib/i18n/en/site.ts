@@ -42,7 +42,7 @@ export const site = {
 	exp_sh: 'Experience',
 	exp_current: 'Current',
 	proj_sh: 'Projects',
-	proj_note: 'Nine products across Python, PHP, Vue and React. Two are commercial.',
+	proj_note: 'Ten products across Python, PHP, Vue and React. Three are commercial.',
 	proj_more: 'More on GitHub',
 	proj_badge_commercial: 'Commercial',
 	proj_badge_personal: 'Personal',

@@ -16,7 +16,7 @@ The personal site and resume of Abdurahmon Sheralievich, a senior full-stack eng
 
 ## Positioning
 
-A backend-focused full-stack engineer with production fintech experience at Alif Bank who also ships complete products alone: nine listed projects, two of them commercial, across Python/FastAPI, PHP/Laravel, Vue and React.
+A backend-focused full-stack engineer with production fintech experience at Alif Bank who also ships complete products alone: ten listed projects, three of them commercial, across Python/FastAPI, PHP/Laravel, Vue and React.
 
 ## Operating Context
 
@@ -42,7 +42,7 @@ A backend-focused full-stack engineer with production fintech experience at Alif
 
 - Employment history with dates: fintech startup (Oct 2025–present), Alif Bank (Aug 2022–Oct 2024), Formika (Oct 2024–Jan 2025), freelance (2021–2022). `src/lib/data/experience.ts`
 - Stated results: 50%+ faster responses on high-traffic endpoints, about 60% faster deployments.
-- Nine projects with stack tags; three have public links. `src/lib/data/projects.ts`
+- Ten projects with stack tags; five have public links. `src/lib/data/projects.ts`
 - Three blog posts. `src/posts/`
 - B.Sc. Computer Science, Russian-Tajik Slavonic University, 2020–2024.
 - No photo, no testimonials, no client logos, no screenshots of projects. Do not fabricate any.

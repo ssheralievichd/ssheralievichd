@@ -23,6 +23,13 @@ export const projects: Project[] = [
 		tags: ['Laravel 12', 'Vue 3', 'Inertia', 'PostgreSQL']
 	},
 	{
+		name: 'Zehn Cloud',
+		href: 'https://cloud.telecom-zehn.tj/',
+		kind: 'commercial',
+		descKey: 'proj10_desc',
+		tags: ['FOSSBilling', 'PHP 8', 'MariaDB', 'PowerDNS', 'Docker']
+	},
+	{
 		name: 'Discovery Trio',
 		href: 'https://play.google.com/store/apps/details?id=com.velocehub&hl=en',
 		kind: 'personal',
