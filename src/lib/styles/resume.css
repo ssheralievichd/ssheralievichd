@@ -74,8 +74,9 @@
 		font-size: 0.875rem;
 	}
 	.resume-bar .btn {
-		font-size: 0;
-		gap: 0;
 		padding-inline: 12px;
+	}
+	.resume-bar .btn span {
+		display: none;
 	}
 }

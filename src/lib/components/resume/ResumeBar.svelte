@@ -8,6 +8,8 @@
 	<div class="wrap resume-bar-inner">
 		<a href="/" class="text-link resume-back"><ArrowLeft />{$t.back_to_portfolio}</a>
 		<LangToggle />
-		<button class="btn" onclick={() => window.print()}><Printer />{$t.r_print}</button>
+		<button class="btn" aria-label={$t.r_print} onclick={() => window.print()}>
+			<Printer /><span>{$t.r_print}</span>
+		</button>
 	</div>
 </div>
