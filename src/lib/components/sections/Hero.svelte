@@ -1,12 +1,14 @@
 <script lang="ts">
 	import { ArrowDownRight, FileText } from '@lucide/svelte';
 	import GithubIcon from '../art/GithubIcon.svelte';
+	import Guilloche from '../art/Guilloche.svelte';
 	import LinkedinIcon from '../art/LinkedinIcon.svelte';
 	import { figures, profile } from '$lib/data/site';
 	import { t } from '$lib/stores/lang';
 </script>
 
 <section id="hero" class="hero field">
+	<Guilloche />
 	<div class="wrap hero-inner">
 		<h1 class="hero-name">Abdurahmon<br />Sheralievich</h1>
 		<p class="hero-lead">{@html $t.hero_lead}</p>
